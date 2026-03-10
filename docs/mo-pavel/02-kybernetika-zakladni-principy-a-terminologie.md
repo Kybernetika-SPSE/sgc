@@ -18,7 +18,7 @@
 
 Za zakladatele je považován **Norbert Wiener**¨, americký matematik, který vydal v roce 1948 knihu Kybernetika aneb Řízení a sdělování u organismů a strojů.
 
-![](../assets/mo-pavel/kuz520495-mrscience.jpg)
+![](images/kuz520495-mrscience.jpg)
 
 Kybernetika se vyvíjela odlišně v různých zemích. V západních zemích víceméně splynula s obecnou teorií systémů a řada oborů, které byly považovány za součást kybernetiky, se vyvíjí jako samostatné obory – například informatika nebo neuronové sítě.
 
@@ -26,7 +26,7 @@ V zemích „socialistického tábora“ byla nejprve kybernetika považována z
 
 ## Co je kybernetika a čím se zabývá a odlišuje od ostatních věd
 
-Kybernetika se svým pojetím liší od ostatních věd (fyziky, chemie, biologie, ...). Odlišnost spočívá v tom, že ony vědy vidí reálný svět jako svět interakcí (vzájemné působení entit reálného světa), zatím co kybernetika ho vidí jako svět, kde něco plyne od někud někam, tedy jedním směrem, může to být nějaký rozruch v reálném světě nebo jindy informace. Je to pohled, který vznikl při studiu principu zpětné vazby, a který byl pro kybernetiku určující. Poznání reálného světa se tedy odehrává pod jiným zorným úhlem a s jinou interpretací. Tento odlišný pohled začal vznikat ve 20. letech dvacátého století v rodící se elektronice a sdělovací technice. Tímto viděním se potkává s teorií informace a sdělování, a nabízí jim včlenění do společného oboru. 
+Kybernetika se svým pojetím liší od ostatních věd (fyziky, chemie, biologie, ...). Odlišnost spočívá v tom, že ony vědy vidí reálný svět jako svět interakcí (vzájemné působení entit reálného světa), zatímco kybernetika ho vidí jako svět, kde něco plyne odněkud někam, tedy jedním směrem; může to být nějaký rozruch v reálném světě nebo jindy informace. Je to pohled, který vznikl při studiu principu zpětné vazby a který byl pro kybernetiku určující. Poznání reálného světa se tedy odehrává pod jiným zorným úhlem a s jinou interpretací. Tento odlišný pohled začal vznikat ve 20. letech dvacátého století v rodící se elektronice a sdělovací technice. Tímto viděním se potkává s teorií informace a sdělování a nabízí jim včlenění do společného oboru.
 
 ### Kybernetika se zabývá například
 
@@ -39,7 +39,7 @@ Kybernetika se svým pojetím liší od ostatních věd (fyziky, chemie, biologi
 ## Základní kybernetické principy a přístupy
 ### Systémový přístup:
 
-* **Model:** Systematické studium různých systémů vedlo k poznatku, že systémy různé fyzikální podstaty mohou mít velmi podobné chování a že chování jednoho systému můžeme zkoumat prostřednictvím chování jiného, snáze realizovatelného systému ve zcela jiných časových či prostorových měřítkách. Ukázalo se, že mnohé systémy mechanické, hydraulické, pneumatické, tepelné ad. jsou popsány formálně stejnými diferenciálními rovnicemi jako elektrické obvody. To vedlo ke vzniku speciálnich elektrických obvodů analogových počítačů. Brzy však byly vytlačeny symbolickými modely na číslicových počítačích.
+* **Model:** Systematické studium různých systémů vedlo k poznatku, že systémy různé fyzikální podstaty mohou mít velmi podobné chování a že chování jednoho systému můžeme zkoumat prostřednictvím chování jiného, snáze realizovatelného systému ve zcela jiných časových či prostorových měřítkách. Ukázalo se, že mnohé systémy mechanické, hydraulické, pneumatické, tepelné ad. jsou popsány formálně stejnými diferenciálními rovnicemi jako elektrické obvody. To vedlo ke vzniku speciálních elektrických obvodů analogových počítačů. Brzy však byly vytlačeny symbolickými modely na číslicových počítačích.
 
 ### Informační přístup:
 
@@ -69,7 +69,7 @@ Kybernetika se svým pojetím liší od ostatních věd (fyziky, chemie, biologi
 
 # Systém:
 
-Systém je jakýkoli proces, objekt nebo uspořádání komponent, který přijímá vstup a přeměňuje jej na výstup prostřednictvím určité formy vnitřní dynamiky nebo operace. Systémy lze definovat v různých technických oblastech, ale i netechnických jako např. biologie, ekonomie a sociálních věd. Mohou být definovány přírozeně (například ekosystémy) nebo uměle definované (například mechanické, elektrické nebo regulační systémy).
+Systém je jakýkoli proces, objekt nebo uspořádání komponent, který přijímá vstup a přeměňuje jej na výstup prostřednictvím určité formy vnitřní dynamiky nebo operace. Systémy lze definovat v různých technických oblastech, ale i netechnických, jako je například biologie, ekonomie a sociální vědy. Mohou být definovány přirozeně (například ekosystémy) nebo uměle (například mechanické, elektrické nebo regulační systémy).
 
 V kontextu teorie řízení je systém obvykle definován jako:
 
@@ -184,7 +184,7 @@ Systém prvního řádu popsaný touto přenosovou funkcí je často používán
 | Přechodová charakteristika | Impulsní charakteristika |
 | ---- | ---- |
 | $y(t)=K\left(1−e^{\frac{−t}{τ}}\right)$ | $y(t) = \frac{K}{\tau} e^\frac{-t}{\tau}$ |
-| ![Systém prvního řádu](../assets/mo-pavel/system-first-order.png) | ![Systém prvního řádu](../assets/mo-pavel/system-first-order-impulse.png) |
+| ![Systém prvního řádu](images/system-first-order.png) | ![Systém prvního řádu](images/system-first-order-impulse.png) |
 
 ### Klíčové metriky u systémů prvního řádu:
 1. **Přechodvá charakteristika**: 
@@ -196,7 +196,7 @@ Systém prvního řádu popsaný touto přenosovou funkcí je často používán
 
 3. **Doba ustálení**: 
    - Doba ustálení je čas, který systém potřebuje k tomu, aby se výstup ustálil v určitém procentu konečné hodnoty, obvykle do 2 % nebo 5 %. Pro systém prvního řádu je doba ustálení přibližně $4-5\tau$.
-![Systém prvního řádu](../assets/mo-pavel/system-first-order-tau.png)
+![Systém prvního řádu](images/system-first-order-tau.png)
 
 ## Příklady **systémů prvního řádu**:
 
@@ -292,7 +292,7 @@ Kde:
 | Přechodová charakteristika response | Impulsní charakteristika |
 | ---- | ---- |
 | $y(t) = 1 - \frac{1}{\sqrt{1-\zeta^2}} e^{-\zeta \omega_n t} \sin\left(\omega_n \sqrt{1-\zeta^2} t + \phi\right) \textnormal{, for } \zeta < 1$  | $y(t) = \frac{\omega_n}{\sqrt{1-\zeta^2}} e^{-\zeta \omega_n t} \sin\left(\omega_n \sqrt{1-\zeta^2} t\right) \textnormal{, for } \zeta <1$ |
-| ![](../assets/mo-pavel/system-second-order.png) | ![](../assets/mo-pavel/system-second-order-impulse.png) |
+| ![](images/system-second-order.png) | ![](images/system-second-order-impulse.png) |
 
 ### Klíčové metriky u systémů druhého řádu
 
@@ -312,7 +312,7 @@ Tyto metriky pomáhají analyzovat dynamickou odezvu systému a umožňují hodn
 
 | vliv parametru $\omega$ | vliv parametru $\zeta$ |
 | ---- | ---- |
-| ![](../assets/mo-pavel/system-second-order-omega.png) | ![](../assets/mo-pavel/system-second-order-zeta.png) |
+| ![](images/system-second-order-omega.png) | ![](images/system-second-order-zeta.png) |
 
 
 ## Příklady **systémů druhého řádu**:
@@ -375,5 +375,6 @@ Tyto metriky pomáhají analyzovat dynamickou odezvu systému a umožňují hodn
 | **Kolísání hlainy kapaliny v nádrži**       | $\frac{K}{s^2 + 2\zeta \omega_n s + \omega_n^2}$        | $\frac{d^2h(t)}{dt^2} + 2\zeta\omega_n \frac{dh(t)}{dt} + \omega_n^2 h(t) = KF(t)$ |
 
 Všimněte si podobností formálního popisu různých systémů.
+
 
 

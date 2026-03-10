@@ -83,3 +83,4 @@ Pokud se třídy překrývají, nebo jsou nelineárně rozloženy (například p
 - rozdíl mezi perceptronem a moderní neuronovou sítí
 
 
+

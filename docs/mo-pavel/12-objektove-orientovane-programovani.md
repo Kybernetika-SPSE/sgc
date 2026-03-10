@@ -1,15 +1,16 @@
-﻿# Otazka 12
+﻿# Otázka 12
 
-## Objektove orientovane programovani
+## Objektově orientované programování
 
-- spravce: Pavel
-- stav: primarni stary podklad nebyl nalezen
+- správce: Pavel
+- stav: primární starý podklad nebyl nalezen
 
-## Souvisejici materialy
+## Související materiály
 
-- [Puvodni README starych skript](../archiv/skripta-kyb/README.md)
+- [Původní README starých skript](../archiv/skripta-kyb/README.md)
 
-## Poznamka
+## Poznámka
 
-Ve starych skriptech neni dohledatelna samostatna OOP kapitola. Stranka je pripravena pro nove zpracovani.
+Ve starých skriptech není dohledatelná samostatná OOP kapitola. Stránka je připravená pro nové zpracování.
+
 

@@ -1,41 +1,43 @@
-﻿# Studentuv pruvodce Kybernetikou
+﻿# Studentův průvodce kybernetikou
 
-> Centralni rozcestnik pro materialy, maturitni pripravu a aktualni informace k predmetu.
+> Centrální rozcestník pro materiály, maturitní přípravu a aktuální informace k předmětu.
 
-Tento web bezi na Docsify a je pripraveny pro publikaci pres GitHub Pages.
+Tento web běží na Docsify a je připravený pro publikaci přes GitHub Pages.
 
 ## Co tu najdete
 
-- [Aktualni informace o predmetu](aktualni-informace/) pro oznameni, organizaci a dulezite terminy.
-- [Seznam maturitnich otazek](seznam-maturitnich-otazek/) jako prehled temat k doplneni.
-- [MO Jirka](mo-jirka/) pro Jirkovy zpracovane maturitni otazky a poznamky.
-- [MO Pavel](mo-pavel/) pro Pavlovy materialy a vlastni zpracovani.
-- [Nova skripta](nova-skripta/) pro budouci studijni texty a rozsahlejsi materialy.
-- [Archiv starych materialu](archiv/) s importovanymi podklady ze stareho repozitare `skripta-kyb`.
+- [Aktuální informace o předmětu](aktualni-informace/) pro oznámení, organizaci a důležité termíny.
+- [Seznam maturitních otázek](seznam-maturitnich-otazek/) jako přehled témat k doplnění.
+- [MO Jirka](mo-jirka/) pro Jirkovy zpracované maturitní otázky a poznámky.
+- [MO Pavel](mo-pavel/) pro Pavlovy materiály a vlastní zpracování.
+- [Nová skripta](nova-skripta/) pro budoucí studijní texty a rozsáhlejší materiály.
+- [Archiv starých materiálů](archiv/) s importovanými podklady ze starého repozitáře `skripta-kyb`.
 
-## Rozdeleni otazek
+## Rozdělení otázek
 
-- Otazky 1 az 12 patri Pavlovi.
-- Otazky 13 az 24 patri Jirkovi.
-- Kazda otazka ma vlastni rozcestnikovou stranku s odkazy na prevzate zdroje.
+- Otázky 1 až 12 patří Pavlovi.
+- Otázky 13 až 24 patří Jirkovi.
+- Každá otázka má vlastní rozcestníkovou stránku s odkazy na převzaté zdroje.
 
-## Jak web pouzivat
+## Jak web používat
 
-1. Vlevo si vyber sekci, ktera te zajima.
-2. Postupne doplnuj jednotlive stranky a odkazy podle potreby.
-3. Pro rychle hledani pouzij vyhledavani v horni casti sidebaru.
+1. Vlevo si vyber sekci, která tě zajímá.
+2. Postupně doplňuj jednotlivé stránky a odkazy podle potřeby.
+3. Pro rychlé hledání použij vyhledávání v horní části sidebaru.
 
 ## Wikilinky
 
-- Docsify nema wikilinky nativne, ale web je ted umi pres vlastni preprocesor v `docs/index.html`.
-- Ve stejne slozce lze psat napriklad `[[13-pasivni-elektronicke-prvky|Otazka 13]]`.
-- Na jinou sekci lze odkazovat napriklad `[[mo-pavel/01-verzovaci-system-git|Git]]`.
-- Wikilinky se automaticky prevadi na bezne odkazy na `.md` soubory, takze zustavaji kompatibilni s Docsify.
+- Docsify nemá wikilinky nativně, ale web je teď umí přes vlastní preprocesor v `docs/index.html`.
+- Uvnitř `mo-jirka/README.md` lze psát například `[[13-pasivni-elektronicke-prvky|Otázka 13]]`.
+- Z jiné sekce lze odkazovat například `[[mo-pavel/01-verzovaci-system-git|Git]]`.
+- Pro PDF, ZIP nebo jiné soubory lze používat třeba `[[mo-jirka/assets/soubor.pdf|Soubor PDF]]`.
+- Wikilinky se automaticky převádějí na Docsify hash odkazy pro markdown stránky a na běžné odkazy pro ostatní soubory.
 
 ## Stav projektu
 
-- Zakladni struktura je pripravena.
-- Stare materialy byly importovany do `docs/archiv/skripta-kyb/`.
-- Obsah jednotlivych sekci se bude doplnovat postupne.
-- Repo je nastavene tak, aby slo publikovat z `docs/` na GitHub Pages.
+- Základní struktura je připravena.
+- Staré materiály byly importovány do `docs/archiv/skripta-kyb/`.
+- Obsah jednotlivých sekcí se bude doplňovat postupně.
+- Obrázky jsou nyní uložené v `mo-*/images/` a ostatní soubory patří do `mo-*/assets/`.
+- Repo je nastavené tak, aby šlo publikovat z `docs/` na GitHub Pages.
 

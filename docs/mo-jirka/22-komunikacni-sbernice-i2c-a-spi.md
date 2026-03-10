@@ -14,7 +14,7 @@
 - Na **SDA** (datové) lince se stav "stažená" (nízká úroveň) a současně **SCL** (hodinová) linka zůstává ve vysoké úrovni.
 - Tímto stavem se všem zařízením na sběrnici signalizuje začátek přenosu dat.
 - Po start podmínce následuje vysílání **adresy cílového slave zařízení**.
-![](../assets/mo-jirka/22-i2c-a.png)
+![](images/22-i2c-a.png)
 
 ## Klíčové vlastnosti I2C
 - **Synchronní komunikace:**
@@ -26,7 +26,7 @@ Tyto vlastnosti činí I2C vhodným zejména pro mnoho aplikací v embedded
 systémech a IoT zařízeních.
 
 ## Topologie I2C
-![](../assets/mo-jirka/22-i2c-b.png)
+![](images/22-i2c-b.png)
 
 ## Další poznámky k I2C
 - Data se přenášejí pouze při náběžné hraně hodinového signálu (kdy CLK dosáhne logické jedničky). Důvodem jsou pull-up rezistory použité v zapojení.
@@ -50,7 +50,7 @@ SPI (Serial Peripheral Interface) je sériový komunikační protokol, který pr
 
 Tento protokol umožňuje efektivní výměnu dat přes společnou sběrnici, čímž šetří počet pinů a zjednodušuje zapojení.
 
-![](../assets/mo-jirka/22-spi-a.png)
+![](images/22-spi-a.png)
 _Poznámka:_ SPI jde také využít pro zvýšení přenosové rychlosti a efektivní propojení s paměťovými zařízeními. Důležité je při návrhu určit správnou polaritu hodinového signálu.
 
 ## Základní principy komunikace
@@ -72,8 +72,8 @@ _Poznámka:_ SPI jde také využít pro zvýšení přenosové rychlosti a efekt
 	Data jsou posílána prostřednictvím MOSI a MISO simultánně.
 4. **Ukončení komunikace:**
 	Po přenosu master zastaví generování hodinového signálu a linku SS/CS vrátí na logickou 1, čímž ukončí komunikaci.
-![](../assets/mo-jirka/22-spi-b.png)
-![](../assets/mo-jirka/22-spi-c.png)
+![](images/22-spi-b.png)
+![](images/22-spi-c.png)
 
 ## Výhody SPI
 - Jednoduchá implementace.
@@ -95,7 +95,8 @@ UART (Universal Asynchronous Receiver/Transmitter) je hardware, který umožňuj
 	- **DATA bity** obsahují informace (často začínající prvním bytem, který může obsahovat např. informaci o počtu následujících bitů).
 	- **STOP bit** značí konec přenosu.
 - Je důležité poznamenat, že na jedné sběrnici nemohou být aktivní více UART zařízení současně, aby nedošlo ke kolizím.
-![](../assets/mo-jirka/22-uart.png)
+![](images/22-uart.png)
+
 
 
 

@@ -1,16 +1,17 @@
-﻿# Otazka 10
+﻿# Otázka 10
 
 ## Computer vision
 
-- spravce: Pavel
-- stav: primarni stary podklad nebyl nalezen
+- správce: Pavel
+- stav: primární starý podklad nebyl nalezen
 
-## Souvisejici materialy
+## Související materiály
 
-- [Zaklady umele inteligence](../archiv/skripta-kyb/kybernetika/chapters/ZakladyUI.md)
-- [Temata uceni watafa](../archiv/skripta-kyb/Temata_uceni_watafa.md)
+- [Základy umělé inteligence](../archiv/skripta-kyb/kybernetika/chapters/ZakladyUI.md)
+- [Témata učení watafa](../archiv/skripta-kyb/Temata_uceni_watafa.md)
 
-## Poznamka
+## Poznámka
 
-Ve starych skriptech neni samostatna kapitola k computer vision. Stranka je pripravena pro nove doplneni.
+Ve starých skriptech není samostatná kapitola k computer vision. Stránka je připravená pro nové doplnění.
+
 

@@ -23,17 +23,18 @@ Karnaughova mapa je tabulka, kde každé pole odpovídá určité kombinaci hodn
   - Bloky musí mít velikost mocniny čísla 2 (1, 2, 4, 8 atd.).
   - Bloky mohou být vodorovné nebo svislé (nikoliv diagonální).
   - Karnaughova mapa je nekonečná, což znamená, že levý a pravý okraj, stejně jako horní a dolní okraj, jsou spojeny.
-  - Bloky se mohou (částčně) překrývat. 
+  - Bloky se mohou (částečně) překrývat. 
   - Každá jednička (1) musí být v nějakém bloku
   - Počet bloků musí být co nejmenší. (Bloky musí být co největší)
 - Zapsání minimalizovaného výrazu na základě seskupených bloků.
 
 > Poznámka:
-> pokud seskupujem do bloků jedničky (1), vzniká zápisem disjuktní normální forma (součet součinů). Můžeme rovněž seskupovat nuly (0), pak vzniká konjuktní normální forma (součin součtů).
+> Pokud seskupujeme do bloků jedničky (1), vzniká zápisem disjunktní normální forma (součet součinů). Můžeme rovněž seskupovat nuly (0), pak vzniká konjunktní normální forma (součin součtů).
 
 ### Příklad:
 
-![](../assets/mo-pavel/karnaugh.png)
+![](images/karnaugh.png)
+
 
 
 

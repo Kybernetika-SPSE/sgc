@@ -8,11 +8,11 @@
 
 ---
 
-- PC (procesor computer)
-- (Jednočipové počítače - 1 čip)
+- PC = osobní počítač (*personal computer*)
+- Jednočipový počítač = počítač realizovaný v jednom integrovaném obvodu
 # Počítač
 - **`CPU` (central processor unit)** : Hlavní procesor, který vykonává instrukce a provádí výpočty.
-	- Jakýsi mozek počítače, řídí jeho ostatní části a jejich podíl na společném výpočetním díle celého systému. Hlavními výrobci procesorů do počítačů jsou společnosti intel a AMD.
+	- Jde o „mozek“ počítače, který řídí jeho ostatní části a vykonává samotné instrukce. Mezi známé výrobce procesorů pro osobní počítače patří například Intel a AMD.
 	- Základní stavební jednotkou procesoru je tranzistor zapojený jako spínač. Jeho úkolem je měnit stav mezi logickou nulou a jedničkou. Jeden samotný tranzistor by příliš výpočtů realizovat nemohl, proto jich v dnešních procesorech nalezneme miliardy, díky čemuž je možné provádět i nejsložitější operace.
 	- Interval mezi dvěma pulsy z oscilátoru se nazývá frekvenční cyklus. V takovém čase je procesor schopen své tranzistory přepnout do jedničky a poté zpět do nuly. O změně stavu z nuly do jedničky referujeme jako o náběžné hraně a o změně jedničky na nulu jako o hraně sestupné.
 - **`RAM` (random access memory)** : Elektronická polovodičová dočasná paměť, která uchovává data a instrukce pro aktuální operace/programy. (zjednodušeně číslované buňky z nichž každá obsahuje hodnotu)
@@ -25,7 +25,7 @@
 	- dříve více častý, dnes už se používá jen zřídka (z důvodu nemožnosti aktualizace softwaru, který obsahoval a taky protože RAMky jsou dnes mnohem rychlejší)
 - **`GPU` (graphics processing unit)** : Grafická jednotka pro zpracování obrazu, promítnutí do monitoru, může být ale využit i k jiným výpočtům (kryptoměny)
 - **`NPU` : (Neural Processing Unit)** je specializovaný procesor navržený k urychlení výpočtů spojených s umělou inteligencí (AI), zejména pro zpracování neuronových sítí a úloh strojového učení. (může se skládat z více CPU a GPU)
-- **`I/O` (input/output)** : Výměna dat mezi pc a externími zařízeními (myš, monitor, disk, klávesnice...)
+- **`I/O` (input/output)** : Výměna dat mezi PC a externími zařízeními (myš, monitor, disk, klávesnice...)
 
 ---
 
@@ -47,21 +47,22 @@
 	- **Instrukční registr** – uchovává právě vykonávanou instrukci.
 	- **Adresový registr** – uchovává adresu v paměti, ze které se čte/zapisuje.
 	- **Aritmeticko-logická jednotka (ALU)** – provádí výpočty a logické operace.
-![](../assets/mo-jirka/17-procesor-s-ramkou.png)
+![](images/17-procesor-s-ramkou.png)
 
 ---
 
 # Připojení procesoru k napájení
-Při zapnutí napájení mikrokontroléru (např. raspberka nebo arduina) nemusí být napětí (`Vcc`) ihned stabilní – často dochází ke kmitání a přechodovým jevům. Pokud by se procesor spustil hned, mohlo by dojít k nesprávné inicializaci nebo poškození. Proto se používá resetovací pin (`RST`), který zajistí, že se procesor spustí až tehdy, když je napětí stabilní.
+Při zapnutí napájení mikrokontroléru nebo jednodeskového počítače (např. Arduino nebo Raspberry Pi Pico) nemusí být napětí `Vcc` ihned stabilní. Často dochází ke kmitání a přechodovým jevům. Pokud by se procesor spustil hned, mohlo by dojít k nesprávné inicializaci nebo chybné činnosti. Proto se používá resetovací pin `RST`, který zajistí, že se procesor spustí až tehdy, když je napětí stabilní.
 
-Zapojuje se kondenzátor a rezistor, kde je čas $\tau$ jejich součin a k uklidnění dojde po $3\text{ až }5~\tau$. (časová hodnota přechodového jevu).
+Používá se kombinace kondenzátoru a rezistoru, kde časová konstanta $\tau$ je jejich součin. Ustálení typicky nastane přibližně po $3\text{ až }5~\tau$.
 
 - Vstup generátoru hodin
 - `Vcc` a `GND`
-- Vystup Reset pin - Pin, který obstarává správné zapnutí procesoru i při zákmitech v připojeni `Vcc`
+
+- Výstup `RST` - pin, který obstará správné spuštění procesoru i při zákmitech na napájení `Vcc`
 	- Časová konstanta $\tau = R\cdot C$ (Tau = odpor * farady)
-	- Vyjadřuje čas, který bude CPU čekat než se zapne
-![](../assets/mo-jirka/17-napetove-spicky.png)
+	- Vyjadřuje dobu, po kterou CPU čeká, než se spustí
+![](images/17-napetove-spicky.png)
 
 ---
 
@@ -85,7 +86,7 @@ Zapojuje se kondenzátor a rezistor, kde je čas $\tau$ jejich součin a k ukli
 - Paměť určená pro instrukce nemůže být využita pro data a naopak, což může vést k nevyužitému prostoru.
 
 _Hlavní rozdíl spočívá v organizaci paměti a způsobu přístupu k datům a instrukcím, což ovlivňuje výkon, bezpečnost a flexibilitu systému._
-![](../assets/mo-jirka/17-architektura-pameti.png)
+![](images/17-architektura-pameti.png)
 
 ---
 
@@ -99,20 +100,18 @@ Obvyklou chybou je domněnka, že procesory **CISC** mají více strojových ins
 instrukcí, které stejnou operaci umí provést nad různými registry.
 
 ## Jak funguje procesor (MOS 6502)
-16-bit adresní prostor
+16bitový adresní prostor.
 
-(Data rozdělena na 2 na 16 Byte, tedy po 4 v šestnáctkové soustavě. Po resetu se podívá na adresy `FFFC` a `FFFD`. Z každé vezme 8 bit, získaná data dá do registru x nebo y, které má na práci a dá je na adresní piny A0 až A15 a tam je podívá, najde další bit, třeba ze samých 0 a od něj jede dále. Procesor má příkazy na 3 Byte, tak má příkaz třeba 5 bit a zbylá tři označí důležitou hodnotu (ACCUMULÁTOR, registr x/y), pomocí dalších dvou Bytů dá data, která tam chce nahrát.)
+Po resetu se procesor podívá na adresy `FFFC` a `FFFD`, ze kterých načte tzv. reset vector. Ten určuje adresu první instrukce, kterou má začít vykonávat. Tím se inicializuje programový čítač a procesor pak postupně načítá další instrukce z paměti.
+
 
 - Důležité adresy:
-	- `FFFD` a `FFFC` - po resetu se podívá na adresu a uloží **bootovací vektor**
-	- **Bootovací vektor** (reset vector) = výchozí **místo**, kde CPU hledá **nové instrukce**
-- Akumulátor = drží data, se kterými pracuje procesor
-- Programový čítač ví kde je **bootovací vektor** (je přímo napojený na paměť)
-	- Vezme **první půlku** bootovacího vektoru a narve je do **x**
-	- Vezme **druhou půlku** bootovacího vektoru a narve ji do **y**
-	- Prohodí se **x** a **y** a načtou se
-	- Narve je do programového čítače (i pro druhou adresu)
+	- `FFFD` a `FFFC` - po resetu z nich procesor načte **bootovací vektor**
+	- **Bootovací vektor** (*reset vector*) = výchozí místo, kde CPU hledá první instrukce programu
+- Akumulátor drží data, se kterými procesor právě pracuje.
+- Programový čítač po načtení bootovacího vektoru ukazuje na první instrukci programu.
 	
 - Celkový **počet základních instrukcí je malý** kvůli variacím v posledních číslech adresy
+
 
 

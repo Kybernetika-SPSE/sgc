@@ -10,30 +10,30 @@
 
 # MQTT
 - Návrhový vzor **publisher/subscriber**
-- Broker (centrální bod) třídí zprávy podle témata (topic) a zařízení buď:
-	- **Publikuje** v daném tématu (publisher) a odesílá zprávu brokeru, který ukládá a přeposílá **zprávu** zařízením, které mají **odběr** (subscribtion) na dané téma
-	- Je **přihlášeno k odběru** na dané téma a broker zasílá tomuto zařízení všechny **zprávy** daného **téma**
-- V protokolu se posílají **zprávy** ( **Message** nebo také **Payload** ) a s ní téma ( **Topic** )
-- Klient může publikovat i v topicu, u kterého má subscribe. Zpráva se samozřejmě odešle **všem subscriberům**, takže i klientovi, který publikoval. Irl se to ale takto nedělá. Nejlépe se klient změní ze subscribera na publishera, zprávu pošle a poté se vrátí na stav subscribera.
+- Broker (centrální bod) třídí zprávy podle tématu (topic) a zařízení buď:
+	- **Publikuje** v daném tématu (publisher) a odesílá zprávu brokeru, který ji ukládá a přeposílá zařízením, která mají **odběr** (subscription) na dané téma
+	- Je **přihlášeno k odběru** na dané téma a broker zasílá tomuto zařízení všechny zprávy daného tématu
+- V protokolu se posílají **zprávy** (**message** nebo také **payload**) a s nimi téma (**topic**)
+- Klient může publikovat i v topicu, který zároveň odebírá. Zpráva se samozřejmě odešle **všem subscriberům**, tedy i klientovi, který ji publikoval. V praxi se to ale takto obvykle nedělá. Typicky klient vystupuje buď jako subscriber, nebo jako publisher podle konkrétní role.
 - Témata
-	- místo kam “putujeˮ zpráva
+	- místo, kam „putuje“ zpráva
 	- Jedno zařízení může mít **odběr nebo publisher** u **více témat najednou**. Zpráva může patřit **právě do jednoho tématu**
-	- **Publisher nemusí zakládat nové téma**. Pokud broker přijme zprávu s novým tématem automaticky jej založí
-	- Témata jsou řetězce **UTF8** (diakritika není problém)
+	- **Publisher nemusí zakládat nové téma**. Pokud broker přijme zprávu s novým tématem, automaticky je založí
+	- Témata jsou řetězce **UTF-8** (diakritika není problém)
 - **Wildcards**:
 	- **Single level** = “+ˮ
 		- odběr celé **jedné úrovně** témat
 		- pokud odbíráme téma: `myhome/groundfloor/+/temperature`
-![](../assets/mo-jirka/21-single-level-wild-card.png)
+![](images/21-single-level-wild-card.png)
 
 - **Multi level** = “#ˮ
 	- odběr **všech úrovní** témat
 	- pokud odbíráme téma: `myhome/groundfloor/#`
-![](../assets/mo-jirka/21-multilevel-wild-card.png)
+![](images/21-multilevel-wild-card.png)
 
-- Normálně broker **nevidí strukturu** topicu (topic je prostě string, Broker nevidí závorky jako oddělovače úrovně)
-- Když broker **detekuje wildcard** , rozdělí si zprávu podle lomítek a vytvoří si routovací tabulku, podle které zasílá nové zprávy subscriberům
-- Protokol je “payload agnosticˮ = **formát** dat / zpráv je **irelevantní** (nejčastěji JSON nebo BSON). Obsah zprávy je omezen na **256 MB**.
+- Normálně broker **nevidí strukturu** topicu; topic je prostě řetězec a broker nevidí lomítka jako oddělovače úrovní.
+- Když broker **detekuje wildcard**, rozdělí si zprávu podle lomítek a vytvoří routovací tabulku, podle které zasílá nové zprávy subscriberům.
+- Protokol je „payload agnostic“, tedy **formát** dat nebo zpráv je z jeho pohledu **irelevantní**. Nejčastěji jde o JSON nebo BSON. Obsah zprávy je omezen na **256 MB**.
 
 ## QoS
 Tři úrovně **QoS** (Quality of Service). Klient **nemusí všechny podporovat**
@@ -43,7 +43,7 @@ Tři úrovně **QoS** (Quality of Service). Klient **nemusí všechny podporovat
 3. Každá zpráva je doručena **právě jednou**
 
 ## Struktura MQTT
-![](../assets/mo-jirka/21-striktura-mqtt.png)
+![](images/21-striktura-mqtt.png)
 
 Ukázka programu MQTT v Micropythonu:
 ```python
@@ -75,12 +75,12 @@ def callback(topic, msg):
 
 ```python
 def mqtt_connect():
-	client = MQTTClient(client_id, mqtt_server, keepalive=3600) #keepalive oz
+	client = MQTTClient(client_id, mqtt_server, keepalive=3600) # keepalive v sekundách
 	client.connect()
 	print('Connected to %s MQTT Broker'%(mqtt_server))
 	return client
 ```
-Parametr “**keepalive**ˮ označuje interval v sekundách, během kterého musí odesílatel odeslat packet `PINGREQ` aby nebylo připojení ukončeno. Broker po přijetí odpovídá `PINGRESP` packet, který potvrzuje že je připojení pořád aktivní
+Parametr **keepalive** označuje interval v sekundách, během kterého musí odesílatel poslat packet `PINGREQ`, aby nebylo připojení ukončeno. Broker po přijetí odpovídá packetem `PINGRESP`, který potvrzuje, že je připojení pořád aktivní.
 
 ```python
 def reconnect():
@@ -99,5 +99,6 @@ while True:
 	#topic_msg = odesílané data
 	time.sleep(3)
 ```
+
 
 

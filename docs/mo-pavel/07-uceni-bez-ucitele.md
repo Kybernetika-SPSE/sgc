@@ -92,7 +92,7 @@ Příklady:
 # K-means (metoda k-průměrů)
 
 ## Co je K-means
-K-means je **neučící se (neřízená)** metoda strojového učení používaná pro **shlukování dat (clustering)**.  
+K-means je **neřízená** metoda strojového učení používaná pro **shlukování dat (clustering)**.  
 Jejím cílem je **rozdělit data do K skupin (shluků)** tak, aby si body ve stejném shluku byly co nejpodobnější a body v různých shlucích co nejvíce odlišné.
 
 ---
@@ -153,7 +153,7 @@ kde:
 
 ## Nevýhody
 - Musí se **předem zvolit K** (počet shluků).
-- Citlivý na **počáteční pozici centroidů**.
+- Je citlivý na **počáteční pozici centroidů**.
 - Funguje dobře pouze pro **sférické (kulovité) shluky**.
 - Špatně pracuje s odlehlými body (outliery).
 
@@ -193,7 +193,7 @@ Tím umožňuje:
 ## Kdy použít PCA
 - Máš **hodně vstupních znaků (features)**.
 - Některé jsou **silně korelované**.
-- Chceš **zredukovat rozměr** dat bez ztráty většiny informace.
+- Chceš **zmenšit rozměrnost** dat bez ztráty většiny informace.
 
 ---
 
@@ -275,5 +275,6 @@ PCA najde **směr této přímky** (největší rozptyl) a **projekcí bodů** n
 | Hlavní princip | Najde směry s největším rozptylem |
 | Matematika | Vlastní vektory kovarianční matice |
 | Výsledek | Data v novém souřadném systému s menším počtem dimenzí |
+
 
 

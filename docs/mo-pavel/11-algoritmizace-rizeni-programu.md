@@ -1,15 +1,16 @@
-﻿# Otazka 11
+﻿# Otázka 11
 
-## Algoritmizace - rizeni programu
+## Algoritmizace - řízení programu
 
-- spravce: Pavel
-- stav: primarni stary podklad nebyl nalezen
+- správce: Pavel
+- stav: primární starý podklad nebyl nalezen
 
-## Souvisejici materialy
+## Související materiály
 
-- [Puvodni README starych skript](../archiv/skripta-kyb/README.md)
+- [Původní README starých skript](../archiv/skripta-kyb/README.md)
 
-## Poznamka
+## Poznámka
 
-V importovanych materialech neni samostatna kapitola venovana algoritmizaci. Tato stranka zustava jako pripraveny rozcestnik pro budouci obsah.
+V importovaných materiálech není samostatná kapitola věnovaná algoritmizaci. Tato stránka zůstává jako připravený rozcestník pro budoucí obsah.
+
 

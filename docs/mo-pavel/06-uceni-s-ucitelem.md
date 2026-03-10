@@ -87,11 +87,11 @@ Výstup je diskrétní třída.
 
 $$ y \in {1, 2, \ldots, K} $$
 
-Typy klasifikace a příkaldy:
+Typy klasifikace a příklady:
 
 - Binární (např. spam / nespam)
 
-- Multitřídní (např. rozpoznání číslice 0–9, rozpoznávání pes, kočka, pták, letadlo, ...)
+- Multitřídní (např. rozpoznání číslic 0-9 nebo rozpoznávání tříd jako pes, kočka, pták, letadlo, ...)
 
 Model rozhoduje, do které třídy vstup patří.
 
@@ -106,7 +106,7 @@ U klasifikace se snažíme najít rozhodovací hranici, která odděluje jednotl
 
 Problém je lineárně separabilní, pokud existuje lineární rozhodovací hranice, která dokonale oddělí všechny třídy bez chyby.
 
-V 2D prostoru je tato hranice přímka, ve 3D prostoru rovina, ve vyššícch dimenzích se nazývá obecně nadrovina.
+V 2D prostoru je tato hranice přímka, ve 3D prostoru rovina, ve vyšších dimenzích se obecně nazývá nadrovina.
 
 Rozhodovací hranici lze zapsat jako:
 
@@ -151,4 +151,5 @@ V takovém případě je nutné zvolit jiný přístup:
   V reálných datech často existuje šum nebo překryv tříd.  
   Model proto hledá rozhodovací hranici, která minimalizuje chybu, ale nemusí data oddělit dokonale.  
   Cílem je dobrá generalizace, nikoli perfektní oddělení trénovacích dat.
+
 

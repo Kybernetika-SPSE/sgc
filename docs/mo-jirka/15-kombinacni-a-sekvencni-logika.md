@@ -8,13 +8,13 @@
 
 ---
 
-Logické obvody, kde výstupní stavy závisí na současných i předešlých vstupních stavech. (= obvod s pamětí)
+Logické obvody, kde výstupní stavy závisí na současných i předchozích vstupních stavech. Jde tedy o obvod s pamětí.
 
-Obsahuje zpětnou vazbu = tzv. *vnitřní výstupy* jsou zapojeny na tzv. *vnitřní vstupy*, jejich stav určuje vnitřní stav sekvenčního obvodu
+Obsahují zpětnou vazbu, tedy tzv. *vnitřní výstupy* jsou zapojeny na tzv. *vnitřní vstupy*. Jejich stav pak určuje vnitřní stav sekvenčního obvodu.
 
 Dělí se na:
-- **Asynchronní** = jejich stav se mění s jakoukoliv změnou vstupních hodnot
-- **Synchronní** = stav se může měnit jen v okamžicích určených *hodinovým vstupem* (clock) (obvykle jeho náběžnou hranou)
+- **Asynchronní** = jejich stav se mění při jakékoli změně vstupních hodnot
+- **Synchronní** = stav se může měnit jen v okamžicích určených *hodinovým vstupem* (`clock`), obvykle jeho náběžnou hranou
 
 # Klopný obvod RS (Flip-flop)
 - asynchronní
@@ -34,8 +34,8 @@ S & R & Q \\
 \end{array}
 $$
 
-![](../assets/mo-jirka/15-sr-flip-flop-async-circuit.png)
-![](../assets/mo-jirka/15-sr-flip-flop-async-symbol.png)
+![](images/15-sr-flip-flop-async-circuit.png)
+![](images/15-sr-flip-flop-async-symbol.png)
 
 # Synchronní klopný obvod RS
 - synchronní
@@ -53,7 +53,7 @@ S & R & C & Q \\
 \end{array}
 $$
 
-![](../assets/mo-jirka/15-sr-flip-flop-sync.png)
+![](images/15-sr-flip-flop-sync.png)
 
 # Klopný obvod JK
 - synchronní
@@ -75,7 +75,7 @@ J & K & C & Q \\
 \end{array}
 $$
 
-![](../assets/mo-jirka/15-jk-flip-flop.png)
+![](images/15-jk-flip-flop.png)
 
 # Klopný obvod D
 - synchronní
@@ -94,12 +94,12 @@ D & C & Q \\
 \end{array}
 $$
 
-![](../assets/mo-jirka/15-d-flip-flop.png)
+![](images/15-d-flip-flop.png)
 
 # Klopný obvod T
 - asynchronní
 - jen vstup $T$
-- jednička na vstupu $T$, výstup se překlopí na negaci předchozího stavu (01,10)
+- jednička na vstupu $T$ překlopí výstup na negaci předchozího stavu (`0 -> 1`, `1 -> 0`)
 
 $$
 \begin{array}{c|c}
@@ -109,7 +109,7 @@ T & Q \\
 \end{array}
 $$
 
-![](../assets/mo-jirka/15-t-flip-flop.png)
+![](images/15-t-flip-flop.png)
 
 # Použití klopných obvodů:
 ## Čítače
@@ -118,32 +118,33 @@ viz. [Čítače, časovače a přerušení](18-citace-casovace-a-preruseni.md)
 ## Posuvné registry (PR)
 - kaskádně (za sebou) zapojené klopné obvody, počet klopných obvodů určuje počet bitů (stupňů)
 - např. do 8bitového PR se vejde 8 bitů, čili např. může převést 8 bitů sériových dat na paralelní data o šířce 8 bitů
-- vyžití především jako převodníky ze sériových na paralelní data, nebo z paralelních na sériová data
-- ŠVIHLA ASI OCENÍ - dají se použít pro získání více vstupů a výstupů mikrokontroleru (`PISO` pro vstupy, `SIPO` pro výstupy), mikrokontroler komunikuje s PR seriově pomocí pár pinů, PR pak může mít neomezeně vstupů/výstupů hodinový vstup $C$ (nebo CLK)
+- využití především jako převodníky ze sériových na paralelní data nebo z paralelních na sériová data
+- prakticky se dají použít i pro rozšíření počtu vstupů a výstupů mikrokontroleru (`PISO` pro vstupy, `SIPO` pro výstupy). Mikrokontroler komunikuje s registrem sériově pomocí několika pinů, zatímco registr může nabídnout více vstupů a výstupů.
 
-## sériová data
-= dva dráty, na jednom hodinové impulsy (CLK), na druhém data (jednička nebo nula), která se čtou jen když je na CLK jednička
-![](../assets/mo-jirka/15-serial-data.png)
+## Sériová data
+Data přenášená typicky dvěma vodiči: na jednom jsou hodinové impulsy (`CLK`), na druhém samotná data (jednička nebo nula), která se čtou ve správný okamžik podle hodin.
+![](images/15-serial-data.png)
 
-## paralelní data
-= např 8 drátů vedle sebe, na každým jednička nebo nula (ty tam prostě jsou, žádný CLK)
+## Paralelní data
+Například 8 vodičů vedle sebe, na každém je samostatně jednička nebo nula. Data jsou tedy dostupná současně, bez nutnosti sériového hodinového přenosu.
 
 ## Základní druhy:
 (kromě popsaných paralelních/sériových vstupů mají ještě řídící vstupy Reset, Enable atd. atd.)
 
 ### SISO (Serial In Serial Out)
 - má sériový vstup i výstup
-- slouží například ke zpoždění sériových dat (data na výstupu jsou zpožděná o $n$ impulsů CLK, kde $n$ je počet stupňů PR
+- slouží například ke zpoždění sériových dat; data na výstupu jsou zpožděná o $n$ impulsů `CLK`, kde $n$ je počet stupňů registru
 
 ### SIPO (Serial In Parallel Out)
 - má sériový vstup a paralelní výstup
 - přijatá data se naposouvají do paralelních výstupů (jako když nabíjím dva druhy střel (jedničky a nuly) do zásobníku)
-- pokud tam pošlu víc bitů sériových dat než má registr, tak přebývající bity vystrčí z registru ty první (nacpu do 8bitového PR 10 bitů → na paralelních výstupech bude jen bit 3 až 8, bity 1 a 2 “přetečouˮ (většina PR má pro tento účel sériový výstup))
+- pokud do registru pošlu víc bitů sériových dat, než kolik pojme, nové bity vytlačí ty nejstarší. Když tedy do 8bitového registru pošlu 10 bitů, na paralelních výstupech zůstanou jen poslední 8 bitů.
 
 ### PISO (Parallel In Serial Out)
 - má paralelní vstup a sériový výstup
 - má hodinový vstup $C$ (CLK)
-- na paralení vstup se nahrají paralelní data
+- na paralelní vstup se nahrají paralelní data
 - pomocí impulsů CLK se jednotlivé bity vyposouvají na sériový výstup
+
 
 

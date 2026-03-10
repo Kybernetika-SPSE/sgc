@@ -7,7 +7,7 @@
 - původní zdroj: [Základy umělé inteligence](../archiv/skripta-kyb/kybernetika/chapters/ZakladyUI.md)
 
 ---
-# Zákaldy umělé inteligence
+# Základy umělé inteligence
 
 ## Základní pojmy
 
@@ -23,7 +23,7 @@ Obecná definice **inteligence**:
 - Abstraktní myšlení: Pochopení složitých konceptů, symbolů a vztahů.
 ---
 
-### Umelá inteligence
+### Umělá inteligence
 je technologie (také název oboru), která se zabývá vytvářením strojů a systémů schopných vykonávat úkoly, které by normálně vyžadovaly lidskou inteligenci. To zahrnuje schopnosti jako například učení, uvažování, plánování, rozhodování, zpracování přirozeného jazyka nebo rozpoznávání obrazů.
 
 formální definice **umělé inteligence**:
@@ -146,6 +146,7 @@ Nevýhody a výzvy:
 ### Genetické algoritmy
 - Genetické algoritmy (GA) jsou optimalizační metody inspirované evoluční teorií a principy přirozeného výběru. Simulují evoluční procesy, jako jsou mutace, křížení a selekce, aby našly optimální řešení komplexních problémů.
 - Genetické algoritmy jsou silný nástroj pro hledání optimálních řešení a jsou hojně využívány v širokém spektru aplikací od inženýrství po vědecký výzkum.
+
 
 
 

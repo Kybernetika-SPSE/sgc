@@ -6,14 +6,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
     />
-    <title>Studentuv pruvodce Kybernetikou</title>
+    <title>Studentův průvodce kybernetikou</title>
     <meta
       name="description"
-      content="Studentsky Docsify rozcestnik pro materialy, maturitni otazky a aktualni informace z kybernetiky."
+      content="Studentský Docsify rozcestník pro materiály, maturitní otázky a aktuální informace z kybernetiky."
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
     />
     <style>
       :root {
@@ -56,11 +60,11 @@
     </style>
   </head>
   <body>
-    <div id="app">Nacitam studijni materialy...</div>
+    <div id="app">Načítám studijní materiály...</div>
 
     <script>
       window.$docsify = {
-        name: "Studentuv pruvodce Kybernetikou",
+        name: "Studentův průvodce kybernetikou",
         repo: "Kybernetika-SPSE/sgc",
         homepage: "README.md",
         loadSidebar: "_sidebar.md",
@@ -69,8 +73,8 @@
         maxLevel: 2,
         notFoundPage: "404.md",
         search: {
-          placeholder: "Hledat v materialech",
-          noData: "Nic jsem nenasel.",
+          placeholder: "Hledat v materiálech",
+          noData: "Nic jsem nenašel.",
           paths: "auto",
           depth: 3,
           maxAge: 600,
@@ -83,24 +87,56 @@
         }
       };
 
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+          fontCache: 'global'
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      };
+
       function docsifyWikiLinksPlugin(hook, vm) {
+        function splitTarget(target) {
+          var hashIndex = target.indexOf('#');
+          if (hashIndex === -1) {
+            return { path: target, hash: '' };
+          }
+
+          return {
+            path: target.slice(0, hashIndex),
+            hash: target.slice(hashIndex)
+          };
+        }
+
         function resolveWikiTarget(target, currentFile) {
-          var clean = target.trim();
+          var split = splitTarget(target.trim());
+          var clean = split.path;
+          var hash = split.hash;
 
           if (!clean) {
-            return clean;
+            return hash || clean;
           }
 
           if (/^(https?:)?\/\//.test(clean) || clean.charAt(0) === '#') {
-            return clean;
+            return clean + hash;
           }
 
-          if (!/\.(md|html)$/i.test(clean) && clean.charAt(clean.length - 1) !== '/') {
+          var hasExtension = /\.[a-z0-9]+$/i.test(clean);
+          var isMarkdown = /\.(md|html)$/i.test(clean);
+
+          if (!hasExtension && clean.charAt(clean.length - 1) !== '/') {
             clean += '.md';
+            hasExtension = true;
+            isMarkdown = true;
           }
 
           if (clean.charAt(0) === '/') {
-            return clean;
+            clean = clean.slice(1);
           }
 
           var base = '';
@@ -108,19 +144,21 @@
             base = currentFile.replace(/[^/]*$/, '');
           }
 
-          if (clean.indexOf('/') !== -1) {
-            return clean;
+          var resolvedPath = clean.indexOf('/') !== -1 ? clean : base + clean;
+
+          if (isMarkdown) {
+            return '#/' + resolvedPath + hash;
           }
 
-          return base + clean;
+          return resolvedPath + hash;
         }
 
         function convertWikiLinks(markdown, currentFile) {
-          var parts = markdown.split(/(```[\s\S]*?```)/g);
+          var parts = markdown.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
 
           return parts
             .map(function (part) {
-              if (part.slice(0, 3) === '```') {
+              if (part.slice(0, 3) === '```' || part.charAt(0) === '`') {
                 return part;
               }
 
@@ -139,11 +177,23 @@
         });
       }
 
-      window.$docsify.plugins = [].concat(docsifyWikiLinksPlugin, window.$docsify.plugins || []);
+      function docsifyMathJaxPlugin(hook) {
+        hook.doneEach(function () {
+          if (window.MathJax && window.MathJax.typesetPromise) {
+            window.MathJax.typesetPromise();
+          }
+        });
+      }
+
+      window.$docsify.plugins = [].concat(docsifyWikiLinksPlugin, docsifyMathJaxPlugin, window.$docsify.plugins || []);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   </body>
 </html>

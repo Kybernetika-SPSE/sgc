@@ -1,16 +1,17 @@
-﻿# Otazka 09
+﻿# Otázka 09
 
-## Typy neuronovych siti
+## Typy neuronových sítí
 
-- spravce: Pavel
-- stav: primarni stary podklad nebyl nalezen
+- správce: Pavel
+- stav: primární starý podklad nebyl nalezen
 
-## Souvisejici materialy
+## Související materiály
 
 - [Perceptron - teorie](../archiv/skripta-kyb/kybernetika/codes/klasifikace/perceptron_teorie.md)
-- [Zaklady umele inteligence](../archiv/skripta-kyb/kybernetika/chapters/ZakladyUI.md)
+- [Základy umělé inteligence](../archiv/skripta-kyb/kybernetika/chapters/ZakladyUI.md)
 
-## Poznamka
+## Poznámka
 
-V archivu neni samostatna kapitola pro prehled typu neuronovych siti. Tato stranka je pripravena pro budouci nove zpracovani.
+V archivu není samostatná kapitola pro přehled typů neuronových sítí. Tato stránka je připravená pro budoucí nové zpracování.
+
 

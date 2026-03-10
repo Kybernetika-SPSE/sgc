@@ -26,7 +26,7 @@ Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elekt
 ## A) Podle měřené veličiny
 ### 1. Teplotní senzory
 - **Termistory (NT C, PTC)** – odpor se mění s teplotou.
-![](../assets/mo-jirka/16-termistory.png)
+![](images/16-termistory.png)
 - **Infračervené teplotní senzory (IR t ermometry)** – měří teplotu bezkontaktně.
 
 ### 2. Tlakové senzory
@@ -35,9 +35,9 @@ Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elekt
 
 ### 3. Senzory vlhkosti
 - **Kapacitní senzory vlhkosti** – měří změnu kapacity způsobenou vlhkostí.
-![](../assets/mo-jirka/16-kapacitni-senzory-vlhkosti.png)
+![](images/16-kapacitni-senzory-vlhkosti.png)
 - **Odporové senzory vlhkosti** – využívají změnu odporu při různých úrovních vlhkosti.
-![](../assets/mo-jirka/16-odporove-senzory-vlhkosti.png)
+![](images/16-odporove-senzory-vlhkosti.png)
 
 ### 4. Senzory plynů a chemických látek
 - **Senzory CO$\mathbf{_{2}}$, CO, CH$\mathbf{_4}$, NH$\mathbf{_3}$** – elektrochemické nebo polovodičové senzory plynů.
@@ -52,21 +52,21 @@ Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elekt
 
 ### 6. Optické senzory
 - **Fotodiody a fototranzistory** – reagují na světlo.
-![](../assets/mo-jirka/16-fotodiody-a-fototranzistory.png)
+![](images/16-fotodiody-a-fototranzistory.png)
 - **Fotorezistory** - mění odpor v závislosti na intenzitě světla
-![](../assets/mo-jirka/16-fotorezistory.png)
+![](images/16-fotorezistory.png)
 - **Infračervené senzory (IR)** – detekce pohybu (PIR senzory), teploty nebo přenos dat.
 - **RGB senzory** – obsahuje fotodiody s různě barevnými filtry, které detekují vlnovou délku určité barvy
 
 ### 7. Senzory vzdálenosti
 - **Ultrazvukové senzory (HC-SR04, sonar)** – měří vzdálenost pomocí odrazu zvukových vln.
-![](../assets/mo-jirka/16-ultrazvukove-senzory.png)
+![](images/16-ultrazvukove-senzory.png)
 - **Laserové dálkoměry (lidar)** – měří vzdálenost přesněji než ultrazvukové senzory.
 - **Optické senzory vzdálenosti** – měří na základě změny intenzity světla.
 
 ### 8. Zvukové senzory
 - **Mikrofony (elektretové, MEMS, piezoelektrické)** – snímají zvukové vlny.
-![](../assets/mo-jirka/16-mikrofony.png)
+![](images/16-mikrofony.png)
 - **Piezoelektrické snímače vibrací** – měří vibrace mechanických systémů.
 
 ## B) Podle způsobu přenosu signálu
@@ -95,5 +95,6 @@ Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elekt
 - **Řízení systémů**: Data z senzorů jsou často použita k řízení systémů, jako je například automatizace výroby nebo řízení dopravy.
 - **Monitorování**: Senzory mohou být použity k monitorování stavů zařízení, budov nebo prostředí.
 - **Predikce**: Analýza dat ze senzorů může být použita k predikci budoucích stavů nebo událostí, například opotřebení zařízení nebo změn počasí.
+
 
 

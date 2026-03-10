@@ -1,17 +1,17 @@
-﻿# Aktualni informace o predmetu
+﻿# Aktuální informace o předmětu
 
-Tato sekce je vyhrazena pro vse, co se meni behem roku.
+Tato sekce je vyhrazená pro vše, co se mění během roku.
 
-## Sem patri
+## Sem patří
 
-- organizacni oznameni
-- terminy testu, konzultaci a odevzdani
-- odkazy na sdilene materialy
-- upresneni k vyuce a maturite
+- organizační oznámení
+- termíny testů, konzultací a odevzdání
+- odkazy na sdílené materiály
+- upřesnění k výuce a maturitě
 
 ## TODO
 
-- doplnit aktualni harmonogram
-- pridat dulezite odkazy
-- sepsat pravidla pro odevzdavani podkladu
+- doplnit aktuální harmonogram
+- přidat důležité odkazy
+- sepsat pravidla pro odevzdávání podkladů
 

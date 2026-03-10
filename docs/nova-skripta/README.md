@@ -1,15 +1,15 @@
-﻿# Nova skripta
+﻿# Nová skripta
 
-Tato sekce slouzi jako misto pro budouci skripta a rozsahlejsi studijni texty.
+Tato sekce slouží jako místo pro budoucí skripta a rozsáhlejší studijní texty.
 
-## Aktualni stav
+## Aktuální stav
 
-- obsah zatim neni doplnen
-- struktura sekce je pripravena
-- podrobnejsi osnovu lze doplnit podle predmetu nebo rocniku
-- starsi materialy jsou momentalne dostupne v [archivu](../archiv/)
+- obsah zatím není doplněn
+- struktura sekce je připravená
+- podrobnější osnovu lze doplnit podle předmětu nebo ročníku
+- starší materiály jsou momentálně dostupné v [archivu](../archiv/)
 
 ## TBD
 
-Tady bude prostor pro nova skripta, prehled kapitol a navazujici materialy.
+Tady bude prostor pro nová skripta, přehled kapitol a navazující materiály.
 

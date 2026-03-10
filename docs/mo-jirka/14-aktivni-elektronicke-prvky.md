@@ -15,7 +15,7 @@
 ---
 # Elektromechanické relé
 - elektromagnet (=cívka z drátu na kovovém jádře), který přitahuje tzv. kotvu a tím přepíná kontakty
-![](../assets/mo-jirka/14-elektromechanicke-rele.png)
+![](images/14-elektromechanicke-rele.png)
 
 ---
 # Polovodičové aktivní součástky
@@ -33,12 +33,12 @@
 - **Fotodioda** - mění vodivost v závislosti na osvětlení
 - **Varikap** - mění svojí kapacitu v závislosti na napětí - využívá se v ladicích obvodech (LC obvod)
 - atd.
-![](../assets/mo-jirka/14-dioda.png)
+![](images/14-dioda.png)
 
 ## Diak
 - třívrstvý - dva druhy - `PNP`/`NPN`
 - jako Zenerova dioda ale pro střídavý proud
-![](../assets/mo-jirka/14-diak.png)
+![](images/14-diak.png)
 
 ## Transistor
 - třívrstvá polovodičová součástka
@@ -53,8 +53,8 @@
 	- Gate má velkou vstupní impedanci
 	- řízen elektrickým polem (napětím) místo proudu
 	- více druhů - `JFET`, `MOSFET` atd. -liší se technologií výroby a některými vlastnostmi
-![](../assets/mo-jirka/14-tranzistor-bi-a-uni-polarni.png)
-![](../assets/mo-jirka/14-tranzistor-unipolarni.png)
+![](images/14-tranzistor-bi-a-uni-polarni.png)
+![](images/14-tranzistor-unipolarni.png)
 
 ## Tyristor
 - čtyřvrstvá polovodičová součástka - `PNPN`
@@ -63,7 +63,8 @@
 - signálem na řídící elektrodě sepne (proud prochází z anody do katody)
 - dokud prochází anodový proud, je tyristor sepnut (i bez napětí na Gate)
 - funguje binárně (sepnuto/rozepnuto), na rozdíl od tranzistoru (zesiluje analogový signál)
-![](../assets/mo-jirka/14-tyristor.png)
+![](images/14-tyristor.png)
+
 
 
 

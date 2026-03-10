@@ -1,27 +1,29 @@
 ﻿# MO Jirka
 
-Sekce pro Jirkovo zpracovani maturitnich otazek 13 az 24.
+Sekce pro Jirkovo zpracování maturitních otázek 13 až 24.
 
-## Otazky
+## Otázky
 
-- [Otazka 13 - Pasivni elektronicke prvky](13-pasivni-elektronicke-prvky.md)
-- [Otazka 14 - Aktivni elektronicke prvky](14-aktivni-elektronicke-prvky.md)
-- [Otazka 15 - Kombinacni a sekvencni logika](15-kombinacni-a-sekvencni-logika.md)
-- [Otazka 16 - Elektronicke senzory a aktuatory](16-elektronicke-senzory-a-aktuatory.md)
-- [Otazka 17 - Jednocipove mikropocitace a mikrokontrolery](17-jednocipove-mikropocitace-a-mikrokontrolery.md)
-- [Otazka 18 - Čítače, časovače a přerušení](18-citace-casovace-a-preruseni.md)
-- [Otazka 19 - A/D a D/A prevodniky](19-ad-da-prevodniky.md)
-- [Otazka 20 - Pulzne sirkova modulace PWM](20-pulzne-sirkova-modulace-pwm.md)
-- [Otazka 21 - Komunikacni protokol MQTT a jeho vyuziti](21-komunikacni-protokol-mqtt.md)
-- [Otazka 22 - Komunikacni sbernice I2C a SPI](22-komunikacni-sbernice-i2c-a-spi.md)
-- [Otazka 23 - Regulatory P, PI, PID](23-regulatory-p-pi-pid.md)
-- [Otazka 24 - Navrh a stabilita regulatoru](24-navrh-a-stabilita-regulatoru.md)
+- [[mo-jirka/13-pasivni-elektronicke-prvky|Otázka 13 - Pasivní elektronické prvky]]
+- [[mo-jirka/14-aktivni-elektronicke-prvky|Otázka 14 - Aktivní elektronické prvky]]
+- [[mo-jirka/15-kombinacni-a-sekvencni-logika|Otázka 15 - Kombinační a sekvenční logika]]
+- [[mo-jirka/16-elektronicke-senzory-a-aktuatory|Otázka 16 - Elektronické senzory a aktuátory]]
+- [[mo-jirka/17-jednocipove-mikropocitace-a-mikrokontrolery|Otázka 17 - Jednočipové mikropočítače a mikrokontrolery]]
+- [[mo-jirka/18-citace-casovace-a-preruseni|Otázka 18 - Čítače, časovače a přerušení]]
+- [[mo-jirka/19-ad-da-prevodniky|Otázka 19 - A/D a D/A převodníky]]
+- [[mo-jirka/20-pulzne-sirkova-modulace-pwm|Otázka 20 - Pulzně šířková modulace PWM]]
+- [[mo-jirka/21-komunikacni-protokol-mqtt|Otázka 21 - Komunikační protokol MQTT a jeho využití]]
+- [[mo-jirka/22-komunikacni-sbernice-i2c-a-spi|Otázka 22 - Komunikační sběrnice I2C a SPI]]
+- [[mo-jirka/23-regulatory-p-pi-pid|Otázka 23 - Regulátory P, PI, PID]]
+- [[mo-jirka/24-navrh-a-stabilita-regulatoru|Otázka 24 - Návrh a stabilita regulátorů]]
 
 ## Stav integrace
 
-- Otazky 13 az 18 a 20 az 22 jsou uz prevedene ze zdrojovych kapitol do primych stranek v novem systemu.
-- Otazky 23 a 24 jsou uz prevedene ze zdrojove kapitoly k regulatorum do primych stranek v novem systemu.
-- Otazka 19 zatim nema samostatnou novou kapitolu a zustava pripravena pro dalsi doplneni.
-- Vsechny odkazy smeruji do importovaneho archivu v `docs/archiv/skripta-kyb/`.
+- Otázky 13 až 18 a 20 až 22 jsou už převedené ze zdrojových kapitol do přímých stránek v novém systému.
+- Otázky 23 a 24 jsou už převedené ze zdrojové kapitoly k regulátorům do přímých stránek v novém systému.
+- Otázka 19 zatím nemá samostatnou novou kapitolu a zůstává připravená pro další doplnění.
+- Obrázky pro tuto sekci jsou v `docs/mo-jirka/images/` a ostatní soubory patří do `docs/mo-jirka/assets/`.
+- Všechny odkazy na původní zdroje směřují do importovaného archivu v `docs/archiv/skripta-kyb/`.
+
 
 

@@ -1,16 +1,17 @@
-﻿# Otazka 19
+﻿# Otázka 19
 
-## A/D a D/A prevodniky
+## A/D a D/A převodníky
 
-- spravce: Jirka
-- stav: castecne pokryto starymi skripty
+- správce: Jirka
+- stav: částečně pokryto starými skripty
 
-## Prevzate materialy
+## Převzaté materiály
 
 - [Osnova elektro kapitol](../archiv/skripta-kyb/elektro/kapitoly.md)
-- [Elektronika a elektricke pohony](../archiv/skripta-kyb/elektro/Skripta_Skala.md)
+- [Elektronika a elektrické pohony](../archiv/skripta-kyb/elektro/Skripta_Skala.md)
 
-## Poznamka
+## Poznámka
 
-Ve starych materialech je tema zmineno, ale ne jako samostatna plne rozepsana kapitola.
+Ve starých materiálech je téma zmíněno, ale ne jako samostatná plně rozepsaná kapitola.
+
 

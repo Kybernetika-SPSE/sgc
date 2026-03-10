@@ -17,8 +17,8 @@
 - funguje na principu rychlého spínání a vypínání signálu, přičemž se mění poměr mezi dobou zapnutí a vypnutí (střída)
 - umožňuje regulaci systémů řízených analogovým vstupem (DC motory, LED), k plynulosti je však potřeba dostatečně vysoká frekvence (např. u LEDky by mohlo být viditelné jak bliká)
 - (pro pochopení) pokud je střída 50 %, pak se námi spínaný systém chová jako kdyby byl spínán stejnosměrným napětím poloviční amplitudy (adekvátně pak pro střídu 33.3 % je DC napětí třetinové amplitudy, ...).
-![20. 50 duty cycle](../assets/mo-jirka/20-50-duty-cycle.png)
-![20. 20 duty cycle](../assets/mo-jirka/20-20-duty-cycle.png)
+![20. 50 duty cycle](images/20-50-duty-cycle.png)
+![20. 20 duty cycle](images/20-20-duty-cycle.png)
 
 ---
 
@@ -37,7 +37,7 @@
 
 ---
 
-# Příklad implementace pro pico
+# Příklad implementace pro Pico
 ```python
 # Nastavení PWM na ESP32 s MicroPythonem
 from machine import Pin, PWM
@@ -67,9 +67,10 @@ PWM signál na pinu 2 s 50% střídou a frekvencí 1000 Hz.
 - U kontinuálního serva (servo co se točí dokola) signál PWM znamená rychlost a směr otáčení.
 	- například jak rychle nebo pomalu se bude točit kolo u autíčka nebo ventilátor
 
-**Led dioda** - u led diody můžeme pomocí pwm řídit jas diody
+**LED dioda** - u LED diody můžeme pomocí PWM řídit jas diody
 
 > Ilustrační obrázek serva v původních podkladech chybí, proto je zde ponechaný jen textový popis.
+
 
 
 
