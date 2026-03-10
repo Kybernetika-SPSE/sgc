@@ -1,4 +1,4 @@
-# Aktualni informace o predmetu
+﻿# Aktualni informace o predmetu
 
 Tato sekce je vyhrazena pro vse, co se meni behem roku.
 
@@ -14,3 +14,4 @@ Tato sekce je vyhrazena pro vse, co se meni behem roku.
 - doplnit aktualni harmonogram
 - pridat dulezite odkazy
 - sepsat pravidla pro odevzdavani podkladu
+

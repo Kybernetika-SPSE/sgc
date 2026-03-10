@@ -1,0 +1,149 @@
+﻿# Otázka 15
+
+## Kombinační a sekvenční logika
+
+- správce: Jirka
+- stav: převedeno z archivu do nové stránky
+- původní zdroj: [15. Kombinační a sekvenční logika](../archiv/skripta-kyb/kybernetika/chapters/15.%20Kombinační%20a%20sekvenční%20logika.md)
+
+---
+
+Logické obvody, kde výstupní stavy závisí na současných i předešlých vstupních stavech. (= obvod s pamětí)
+
+Obsahuje zpětnou vazbu = tzv. *vnitřní výstupy* jsou zapojeny na tzv. *vnitřní vstupy*, jejich stav určuje vnitřní stav sekvenčního obvodu
+
+Dělí se na:
+- **Asynchronní** = jejich stav se mění s jakoukoliv změnou vstupních hodnot
+- **Synchronní** = stav se může měnit jen v okamžicích určených *hodinovým vstupem* (clock) (obvykle jeho náběžnou hranou)
+
+# Klopný obvod RS (Flip-flop)
+- asynchronní
+- má dva vstupy: $S$ = `set`, $R$ = `reset`
+- má dva výstupy (ostatní druhy taky): $Q$ = `výstup`, $\overline{Q}$ = `negace výstupu`
+- $1$ na vstupu $S$ nastaví výstup na 1
+- $1$ na vstupu $R$ nastaví výstup na 0
+- $1$ na vstupu $S$ a $R$ zároveň je **nepovolený stav**
+
+$$
+\begin{array}{cc|c}
+S & R & Q \\
+\hline 0 & 0 & Q \\
+0 & 1 & 0 \\
+1 & 0 & 1 \\
+1 & 1 & -
+\end{array}
+$$
+
+![](../assets/mo-jirka/15-sr-flip-flop-async-circuit.png)
+![](../assets/mo-jirka/15-sr-flip-flop-async-symbol.png)
+
+# Synchronní klopný obvod RS
+- synchronní
+- viz výše
+- má hodinový vstup $C$ ($EN$)
+- když chci změnit stav změnou vstupů, musím dát zároveň $1$ i na vstup $C$, jinak nereaguje na vstupy
+
+$$
+\begin{array}{ccc|c}
+S & R & C & Q \\
+\hline 0 & 0 & \uparrow & Q \\
+0 & 1 & \uparrow & 0 \\
+1 & 0 & \uparrow & 1 \\
+1 & 1 & \uparrow & -
+\end{array}
+$$
+
+![](../assets/mo-jirka/15-sr-flip-flop-sync.png)
+
+# Klopný obvod JK
+- synchronní
+- vstupy $J$, $K$
+- hodinový vstup $C$ ($CLK$)
+- když chci změnit stav změnou vstupů, musím dát zároveň $1$ i na vstup $C$, jinak nereaguje na vstupy
+- když $J=K=0$ , výstup zůstává stejný
+- když $J=K=1$, výstup se neguje
+- $K=1$ a $J=0$, výstup se nastaví na $0$
+- $K=0$ a $J=1$, výstup se nastaví na $1$
+
+$$
+\begin{array}{ccc|c}
+J & K & C & Q \\
+\hline 0 & 0 & \uparrow & Q \\
+0 & 1 & \uparrow & 0 \\
+1 & 0 & \uparrow & 1 \\
+1 & 1 & \uparrow & \overline{Q}
+\end{array}
+$$
+
+![](../assets/mo-jirka/15-jk-flip-flop.png)
+
+# Klopný obvod D
+- synchronní
+- vstup $D$
+- hodinový vstup $C$
+- když chci změnit stav změnou vstupů, musím dát zároveň $1$ i na vstup $C$, jinak nereaguje na vstup
+- když $D=0$, výstup se nastaví na $0$
+- když $D=1$, výstup se nastaví na $1$
+- v podstatě jeden bit RAM
+
+$$
+\begin{array}{cc|c}
+D & C & Q \\
+\hline 0 & \uparrow & 0 \\
+1 & \uparrow & 1
+\end{array}
+$$
+
+![](../assets/mo-jirka/15-d-flip-flop.png)
+
+# Klopný obvod T
+- asynchronní
+- jen vstup $T$
+- jednička na vstupu $T$, výstup se překlopí na negaci předchozího stavu (01,10)
+
+$$
+\begin{array}{c|c}
+T & Q \\
+\hline 0  & Q \\
+1  & \overline{Q}
+\end{array}
+$$
+
+![](../assets/mo-jirka/15-t-flip-flop.png)
+
+# Použití klopných obvodů:
+## Čítače
+viz. [Čítače, časovače a přerušení](18-citace-casovace-a-preruseni.md)
+
+## Posuvné registry (PR)
+- kaskádně (za sebou) zapojené klopné obvody, počet klopných obvodů určuje počet bitů (stupňů)
+- např. do 8bitového PR se vejde 8 bitů, čili např. může převést 8 bitů sériových dat na paralelní data o šířce 8 bitů
+- vyžití především jako převodníky ze sériových na paralelní data, nebo z paralelních na sériová data
+- ŠVIHLA ASI OCENÍ - dají se použít pro získání více vstupů a výstupů mikrokontroleru (`PISO` pro vstupy, `SIPO` pro výstupy), mikrokontroler komunikuje s PR seriově pomocí pár pinů, PR pak může mít neomezeně vstupů/výstupů hodinový vstup $C$ (nebo CLK)
+
+## sériová data
+= dva dráty, na jednom hodinové impulsy (CLK), na druhém data (jednička nebo nula), která se čtou jen když je na CLK jednička
+![](../assets/mo-jirka/15-serial-data.png)
+
+## paralelní data
+= např 8 drátů vedle sebe, na každým jednička nebo nula (ty tam prostě jsou, žádný CLK)
+
+## Základní druhy:
+(kromě popsaných paralelních/sériových vstupů mají ještě řídící vstupy Reset, Enable atd. atd.)
+
+### SISO (Serial In Serial Out)
+- má sériový vstup i výstup
+- slouží například ke zpoždění sériových dat (data na výstupu jsou zpožděná o $n$ impulsů CLK, kde $n$ je počet stupňů PR
+
+### SIPO (Serial In Parallel Out)
+- má sériový vstup a paralelní výstup
+- přijatá data se naposouvají do paralelních výstupů (jako když nabíjím dva druhy střel (jedničky a nuly) do zásobníku)
+- pokud tam pošlu víc bitů sériových dat než má registr, tak přebývající bity vystrčí z registru ty první (nacpu do 8bitového PR 10 bitů → na paralelních výstupech bude jen bit 3 až 8, bity 1 a 2 “přetečouˮ (většina PR má pro tento účel sériový výstup))
+
+### PISO (Parallel In Serial Out)
+- má paralelní vstup a sériový výstup
+- má hodinový vstup $C$ (CLK)
+- na paralení vstup se nahrají paralelní data
+- pomocí impulsů CLK se jednotlivé bity vyposouvají na sériový výstup
+
+

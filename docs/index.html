@@ -82,6 +82,64 @@
           linkify: true
         }
       };
+
+      function docsifyWikiLinksPlugin(hook, vm) {
+        function resolveWikiTarget(target, currentFile) {
+          var clean = target.trim();
+
+          if (!clean) {
+            return clean;
+          }
+
+          if (/^(https?:)?\/\//.test(clean) || clean.charAt(0) === '#') {
+            return clean;
+          }
+
+          if (!/\.(md|html)$/i.test(clean) && clean.charAt(clean.length - 1) !== '/') {
+            clean += '.md';
+          }
+
+          if (clean.charAt(0) === '/') {
+            return clean;
+          }
+
+          var base = '';
+          if (currentFile && currentFile.indexOf('/') !== -1) {
+            base = currentFile.replace(/[^/]*$/, '');
+          }
+
+          if (clean.indexOf('/') !== -1) {
+            return clean;
+          }
+
+          return base + clean;
+        }
+
+        function convertWikiLinks(markdown, currentFile) {
+          var parts = markdown.split(/(```[\s\S]*?```)/g);
+
+          return parts
+            .map(function (part) {
+              if (part.slice(0, 3) === '```') {
+                return part;
+              }
+
+              return part.replace(/\[\[([^\]|]+?)(?:\|([^\]]+))?\]\]/g, function (_, target, label) {
+                var resolved = resolveWikiTarget(target, currentFile);
+                var text = (label || target).trim();
+                return '[' + text + '](' + resolved + ')';
+              });
+            })
+            .join('');
+        }
+
+        hook.beforeEach(function (content) {
+          var currentFile = vm.route.file || 'README.md';
+          return convertWikiLinks(content, currentFile);
+        });
+      }
+
+      window.$docsify.plugins = [].concat(docsifyWikiLinksPlugin, window.$docsify.plugins || []);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
