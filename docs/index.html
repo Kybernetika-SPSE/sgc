@@ -27,6 +27,7 @@
             href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
         />
         <style>
+            /*Default color theme */
             :root {
                 --theme-color: #0f766e;
                 --theme-color-hover: #115e59;
@@ -65,27 +66,40 @@
                 --heading-font-family: "Trebuchet MS", "Segoe UI", sans-serif;
             }
 
+            /*Dark theme*/
             html[data-theme="dark"] {
-                --theme-color: #5eead4;
-                --theme-color-hover: #99f6e4;
-                --base-background-color: #0f1418;
-                --base-color: #e5edf3;
+                --theme-color: #0fb6d6;
+                --theme-color-secondary: #053943;
+                --theme-color-hover: #0a748a;
+                --base-background-color: #02171b;
+                --base-color: #ffffff;
                 --sidebar-background: linear-gradient(
                     180deg,
-                    #0f1f24 0%,
-                    #11161b 100%
+                    #071c1f 0%,
+                    #02171b 100%
                 );
-                --sidebar-name-color: #f3f4f6;
-                --sidebar-nav-link-color: #cbd5e1;
-                --sidebar-nav-link-color--active: #5eead4;
+                --sidebar-name-color: var(--base-color);
+                --sidebar-nav-link-color: var(--base-color);
+                --sidebar-nav-link-color--active: var(--base-color);
                 --sidebar-nav-link-background-color--active: rgba(
                     94,
                     234,
                     212,
                     0.12
                 );
-                --heading-color: #f8fafc;
-                --link-color: #5eead4;
+
+                --heading-color: var(--theme-color);
+                --link-color: var(--theme-color);
+                --link-color-hover: var(--theme-color-hover);
+                --bold-text-color: #7aa2f7;
+                --italic-text-color: #7979f7;
+
+                --blockquote-stripe-color: var(--theme-color);
+                --blockquote-background-color: var(--theme-color-secondary);
+
+                --code-text-color: var(--base-color);
+                --code-background-color: var(--theme-color-secondary);
+
                 --cover-background-image:
                     radial-gradient(
                         circle at top left,
@@ -105,12 +119,36 @@
             }
 
             .markdown-section strong {
-                color: #102a43;
+                color: var(--bold-text-color);
+            }
+
+            .markdown-section em {
+                color: var(--italic-text-color);
+            }
+
+            .markdown-section code {
+                /*Block code*/
+                color: var(--code-text-color);
+                background-color: var(--code-background-color);
+
+                /*Inline code*/
+                &:not([class*="lang-"]):not([class*="language-"]) {
+                    color: var(--code-text-color);
+                    background: var(--code-background-color);
+                }
+            }
+
+            .markdown-section a {
+                color: var(--link-color);
+            }
+
+            .markdown-section a:hover {
+                color: var(--link-color-hover);
             }
 
             .markdown-section blockquote {
-                border-left: 4px solid #0f766e;
-                background: rgba(255, 255, 255, 0.65);
+                border-left: 4px solid var(--blockquote-stripe-color);
+                background: var(--blockquote-background-color);
             }
 
             .sidebar-nav > ul > li > a {
