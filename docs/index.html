@@ -178,6 +178,7 @@
         subMaxLevel: 2,
         maxLevel: 2,
         notFoundPage: "404.md",
+        relativePath: true,
         search: {
           placeholder: "Hledat v materiálech",
           noData: "Nic jsem nenašel.",
@@ -206,83 +207,6 @@
         }
       };
 
-      function docsifyWikiLinksPlugin(hook, vm) {
-        function splitTarget(target) {
-          var hashIndex = target.indexOf('#');
-          if (hashIndex === -1) {
-            return { path: target, hash: '' };
-          }
-
-          return {
-            path: target.slice(0, hashIndex),
-            hash: target.slice(hashIndex)
-          };
-        }
-
-        function resolveWikiTarget(target, currentFile) {
-          var split = splitTarget(target.trim());
-          var clean = split.path;
-          var hash = split.hash;
-
-          if (!clean) {
-            return hash || clean;
-          }
-
-          if (/^(https?:)?\/\//.test(clean) || clean.charAt(0) === '#') {
-            return clean + hash;
-          }
-
-          var hasExtension = /\.[a-z0-9]+$/i.test(clean);
-          var isMarkdown = /\.(md|html)$/i.test(clean);
-
-          if (!hasExtension && clean.charAt(clean.length - 1) !== '/') {
-            clean += '.md';
-            hasExtension = true;
-            isMarkdown = true;
-          }
-
-          if (clean.charAt(0) === '/') {
-            clean = clean.slice(1);
-          }
-
-          var base = '';
-          if (currentFile && currentFile.indexOf('/') !== -1) {
-            base = currentFile.replace(/[^/]*$/, '');
-          }
-
-          var resolvedPath = clean.indexOf('/') !== -1 ? clean : base + clean;
-
-          if (isMarkdown) {
-            return '#/' + resolvedPath + hash;
-          }
-
-          return resolvedPath + hash;
-        }
-
-        function convertWikiLinks(markdown, currentFile) {
-          var parts = markdown.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
-
-          return parts
-            .map(function (part) {
-              if (part.slice(0, 3) === '```' || part.charAt(0) === '`') {
-                return part;
-              }
-
-              return part.replace(/\[\[([^\]|]+?)(?:\|([^\]]+))?\]\]/g, function (_, target, label) {
-                var resolved = resolveWikiTarget(target, currentFile);
-                var text = (label || target).trim();
-                return '[' + text + '](' + resolved + ')';
-              });
-            })
-            .join('');
-        }
-
-        hook.beforeEach(function (content) {
-          var currentFile = vm.route.file || 'README.md';
-          return convertWikiLinks(content, currentFile);
-        });
-      }
-
       function docsifyMathJaxPlugin(hook) {
         hook.doneEach(function () {
           if (window.MathJax && window.MathJax.typesetPromise) {
@@ -291,7 +215,7 @@
         });
       }
 
-      window.$docsify.plugins = [].concat(docsifyWikiLinksPlugin, docsifyMathJaxPlugin, window.$docsify.plugins || []);
+      window.$docsify.plugins = [].concat(docsifyMathJaxPlugin, window.$docsify.plugins || []);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
@@ -302,7 +226,10 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-latex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   </body>

@@ -4,7 +4,7 @@
 
 - správce: Jirka
 - stav: převedeno z archivu do nové stránky
-- původní zdroj: [PID regulator](../archiv/skripta-kyb/kybernetika/chapters/PID_regulator.md)
+- původní zdroj: [PID regulator](/archiv/skripta-kyb/kybernetika/chapters/PID_regulator.md)
 
 ---
 

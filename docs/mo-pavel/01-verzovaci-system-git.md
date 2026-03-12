@@ -4,7 +4,7 @@
 
 - správce: Pavel
 - stav: převedeno z archivu do nové stránky
-- původní zdroj: [Git](../archiv/skripta-kyb/kybernetika/chapters/git.md)
+- původní zdroj: [Git](/archiv/skripta-kyb/kybernetika/chapters/git.md)
 
 ---
 # GIT

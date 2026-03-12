@@ -1,37 +1,36 @@
 ﻿# Studentův průvodce kybernetikou
 
-> Centrální rozcestník pro materiály, maturitní přípravu a aktuální informace k předmětu.
+> Zdroj všeho vědění pro aktuálně vyučovanou kybernetiku na VOŠ a SPŠE.
 
-Tento web běží na Docsify a je připravený pro publikaci přes GitHub Pages.
 
 ## Co tu najdete
 
-- [Aktuální informace o předmětu](aktualni-informace/) pro oznámení, organizaci a důležité termíny.
-- [Seznam maturitních otázek](seznam-maturitnich-otazek/) jako přehled témat k doplnění.
-- [MO Jirka](mo-jirka/) pro Jirkovy zpracované maturitní otázky a poznámky.
-- [MO Pavel](mo-pavel/) pro Pavlovy materiály a vlastní zpracování.
-- [Nová skripta](nova-skripta/) pro budoucí studijní texty a rozsáhlejší materiály.
-- [Archiv starých materiálů](archiv/) s importovanými podklady ze starého repozitáře `skripta-kyb`.
-
-## Rozdělení otázek
-
-- Otázky 1 až 12 patří Pavlovi.
-- Otázky 13 až 24 patří Jirkovi.
-- Každá otázka má vlastní rozcestníkovou stránku s odkazy na převzaté zdroje.
+- [Info](/informace/) - termíny, organizace, jak na Markdown, atd.
+- [Seznam maturitních otázek](/seznam-maturitnich-otazek/) - z toho vás budeme zkoušet ať chcete nebo ne :)
+- [MO Pavel](/mo-pavel/) - materiály pro KYB orientovanou část otázek
+- [MO Jirka](/mo-jirka/) - materiály pro ELE orientovanou část otázek
+- [Nová skripta](/nova-skripta/) pro budoucí studijní texty a rozsáhlejší materiály.
+- [Archiv starých materiálů](/archiv/) s importovanými podklady ze starého repozitáře `skripta-kyb`.
 
 ## Jak web používat
 
 1. Vlevo si vyber sekci, která tě zajímá.
-2. Postupně doplňuj jednotlivé stránky a odkazy podle potřeby.
+2. Postupně procházej jednotlivé stránky a studuj materiály.
 3. Pro rychlé hledání použij vyhledávání v horní části sidebaru.
+4. Pro noční studium můžeš přepnout na tmavý režim v nastavení (ikona vpravo dole).
 
-## Wikilinky
+## Jak přispět
+- Pokud máš nějaké materiály, které bys chtěl přidat, nebo chceš pomoci s úpravami, vytvoř si fork repozitáře a pošli pull request.
 
-- Docsify nemá wikilinky nativně, ale web je teď umí přes vlastní preprocesor v `docs/index.html`.
-- Uvnitř `mo-jirka/README.md` lze psát například `[[13-pasivni-elektronicke-prvky|Otázka 13]]`.
-- Z jiné sekce lze odkazovat například `[[mo-pavel/01-verzovaci-system-git|Git]]`.
-- Pro PDF, ZIP nebo jiné soubory lze používat třeba `[[mo-jirka/assets/soubor.pdf|Soubor PDF]]`.
-- Wikilinky se automaticky převádějí na Docsify hash odkazy pro markdown stránky a na běžné odkazy pro ostatní soubory.
+## Odkazy v Markdown
+
+- Docsify používá standardní Markdown odkazy `[text](cesta)`.
+- **Relativní cesta** (`file.md`, `assets/note.pdf`) - relativní k aktuálnímu souboru
+- **Absolutní cesta** (`/mo-jirka/file.md`, `/assets/note.pdf`) - relativní ke kořenu `docs/`
+- Příklady:
+  - Uvnitř `mo-jirka/README.md` lze psát `[Otázka 13](13-pasivni-elektronicke-prvky.md)`
+  - Z jiné sekce odkazovat `[Git](mo-pavel/01-verzovaci-system-git.md)`
+  - Pro PDF soubor `[Návod](assets/soubor.pdf)` nebo absolutně `[Návod](/mo-jirka/assets/soubor.pdf)`
 
 ## Stav projektu
 

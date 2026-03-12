@@ -5,8 +5,8 @@
 - správce: Pavel
 - stav: převedeno z archivu do nové stránky
 - původní zdroje:
-  - [Základní principy](../archiv/skripta-kyb/kybernetika/chapters/zakladni_principy.md)
-  - [Systémy a terminologie](../archiv/skripta-kyb/kybernetika/chapters/systems_CZ.md)
+  - [Základní principy](/archiv/skripta-kyb/kybernetika/chapters/zakladni_principy.md)
+  - [Systémy a terminologie](/archiv/skripta-kyb/kybernetika/chapters/systems_CZ.md)
 
 ---
 # Základní principy kybernetiky

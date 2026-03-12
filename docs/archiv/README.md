@@ -1,6 +1,6 @@
-﻿# Archiv starych materialu
+﻿# Archiv starých materialů
 
-Tato sekce obsahuje prevzate materialy ze stareho repozitare `skripta-kyb`, aby byly dostupne i v novem Docsify webu.
+Tato sekce obsahuje prevzaté materialy ze stareho repozitare `skripta-kyb`, aby byly dostupne i v novem Docsify webu.
 
 ## Co je uvnitr
 
