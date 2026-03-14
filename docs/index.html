@@ -1,236 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
-    />
-    <title>Studentův průvodce kybernetikou</title>
-    <meta
-      name="description"
-      content="Studentský Docsify rozcestník pro materiály, maturitní otázky a aktuální informace z kybernetiky."
-    />
-    <link
-      id="theme-light"
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
-    />
-    <link
-      id="theme-dark"
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
-      disabled
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
-    />
-    <style>
-      :root {
-        --theme-color: #0f766e;
-        --theme-color-hover: #115e59;
-        --base-background-color: #f6f5ef;
-        --base-color: #1b1d1f;
-        --sidebar-background: linear-gradient(180deg, #e7f3ef 0%, #f7f5ef 100%);
-        --sidebar-name-color: #0f172a;
-        --sidebar-nav-link-color: #25323d;
-        --sidebar-nav-link-color--active: #0f766e;
-        --sidebar-nav-link-background-color--active: rgba(15, 118, 110, 0.1);
-        --heading-color: #102a43;
-        --link-color: #0f766e;
-        --content-max-width: 58rem;
-        --cover-background-image: radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 34%),
-          radial-gradient(circle at right, rgba(180, 83, 9, 0.12), transparent 28%),
-          linear-gradient(135deg, #f8f6ef 0%, #eef6f1 100%);
-        --font-family: "Segoe UI", "Trebuchet MS", sans-serif;
-        --heading-font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-      }
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+        />
+        <title>Studentův průvodce kybernetikou</title>
+        <meta
+            name="description"
+            content="Studentský Docsify rozcestník pro materiály, maturitní otázky a aktuální informace z kybernetiky."
+        />
+        <link
+            id="theme-light"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+        />
+        <link
+            id="theme-dark"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+            disabled
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+        />
+        <style>
+            /*Default color theme */
+            :root {
+                --theme-color: #0f766e;
+                --theme-color-secondary: #ccfffb;
+                --theme-color-hover: #115e59;
+                --base-background-color: #f6f5ef;
+                --base-color: #1b1d1f;
+                --sidebar-background: linear-gradient(
+                    180deg,
+                    #e7f3ef 0%,
+                    #f7f5ef 100%
+                );
+                --sidebar-name-color: #0f172a;
+                --sidebar-nav-link-color: #25323d;
+                --sidebar-nav-link-color--active: #0f766e;
+                --sidebar-nav-link-background-color--active: rgba(
+                    15,
+                    118,
+                    110,
+                    0.1
+                );
+                --heading-color: #102a43;
+                --link-color: #0f766e;
+                --link-color-hover: var(--theme-color-hover);
+                --bold-text-color: #7aa2f7;
+                --italic-text-color: #7979f7;
 
-      html[data-theme="dark"] {
-        --theme-color: #5eead4;
-        --theme-color-hover: #99f6e4;
-        --base-background-color: #0f1418;
-        --base-color: #e5edf3;
-        --sidebar-background: linear-gradient(180deg, #0f1f24 0%, #11161b 100%);
-        --sidebar-name-color: #f3f4f6;
-        --sidebar-nav-link-color: #cbd5e1;
-        --sidebar-nav-link-color--active: #5eead4;
-        --sidebar-nav-link-background-color--active: rgba(94, 234, 212, 0.12);
-        --heading-color: #f8fafc;
-        --link-color: #5eead4;
-        --cover-background-image: radial-gradient(circle at top left, rgba(45, 212, 191, 0.16), transparent 34%),
-          radial-gradient(circle at right, rgba(251, 191, 36, 0.12), transparent 28%),
-          linear-gradient(135deg, #10161b 0%, #132026 100%);
-      }
+                --blockquote-stripe-color: var(--theme-color);
+                --blockquote-background-color: #ffffff;
 
-      .app-name-link img {
-        display: none;
-      }
+                --code-text-color: var(--base-color);
+                --code-background-color: #ffffff;
+                --content-max-width: 58rem;
+                --cover-background-image:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(15, 118, 110, 0.14),
+                        transparent 34%
+                    ),
+                    radial-gradient(
+                        circle at right,
+                        rgba(180, 83, 9, 0.12),
+                        transparent 28%
+                    ),
+                    linear-gradient(135deg, #f8f6ef 0%, #eef6f1 100%);
+                --font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+                --heading-font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            }
 
-      .markdown-section strong {
-        color: #102a43;
-      }
+            /*Dark theme*/
+            html[data-theme="dark"] {
+                --theme-color: #0fb6d6;
+                --theme-color-secondary: #053943;
+                --theme-color-hover: #0a748a;
+                --base-background-color: #02171b;
+                --base-color: #ffffff;
+                --sidebar-background: linear-gradient(
+                    180deg,
+                    #071c1f 0%,
+                    #02171b 100%
+                );
+                --sidebar-name-color: var(--base-color);
+                --sidebar-nav-link-color: var(--base-color);
+                --sidebar-nav-link-color--active: var(--base-color);
+                --sidebar-nav-link-background-color--active: rgba(
+                    94,
+                    234,
+                    212,
+                    0.12
+                );
 
-      .markdown-section blockquote {
-        border-left: 4px solid #0f766e;
-        background: rgba(255, 255, 255, 0.65);
-      }
+                --heading-color: var(--theme-color);
+                --link-color: var(--theme-color);
+                --link-color-hover: var(--theme-color-hover);
+                --bold-text-color: var(--theme-color);
+                --italic-text-color: var(--theme-color);
 
-      .sidebar-nav > ul > li > a {
-        font-weight: 600;
-        letter-spacing: 0.01em;
-      }
+                --blockquote-stripe-color: var(--theme-color);
+                --blockquote-background-color: var(--theme-color-secondary);
 
-      #theme-toggle {
-        position: fixed;
-        bottom: 1rem;
-        right: 1rem;
-        z-index: 20;
-        border: 1px solid rgba(15, 118, 110, 0.25);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.82);
-        color: #102a43;
-        padding: 0.45rem 0.8rem;
-        font: 600 0.85rem/1 "Segoe UI", "Trebuchet MS", sans-serif;
-        backdrop-filter: blur(10px);
-        cursor: pointer;
-      }
+                --code-text-color: var(--base-color);
+                --code-background-color: var(--theme-color-secondary);
 
-      html[data-theme="dark"] #theme-toggle {
-        background: rgba(15, 23, 32, 0.88);
-        color: #e5edf3;
-        border-color: rgba(94, 234, 212, 0.25);
-      }
+                --cover-background-image:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(45, 212, 191, 0.16),
+                        transparent 34%
+                    ),
+                    radial-gradient(
+                        circle at right,
+                        rgba(251, 191, 36, 0.12),
+                        transparent 28%
+                    ),
+                    linear-gradient(135deg, #10161b 0%, #132026 100%);
+            }
 
-      @media (max-width: 768px) {
-        #theme-toggle {
-          bottom: 0.75rem;
-          right: 0.75rem;
-          padding: 0.4rem 0.7rem;
-          font-size: 0.8rem;
-        }
-      }
+            .app-name-link img {
+                display: none;
+            }
 
-      /* Keep only the Docsify-active sidebar branch expanded. */
-      .sidebar-nav li > ul {
-        display: none;
-      }
+            .markdown-section strong {
+                color: var(--bold-text-color);
+            }
 
-      .sidebar-nav li.active > ul,
-      .sidebar-nav li:has(> ul li.active) > ul {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app">Načítám studijní materiály...</div>
-    <button id="theme-toggle" type="button" aria-label="Přepnout barevné schéma">Tmavý režim</button>
+            .markdown-section em {
+                color: var(--italic-text-color);
+            }
 
-    <script>
-      function applyTheme(theme) {
-        var root = document.documentElement;
-        var lightTheme = document.getElementById('theme-light');
-        var darkTheme = document.getElementById('theme-dark');
-        var toggle = document.getElementById('theme-toggle');
-        var isDark = theme === 'dark';
+            .markdown-section code {
+                /*Block code*/
+                color: var(--code-text-color);
+                background-color: var(--code-background-color);
 
-        root.setAttribute('data-theme', theme);
-        lightTheme.disabled = isDark;
-        darkTheme.disabled = !isDark;
+                /*Inline code*/
+                &:not([class*="lang-"]):not([class*="language-"]) {
+                    color: var(--code-text-color);
+                    background: var(--code-background-color);
+                }
+            }
 
-        if (toggle) {
-          toggle.textContent = isDark ? 'Světlý režim' : 'Tmavý režim';
-          toggle.setAttribute('aria-pressed', String(isDark));
-        }
-      }
+            .markdown-section a {
+                color: var(--link-color);
+            }
 
-      function getPreferredTheme() {
-        var savedTheme = localStorage.getItem('sgc-theme');
-        if (savedTheme === 'light' || savedTheme === 'dark') {
-          return savedTheme;
-        }
+            .markdown-section a:hover {
+                color: var(--link-color-hover);
+            }
 
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
+            .markdown-section blockquote {
+                border-left: 4px solid var(--blockquote-stripe-color);
+                background: var(--blockquote-background-color);
+            }
 
-      applyTheme(getPreferredTheme());
+            .sidebar-nav > ul > li > a {
+                font-weight: 600;
+                letter-spacing: 0.01em;
+            }
 
-      document.addEventListener('DOMContentLoaded', function () {
-        var toggle = document.getElementById('theme-toggle');
-        if (!toggle) {
-          return;
-        }
+            #theme-toggle {
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                z-index: 20;
+                border: 1px solid rgba(15, 118, 110, 0.25);
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.82);
+                color: #102a43;
+                padding: 0.45rem 0.8rem;
+                font:
+                    600 0.85rem/1 "Segoe UI",
+                    "Trebuchet MS",
+                    sans-serif;
+                backdrop-filter: blur(10px);
+                cursor: pointer;
+            }
 
-        toggle.addEventListener('click', function () {
-          var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          localStorage.setItem('sgc-theme', nextTheme);
-          applyTheme(nextTheme);
-        });
-      });
+            html[data-theme="dark"] #theme-toggle {
+                background: rgba(15, 23, 32, 0.88);
+                color: #e5edf3;
+                border-color: rgba(94, 234, 212, 0.25);
+            }
 
-      window.$docsify = {
-        name: "Studentův průvodce kybernetikou",
-        repo: "Kybernetika-SPSE/sgc",
-        homepage: "README.md",
-        loadSidebar: "_sidebar.md",
-        auto2top: true,
-        subMaxLevel: 2,
-        maxLevel: 2,
-        notFoundPage: "404.md",
-        relativePath: true,
-        search: {
-          placeholder: "Hledat v materiálech",
-          noData: "Nic jsem nenašel.",
-          paths: "auto",
-          depth: 3,
-          maxAge: 600,
-          namespace: "sgc-docs"
-        },
-        markdown: {
-          smartypants: true,
-          externalLinkTarget: "_blank",
-          linkify: true
-        }
-      };
+            @media (max-width: 768px) {
+                #theme-toggle {
+                    bottom: 0.75rem;
+                    right: 0.75rem;
+                    padding: 0.4rem 0.7rem;
+                    font-size: 0.8rem;
+                }
+            }
 
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        },
-        svg: {
-          fontCache: 'global'
-        },
-        options: {
-          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      };
+            /* Keep only the Docsify-active sidebar branch expanded. */
+            .sidebar-nav li > ul {
+                display: none;
+            }
 
-      function docsifyMathJaxPlugin(hook) {
-        hook.doneEach(function () {
-          if (window.MathJax && window.MathJax.typesetPromise) {
-            window.MathJax.typesetPromise();
-          }
-        });
-      }
+            .sidebar-nav li.active > ul,
+            .sidebar-nav li:has(> ul li.active) > ul {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">Načítám studijní materiály...</div>
+        <button
+            id="theme-toggle"
+            type="button"
+            aria-label="Přepnout barevné schéma"
+        >
+            Tmavý režim
+        </button>
 
-      window.$docsify.plugins = [].concat(docsifyMathJaxPlugin, window.$docsify.plugins || []);
-    </script>
+        <script>
+            function applyTheme(theme) {
+                var root = document.documentElement;
+                var lightTheme = document.getElementById("theme-light");
+                var darkTheme = document.getElementById("theme-dark");
+                var toggle = document.getElementById("theme-toggle");
+                var isDark = theme === "dark";
 
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-latex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markup.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  </body>
+                root.setAttribute("data-theme", theme);
+                lightTheme.disabled = isDark;
+                darkTheme.disabled = !isDark;
+
+                if (toggle) {
+                    toggle.textContent = isDark
+                        ? "Světlý režim"
+                        : "Tmavý režim";
+                    toggle.setAttribute("aria-pressed", String(isDark));
+                }
+            }
+
+            function getPreferredTheme() {
+                var savedTheme = localStorage.getItem("sgc-theme");
+                if (savedTheme === "light" || savedTheme === "dark") {
+                    return savedTheme;
+                }
+
+                return window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light";
+            }
+
+            applyTheme(getPreferredTheme());
+
+            document.addEventListener("DOMContentLoaded", function () {
+                var toggle = document.getElementById("theme-toggle");
+                if (!toggle) {
+                    return;
+                }
+
+                toggle.addEventListener("click", function () {
+                    var nextTheme =
+                        document.documentElement.getAttribute("data-theme") ===
+                        "dark"
+                            ? "light"
+                            : "dark";
+                    localStorage.setItem("sgc-theme", nextTheme);
+                    applyTheme(nextTheme);
+                });
+            });
+
+            window.$docsify = {
+                name: "Studentův průvodce kybernetikou",
+                repo: "Kybernetika-SPSE/sgc",
+                homepage: "README.md",
+                loadSidebar: "_sidebar.md",
+                auto2top: true,
+                subMaxLevel: 2,
+                maxLevel: 2,
+                notFoundPage: "404.md",
+                relativePath: true,
+                search: {
+                    placeholder: "Hledat v materiálech",
+                    noData: "Nic jsem nenašel.",
+                    paths: "auto",
+                    depth: 3,
+                    maxAge: 600,
+                    namespace: "sgc-docs",
+                },
+                markdown: {
+                    smartypants: true,
+                    externalLinkTarget: "_blank",
+                    linkify: true,
+                },
+                plugins: [
+                    function (hook, vm) {
+                        hook.beforeEach(function (content) {
+                            // Find math blocks and replace double backslashes with quadruple
+                            // so that they survive the Markdown render process
+                            return content.replace(
+                                /\$\$.*?\$\$/gs,
+                                function (match) {
+                                    return match.replace(/\\\\/g, "\\\\\\\\");
+                                },
+                            );
+                        });
+                    },
+                ],
+            };
+
+            window.MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"],
+                        ["\\(", "\\)"],
+                    ],
+                    displayMath: [
+                        ["$$", "$$"],
+                        ["\\[", "\\]"],
+                    ],
+                },
+                svg: {
+                    fontCache: "global",
+                },
+                options: {
+                    skipHtmlTags: [
+                        "script",
+                        "noscript",
+                        "style",
+                        "textarea",
+                        "pre",
+                        "code",
+                    ],
+                },
+            };
+
+            function docsifyMathJaxPlugin(hook) {
+                hook.doneEach(function () {
+                    if (window.MathJax && window.MathJax.typesetPromise) {
+                        window.MathJax.typesetPromise();
+                    }
+                });
+            }
+
+            window.$docsify.plugins = [].concat(
+                docsifyMathJaxPlugin,
+                window.$docsify.plugins || [],
+            );
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-latex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markup.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    </body>
 </html>

@@ -1,5 +1,7 @@
 ﻿- [Hlavní stránka](/)
 - [Informace o předmětu](/informace/)
+  - [Jak na LaTeX](/informace/how-to-latex.md)
+  - [Jak na Markdown](/informace/how-to-markdown.md)
 - [Seznam maturitních otázek](/seznam-maturitnich-otazek/)
 - [MO Jirka](/mo-jirka/)
   - [13 - Pasivní elektronické prvky](/mo-jirka/13-pasivni-elektronicke-prvky.md)
@@ -30,5 +32,3 @@
 - [Nová skripta](/nova-skripta/)
 - [Aplikační listy](/application-notes/)
 - [Archiv starých materiálů](/archiv/)
-
-
