@@ -1,15 +1,14 @@
 ﻿# Archiv starých materialů
 
-Tato sekce obsahuje prevzaté materialy ze stareho repozitare `skripta-kyb`, aby byly dostupne i v novem Docsify webu.
+Tato sekce obsahuje převzaté materiály ze starého repozitáře `skripta-kyb`, aby byly dostupné i v novém Docsify webu.
 
-## Co je uvnitr
+## Co je uvnitř
 
-- [Puvodni README](skripta-kyb/README.md)
-- [Aktualni kyberneticke skripta](skripta-kyb/kybernetika/maturitni_otazky.md)
-- [Starsi kyberneticke materialy](skripta-kyb/kybernetika_old/obsah.md)
-- [Elektro materialy](skripta-kyb/elektro/kapitoly.md)
+- [Původní README](skripta-kyb/README.md)
+- [Aktuální kybernetické skripta](skripta-kyb/kybernetika/maturitni_otazky.md)
+- [Staré kybernetické materiály](skripta-kyb/kybernetika_old/obsah.md)
+- [Elektro materiály](skripta-kyb/elektro/kapitoly.md)
 
-## Poznamka
+## Poznámka
 
-Obsah v archivu je prevzaty v puvodni strukture. Nove rozcestniky v sekcich `MO Pavel` a `MO Jirka` na nej odkazuji po jednotlivych maturitnich otazkach.
-
+Obsah v archivu je převzatý v původní struktuře. Nové rozcestníky v sekcích `MO Pavel` a `MO Jirka` na něj odkazuji po jednotlivých maturitních otázkách.
