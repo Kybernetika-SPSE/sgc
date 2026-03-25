@@ -118,15 +118,15 @@ Proces se opakuje, dokud se středy „neustálí“.
 
 ## Matematicky (zjednodušeně)
 
-Hledáme rozdělení dat \( X = \{x_1, x_2, ..., x_n\} \) do K shluků \( C_1, ..., C_K \), které minimalizuje tzv. **chybu (SSE – Sum of Squared Errors):**
+Hledáme rozdělení dat $ X = \{x_1, x_2, ..., x_n\} $ do K shluků $ C_1, ..., C_K $, které minimalizuje tzv. **chybu (SSE – Sum of Squared Errors):**
 
-\[
+$$
 J = \sum_{k=1}^{K} \sum_{x_i \in C_k} ||x_i - \mu_k||^2
-\]
+$$
 
 kde:
-- \( \mu_k \) je centroid (střed) shluku \( C_k \),
-- \( ||x_i - \mu_k|| \) je vzdálenost bodu od středu shluku.
+- $ \mu_k $ je centroid (střed) shluku $ C_k $,
+- $ ||x_i - \mu_k|| $ je vzdálenost bodu od středu shluku.
 
 ---
 
@@ -222,26 +222,26 @@ První osa (PC₁) vysvětluje největší část rozptylu, druhá menší atd.
 
 ## Matematicky (zjednodušeně)
 
-Máme matici dat \( X \in \mathbb{R}^{n \times d} \):
+Máme matici dat $ X \in \mathbb{R}^{n \times d} $:
 
 1. Centrovaná data:  
-   \( X' = X - \bar{X} \)
+   $ X' = X - \bar{X} $
 
 2. Kovarianční matice:  
-   \( C = \frac{1}{n-1} (X')^T X' \)
+   $ C = \frac{1}{n-1} (X')^T X' $
 
 3. Vlastní čísla λ a vlastní vektory v:
-   \[
+   $$
    C v = \lambda v
-   \]
+   $$
 
 4. Seřadíme vektory podle λ (od největšího).
 
 5. Projekce na k komponent:
-   \[
+   $$
    Z = X' W_k
-   \]
-   kde \( W_k \) obsahuje první k vlastních vektorů.
+   $$
+   kde $ W_k $ obsahuje první k vlastních vektorů.
 
 ---
 
@@ -275,6 +275,3 @@ PCA najde **směr této přímky** (největší rozptyl) a **projekcí bodů** n
 | Hlavní princip | Najde směry s největším rozptylem |
 | Matematika | Vlastní vektory kovarianční matice |
 | Výsledek | Data v novém souřadném systému s menším počtem dimenzí |
-
-
-

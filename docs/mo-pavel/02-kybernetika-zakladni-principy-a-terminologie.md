@@ -111,7 +111,7 @@ V teorii řízení a teorii systémů lze systém popsat externě několika způ
    **Příklad**:
    Pro systém prvního řádu je diferenciální rovnice:
    
-   $\tau \frac{dy(t)}{dt} + y(t) = K u(t)$
+   $\tau \dfrac{dy(t)}{dt} + y(t) = K u(t)$
    
    Kde:
    - $y(t)$ je výstup.
@@ -127,7 +127,7 @@ V teorii řízení a teorii systémů lze systém popsat externě několika způ
    **Příklad**:
    Přenosová funkce pro systém prvního řádu je:
    
-   $G(s) = \frac{Y(s)}{U(s)} = \frac{K}{\tau s + 1}$
+   $G(s) = \dfrac{Y(s)}{U(s)} = \dfrac{K}{\tau s + 1}$
    
    Kde:
    - $G(s)$ je přenosová funkce.
@@ -141,7 +141,7 @@ V teorii řízení a teorii systémů lze systém popsat externě několika způ
    - **Přechodová funkce** popisuje chování systému v časové doméně při skokové změně vstupu (tj. vstup, který se náhle změní z nuly na pevnou hodnotu). **Přechodová funkce** ukazuje, jak se výstup systému vyvíjí z počátečního stavu do ustáleného stavu po náhlé změně vstupu.
    
    **Příklad**:
-   Pro systém prvního řádu s přenosovou funkcí $G(s) = \frac{K}{\tau s + 1}$ je přechodová funkce v časové doméně:
+   Pro systém prvního řádu s přenosovou funkcí $G(s) = \dfrac{K}{\tau s + 1}$ je přechodová funkce v časové doméně:
    
    $y(t) = K \left( 1 - e^{-t/\tau} \right)$
    
@@ -160,7 +160,7 @@ V teorii řízení a teorii systémů lze systém popsat externě několika způ
    **Příklad**:
    Pro systém prvního řádu je impulsní odezva derivací krokové odezvy:
    
-   $h(t) = \frac{K}{\tau} e^{-t/\tau}, \quad t \geq 0$
+   $h(t) = \dfrac{K}{\tau} e^{-t/\tau}, \quad t \geq 0$
    
    Impulsní odezva je zvláště užitečná pro analýzu přechodového chování systému a slouží jako základní prvek pro složitější vstupy prostřednictvím konvoluce.
 
@@ -171,7 +171,7 @@ V teorii řízení a teorii systémů lze systém popsat externě několika způ
 
 Typicky odkazuje na systém, který má přenosovou funkci ve tvaru:
 
-$G(s) = \frac{K}{\tau s + 1}$
+$G(s) = \dfrac{K}{\tau s + 1}$
 
 Kde:
 - $G(s)$: je přenosová funkce systému.
@@ -183,7 +183,7 @@ Systém prvního řádu popsaný touto přenosovou funkcí je často používán
 
 | Přechodová charakteristika | Impulsní charakteristika |
 | ---- | ---- |
-| $y(t)=K\left(1−e^{\frac{−t}{τ}}\right)$ | $y(t) = \frac{K}{\tau} e^\frac{-t}{\tau}$ |
+| $y(t)=K\left(1−e^{\frac{−t}{τ}}\right)$ | $y(t) = \dfrac{K}{\tau} e^\frac{-t}{\tau}$ |
 | ![Systém prvního řádu](images/system-first-order.png) | ![Systém prvního řádu](images/system-first-order-impulse.png) |
 
 ### Klíčové metriky u systémů prvního řádu:
@@ -264,11 +264,11 @@ $G(s) = \frac{1}{RCs + 1}$
 
 | **Systém**                 | **Přenos**                      | **Diferenciální rovnice**                                     |
 |----------------------------|--------------------------------------------|---------------------------------------------------------------|
-| **RC Obvod**              | $\frac{1}{RCs + 1}$                      | $RC \frac{dV_{out}}{dt} + V_{out}(t) = V_{in}(t)$            |
-| **Hmotnost-tlumič**      | $\frac{1}{ms + b}$                       | $m\frac{dv(t)}{dt} + bv(t) = F(t)$                           |
-| **Tepelný výměník**          | $\frac{1}{\tau s + 1}$                   | $\tau \frac{dT(t)}{dt} + T(t) = T_{in}(t)$                   |
-| **Nádrž s kapalinnou**              | $\frac{1}{\tau s + 1}$                   | $\tau \frac{dh(t)}{dt} + h(t) = Q_{in}(t)$                   |
-| **CSTR**                    | $\frac{1}{\tau s + 1}$                   | $\tau \frac{dc(t)}{dt} + c(t) = c_{in}(t)$                   |
+| **RC Obvod**              | $\dfrac{1}{RCs + 1}$                      | $RC \dfrac{dV_{out}}{dt} + V_{out}(t) = V_{in}(t)$            |
+| **Hmotnost-tlumič**      | $\dfrac{1}{ms + b}$                       | $m\dfrac{dv(t)}{dt} + bv(t) = F(t)$                           |
+| **Tepelný výměník**          | $\dfrac{1}{\tau s + 1}$                   | $\tau \dfrac{dT(t)}{dt} + T(t) = T_{in}(t)$                   |
+| **Nádrž s kapalinnou**              | $\dfrac{1}{\tau s + 1}$                   | $\tau \dfrac{dh(t)}{dt} + h(t) = Q_{in}(t)$                   |
+| **CSTR**                    | $\dfrac{1}{\tau s + 1}$                   | $\tau \dfrac{dc(t)}{dt} + c(t) = c_{in}(t)$                   |
 
 Všimněte si podobností formálního popisu různých systémů.
 
@@ -276,7 +276,7 @@ Všimněte si podobností formálního popisu různých systémů.
 ## Systém druhého řádu
 je složitější než systém prvního řádu a může popisovat širší škálu dynamického chování. Obecná přenosová funkce druhého řádu je:
 
-$G(s) = \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}$
+$G(s) = \dfrac{\omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}$
 
 Kde:
 - $G(s)$: Přenosová funkce systému.
@@ -291,7 +291,7 @@ Kde:
 
 | Přechodová charakteristika response | Impulsní charakteristika |
 | ---- | ---- |
-| $y(t) = 1 - \frac{1}{\sqrt{1-\zeta^2}} e^{-\zeta \omega_n t} \sin\left(\omega_n \sqrt{1-\zeta^2} t + \phi\right) \textnormal{, for } \zeta < 1$  | $y(t) = \frac{\omega_n}{\sqrt{1-\zeta^2}} e^{-\zeta \omega_n t} \sin\left(\omega_n \sqrt{1-\zeta^2} t\right) \textnormal{, for } \zeta <1$ |
+| $y(t) = 1 - \dfrac{1}{\sqrt{1-\zeta^2}} e^{-\zeta \omega_n t} \sin\left(\omega_n \sqrt{1-\zeta^2} t + \phi\right) \textnormal{, for } \zeta < 1$  | $y(t) = \dfrac{\omega_n}{\sqrt{1-\zeta^2}} e^{-\zeta \omega_n t} \sin\left(\omega_n \sqrt{1-\zeta^2} t\right) \textnormal{, for } \zeta <1$ |
 | ![](images/system-second-order.png) | ![](images/system-second-order-impulse.png) |
 
 ### Klíčové metriky u systémů druhého řádu
@@ -369,9 +369,9 @@ Tyto metriky pomáhají analyzovat dynamickou odezvu systému a umožňují hodn
 
 | **Systém**                          | **Přenos**                                     | **Diferenciální rovnice**                                                      |
 |-------------------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------|
-| **Systém hmotnost-pružina-tlumič**       | $\frac{1}{ms^2 + bs + k}$                               | $m\frac{d^2x(t)}{dt^2} + b\frac{dx(t)}{dt} + kx(t) = F(t)$                   |
-| **RLC Obvod**                     | $\frac{1}{LCs^2 + RCs + 1}$                             | $L\frac{d^2q(t)}{dt^2} + R\frac{dq(t)}{dt} + \frac{q(t)}{C} = V_{in}(t)$     |
-| **Kyvadlo (malé úhly)**   | $\frac{1}{\frac{L}{g}s^2 + 1}$                         | $\frac{L}{g}\frac{d^2\theta(t)}{dt^2} + \theta(t) = \theta_{in}(t)$          |
-| **Kolísání hlainy kapaliny v nádrži**       | $\frac{K}{s^2 + 2\zeta \omega_n s + \omega_n^2}$        | $\frac{d^2h(t)}{dt^2} + 2\zeta\omega_n \frac{dh(t)}{dt} + \omega_n^2 h(t) = KF(t)$ |
+| **Systém hmotnost-pružina-tlumič**       | $\dfrac{1}{ms^2 + bs + k}$                               | $m\dfrac{d^2x(t)}{dt^2} + b\dfrac{dx(t)}{dt} + kx(t) = F(t)$                   |
+| **RLC Obvod**                     | $\dfrac{1}{LCs^2 + RCs + 1}$                             | $L\dfrac{d^2q(t)}{dt^2} + R\dfrac{dq(t)}{dt} + \dfrac{q(t)}{C} = V_{in}(t)$     |
+| **Kyvadlo (malé úhly)**   | $\dfrac{1}{\frac{L}{g}s^2 + 1}$                         | $\dfrac{L}{g}\dfrac{d^2\theta(t)}{dt^2} + \theta(t) = \theta_{in}(t)$          |
+| **Kolísání hlainy kapaliny v nádrži**       | $\dfrac{K}{s^2 + 2\zeta \omega_n s + \omega_n^2}$        | $\dfrac{d^2h(t)}{dt^2} + 2\zeta\omega_n \dfrac{dh(t)}{dt} + \omega_n^2 h(t) = KF(t)$ |
 
 Všimněte si podobností formálního popisu různých systémů.
