@@ -34,8 +34,8 @@ S & R & Q \\
 \end{array}
 $$
 
-![](images/15-sr-flip-flop-async-circuit.png)
-![](images/15-sr-flip-flop-async-symbol.png)
+![](images/15-sr-flip-flop-async-circuit.png ":class=pre-inverted")
+![](images/15-sr-flip-flop-async-symbol.png ":class=pre-inverted")
 
 # Synchronní klopný obvod RS
 - synchronní
@@ -53,7 +53,7 @@ S & R & C & Q \\
 \end{array}
 $$
 
-![](images/15-sr-flip-flop-sync.png)
+![](images/15-sr-flip-flop-sync.png ":class=pre-inverted")
 
 # Klopný obvod JK
 - synchronní
@@ -75,7 +75,7 @@ J & K & C & Q \\
 \end{array}
 $$
 
-![](images/15-jk-flip-flop.png)
+![](images/15-jk-flip-flop.png ":class=pre-inverted")
 
 # Klopný obvod D
 - synchronní
@@ -94,7 +94,7 @@ D & C & Q \\
 \end{array}
 $$
 
-![](images/15-d-flip-flop.png)
+![](images/15-d-flip-flop.png ":class=pre-inverted")
 
 # Klopný obvod T
 - asynchronní
@@ -109,7 +109,7 @@ T & Q \\
 \end{array}
 $$
 
-![](images/15-t-flip-flop.png)
+![](images/15-t-flip-flop.png ":class=pre-inverted")
 
 # Použití klopných obvodů:
 ## Čítače
@@ -145,6 +145,3 @@ Například 8 vodičů vedle sebe, na každém je samostatně jednička nebo nul
 - má hodinový vstup $C$ (CLK)
 - na paralelní vstup se nahrají paralelní data
 - pomocí impulsů CLK se jednotlivé bity vyposouvají na sériový výstup
-
-
-

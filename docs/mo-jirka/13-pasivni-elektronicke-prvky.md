@@ -99,7 +99,3 @@
 ![](images/13-stabilizace-napeti-graf.png)
 
 - **časovače** - ve většině generátorů signálu jsou kondenzátory použity jako časové prvky → jejich střídavé nabíjení a vybíjení určuje periodu kmitání, čím větší má kondenzátor kapacitu, tím větší perioda (trvá déle než se vybije)
-
-
-
-

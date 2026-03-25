@@ -18,7 +18,7 @@
 
 Za zakladatele je považován **Norbert Wiener**¨, americký matematik, který vydal v roce 1948 knihu Kybernetika aneb Řízení a sdělování u organismů a strojů.
 
-![](images/kuz520495-mrscience.jpg)
+![](images/kuz520495-mrscience.jpg ":class=no-invert")
 
 Kybernetika se vyvíjela odlišně v různých zemích. V západních zemích víceméně splynula s obecnou teorií systémů a řada oborů, které byly považovány za součást kybernetiky, se vyvíjí jako samostatné obory – například informatika nebo neuronové sítě.
 
@@ -375,6 +375,3 @@ Tyto metriky pomáhají analyzovat dynamickou odezvu systému a umožňují hodn
 | **Kolísání hlainy kapaliny v nádrži**       | $\frac{K}{s^2 + 2\zeta \omega_n s + \omega_n^2}$        | $\frac{d^2h(t)}{dt^2} + 2\zeta\omega_n \frac{dh(t)}{dt} + \omega_n^2 h(t) = KF(t)$ |
 
 Všimněte si podobností formálního popisu různých systémů.
-
-
-
