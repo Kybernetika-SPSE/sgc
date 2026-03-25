@@ -2,7 +2,7 @@
 
 Studentuv pruvodce Kybernetikou.
 
-Tento repozitar hostuje Docsify web pripraveny pro GitHub Pages.
+Tento repozitar hostuje Docsify web pripraveny pro GitHub Pages. **[here](https://kybernetika-spse.github.io/sgc/)**
 
 ## Publikace
 
