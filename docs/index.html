@@ -124,6 +124,25 @@
                     linear-gradient(135deg, #10161b 0%, #132026 100%);
             }
 
+            /*Dark mode images*/
+            /* BLACKLIST: Invert ALL markdown images in dark mode UNLESS they have 'no-invert' */
+            html[data-theme="dark"]
+                .markdown-section
+                img:not(.no-invert):not(.pre-inverted) {
+                filter: invert(1) hue-rotate(180deg);
+            }
+
+            /* PRE-INVERTED: If an image is already dark, invert it ONLY in light mode */
+            html[data-theme="light"] img.pre-inverted {
+                filter: invert(1) hue-rotate(180deg);
+            }
+
+            /* Ensure images with these classes don't get double-filtered or messy */
+            img.no-invert,
+            html[data-theme="dark"] img.pre-inverted {
+                filter: none !important;
+            }
+
             .app-name-link img {
                 display: none;
             }
