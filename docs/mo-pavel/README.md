@@ -22,5 +22,9 @@ Sekce pro Pavlovo zpracování maturitních otázek 1 až 12.
 - Otázky 1 až 8 jsou už převedené do přímých stránek v novém systému.
 - Otázky 9 až 12 zatím nemají plný starý podklad a zůstávají připravené pro nové zpracování.
 - Obrázky pro tuto sekci jsou v `docs/mo-pavel/images/` a ostatní soubory patří do `docs/mo-pavel/assets/`.
-- Prezentace k otázkám 8, 9 ve složce assets!
+- Prezentace k otázkám 8, 9 zde:
+    - [prezentace1](assets/1_Motivace__lidsky_mozek__modely_neuronu.pdf)
+    - [prezentace2](assets/2_Typy_umelych_neuronovych_siti-faze_jejich_cinnosti-pouziti.pdf)
+    - [prezentace3](assets/Deep Neural Networks_1.pdf)
 
+- Odkaz na původní (nedodělaná) [skripta](https://github.com/bublinak/skripta-kyb):
