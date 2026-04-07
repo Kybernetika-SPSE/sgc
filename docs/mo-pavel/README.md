@@ -22,5 +22,5 @@ Sekce pro Pavlovo zpracování maturitních otázek 1 až 12.
 - Otázky 1 až 8 jsou už převedené do přímých stránek v novém systému.
 - Otázky 9 až 12 zatím nemají plný starý podklad a zůstávají připravené pro nové zpracování.
 - Obrázky pro tuto sekci jsou v `docs/mo-pavel/images/` a ostatní soubory patří do `docs/mo-pavel/assets/`.
-
+- Prezentace k otázkám 8, 9 ve složce assets!
 
