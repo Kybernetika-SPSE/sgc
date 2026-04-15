@@ -1,4 +1,4 @@
-﻿# Otázka 08
+# Otázka 08
 
 ## Základní principy neuronových sítí
 
@@ -13,19 +13,19 @@
 Tato otázka má ve starých materiálech zatím nejsilnější pokrytí přes perceptron, tedy základní model umělého neuronu. Vícevrstvé sítě, aktivační funkce a backpropagation bude vhodné doplnit samostatně.
 # Jak funguje perceptron
 
-Perceptron je jednoduchý model umělého neuronu, který se používá pro binární klasifikaci. Jeho úkolem je rozdělit data do dvou tříd, například +1 a -1.
+Perceptron je jednoduchý model umělého neuronu, který se používá pro binární klasifikaci. Jeho úkolem je rozdělit data do dvou tříd, například $+1$ a $-1$.
 
 ---
 
 ## Základní princip
 
-Perceptron dostává několik vstupů x₁, x₂, ..., xₙ. Každý vstup má přiřazenou váhu w₁, w₂, ..., wₙ, která určuje, jak je daný vstup důležitý.
+Perceptron dostává několik vstupů $x_{1}, x_{2}, \dots, x_{n}$. Každý vstup má přiřazenou váhu $w_{1}, w_{2}, \dots, w_{n}$, která určuje, jak je daný vstup důležitý.
 
 Model spočítá lineární kombinaci vstupů a vah:
 
-z = w₁·x₁ + w₂·x₂ + ... + wₙ·xₙ + b
+$z = w_{1} \cdot x_{1} + w_{2} \cdot x_{2} + \dots + w_{n} \cdot x_{n} + b$
 
-kde b je bias (konstanta, která posouvá rozhodovací hranici).
+kde $b$ je bias (konstanta, která posouvá rozhodovací hranici).
 
 ---
 
@@ -33,10 +33,10 @@ kde b je bias (konstanta, která posouvá rozhodovací hranici).
 
 Výsledek z se pošle do jednoduché aktivační funkce sign:
 
-y = sign(z)
+$$y = \mathrm{sign}(z)$$
 
-Pokud je z > 0, perceptron vrátí +1.  
-Pokud je z ≤ 0, vrátí -1.
+Pokud je $z > 0$, perceptron vrátí $+1$.  
+Pokud je $z \leq 0$, vrátí $-1$.
 
 Tak perceptron určí, do které třídy vstup patří.
 
@@ -46,13 +46,17 @@ Tak perceptron určí, do které třídy vstup patří.
 
 Perceptron se učí z trénovacích dat. Postupně prochází všechny příklady a upravuje váhy podle toho, jestli klasifikoval správně nebo ne.
 
-1. Pro daný vstup xᵢ spočítá výstup ŷ = sign(w·xᵢ + b).
-2. Pokud se spletl (ŷ ≠ yᵢ), upraví váhy podle pravidla:
+1. Pro daný vstup $x_{i}$ spočítá výstup $\hat{y} = \mathrm{sign}(w\cdot x_{i} + b)$.
+2. Pokud se spletl ($\hat{y} \neq y_{i}$), upraví váhy podle pravidla:
+$$
+\begin{align}
+w &:= w + \eta \cdot y_{i} \cdot x_{i}\\
+b &:= b + \eta \cdot y_{i}
+\end{align}
+$$
+   
 
-   w := w + η * yᵢ * xᵢ  
-   b := b + η * yᵢ
-
-   kde η je koeficient učení (learning rate).
+   kde $\eta$ je koeficient učení (learning rate).
 
 3. Proces se opakuje, dokud nejsou všechny příklady správně klasifikovány
    nebo dokud se chyba dále nezmenšuje.
@@ -63,9 +67,9 @@ Perceptron se učí z trénovacích dat. Postupně prochází všechny příklad
 
 Po natrénování perceptron najde takové váhy a bias, které určují rozhodovací hranici:
 
-w₁·x₁ + w₂·x₂ + b = 0
+$$w_{1} \cdot x_{1} + w_{2} \cdot x_{2} + b = 0$$
 
-Tato přímka (v 2D) nebo rovina (v nD) rozděluje prostor na dvě oblasti odpovídající dvěma třídám.
+Tato přímka (v $2D$) nebo rovina (v $nD$) rozděluje prostor na dvě oblasti odpovídající dvěma třídám.
 
 ---
 
@@ -81,6 +85,3 @@ Pokud se třídy překrývají, nebo jsou nelineárně rozloženy (například p
 - aktivační funkce
 - zpětné šíření chyby (backpropagation)
 - rozdíl mezi perceptronem a moderní neuronovou sítí
-
-
-

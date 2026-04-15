@@ -315,10 +315,17 @@
                 plugins: [
                     function (hook, vm) {
                         hook.beforeEach(function (content) {
-                            // Find math blocks and replace double backslashes with quadruple
-                            // so that they survive the Markdown render process
+                            // Convert \[ ... \] → $$ ... $$
+                            content = content.replace(
+                                /\\\[([\s\S]*?)\\\]/g,
+                                function (_, inner) {
+                                    return "$$" + inner + "$$";
+                                },
+                            );
+
+                            // Fix escaped backslashes inside math blocks
                             return content.replace(
-                                /\$\$.*?\$\$/gs,
+                                /\$\$[\s\S]*?\$\$/g,
                                 function (match) {
                                     return match.replace(/\\\\/g, "\\\\\\\\");
                                 },

@@ -1,4 +1,4 @@
-﻿# Otázka 10
+# Otázka 10
 
 ## Computer vision
 
@@ -41,14 +41,14 @@ Nižší rozlišení → ztráta detailů (aliasing)
 Digitální obraz lze reprezentovat jako matici:
 
 \[
-I(x,y)  
+\mathbf{I}(x,y)  
 \]
 
 kde:
 
-- x, y — souřadnice pixelu
+- $x$, $y$ — souřadnice pixelu
 
-- I — intenzita jasu nebo barvy
+- $\mathbf{I}$ — intenzita jasu nebo barvy
 
 ---
 
@@ -228,9 +228,9 @@ Histogram umožňuje:
 
 Histogram jasu používá grayscale obraz:
 
-[  
+\[  
 Y = 0.299R + 0.587G + 0.114B  
-]
+\]
 
 Používá se pro:
 
@@ -282,17 +282,17 @@ Konvoluce je základní operace zpracování obrazu.
 
 Výstupní pixel:
 
-[  
-I'(x,y) = \sum_{i=-k}^{k} \sum_{j=-k}^{k} K(i,j) I(x-i, y-j)  
-]
+\[  
+\mathbf{I}'(x,y) = \sum_{i=-k}^{k} \sum_{j=-k}^{k} \mathbf{K}(i,j) \mathbf{I}(x-i, y-j)  
+\]
 
 kde:
 
-- I — vstupní obraz
+- $\mathbf{I}$ — vstupní obraz
 
-- K — konvoluční jádro
+- $\mathbf{K}$ — konvoluční jádro
 
-- I' — výstupní obraz
+- $\mathbf{I}'$ — výstupní obraz
 
 Jádro se posouvá přes obraz.
 
@@ -302,27 +302,27 @@ Jádro se posouvá přes obraz.
 
 ## Rozmazání (blur)
 
-[  
+\[  
 \frac{1}{9}  
 \begin{bmatrix}  
-1 & 1 & 1 \  
-1 & 1 & 1 \  
+1 & 1 & 1 \\  
+1 & 1 & 1 \\ 
 1 & 1 & 1  
 \end{bmatrix}  
-]
+\]
 
 ---
 
 ## Gaussian blur
 
-[  
+\[  
 \frac{1}{16}  
 \begin{bmatrix}  
-1 & 2 & 1 \  
-2 & 4 & 2 \  
+1 & 2 & 1 \\  
+2 & 4 & 2 \\ 
 1 & 2 & 1  
 \end{bmatrix}  
-]
+\]
 
 ---
 
@@ -330,41 +330,41 @@ Jádro se posouvá přes obraz.
 
 ## Sobel X
 
-[  
+\[
 \begin{bmatrix}  
--1 & 0 & 1 \  
--2 & 0 & 2 \  
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\ 
 -1 & 0 & 1  
 \end{bmatrix}  
-]
+\]
 
 ## Sobel Y
 
-[  
+\[  
 \begin{bmatrix}  
--1 & -2 & -1 \  
-0 & 0 & 0 \  
+-1 & -2 & -1 \\
+0 & 0 & 0 \\
 1 & 2 & 1  
 \end{bmatrix}  
-]
+\]
 
 Gradient:
 
-[  
+\[  
 G = \sqrt{G_x^2 + G_y^2}  
-]
+\]
 
 ---
 
 ## Laplace
 
-[  
+\[  
 \begin{bmatrix}  
-0 & -1 & 0 \  
--1 & 4 & -1 \  
+0 & -1 & 0 \\
+-1 & 4 & -1 \\  
 0 & -1 & 0  
 \end{bmatrix}  
-]
+\]
 
 Detekuje změny intenzity.
 
@@ -442,8 +442,12 @@ Výstupem segmentace je maska:
 
 Nejjednodušší segmentace používá práh $T$:
 
-S(x,y) = 1 pro I(x,y) > T  
-S(x,y) = 0 pro I(x,y) ≤ T
+$$
+\begin{gathered}
+\mathbf{S}(x,y) = 1 \text{ pro } \mathbf{I}(x,y) > T  \\
+\mathbf{S}(x,y) = 0 \text{ pro } \mathbf{I}(x,y) \leq T
+\end{gathered}
+$$
 
 Typy thresholdingu:
 
@@ -515,7 +519,7 @@ ratio = width / height
 
 Například:
 
-- mince → ratio ≈ 1
+- mince → ratio $\approx$ 1
 
 - tužka → ratio >> 1
 
@@ -531,26 +535,28 @@ A = počet pixelů segmentu
 
 ## Cirkularita
 
-C = 4πA / P²
+$$C = \frac{4πA}{P^{2}} $$
 
 kde:
 
-- A — plocha
+- $A$ — plocha
 
-- P — obvod
+- $P$ — obvod
 
-kruh → C ≈ 1  
-nepravidelný tvar → C < 1
+kruh → $C \approx 1$  
+nepravidelný tvar → $C < 1$
 
 ---
 
 ## Těžiště segmentu
 
 Střed objektu:
-
-xc = (1/A) Σ x  
-yc = (1/A) Σ y
-
+$$
+\begin{gathered}
+x_c = \frac1A \sum x \\
+y_c = \frac1A \sum y
+\end{gathered}
+$$
 ---
 
 ## Další příznaky segmentu
@@ -579,11 +585,11 @@ Postup:
 
 Příklad:
 
-| Objekt | ratio | cirkularita |
-| ------ | ----- | ----------- |
-| mince  | ≈1    | ≈1          |
-| šroub  | >2    | malá        |
-| matice | ≈1    | nižší       |
+| Objekt | ratio       | cirkularita |
+| ------ | ----------- | ----------- |
+| mince  | $\approx1$  | $\approx 1$ |
+| šroub  | $>2$        | malá        |
+| matice | $\approx 1$ | nižší       |
 
 Klasifikace může být:
 
