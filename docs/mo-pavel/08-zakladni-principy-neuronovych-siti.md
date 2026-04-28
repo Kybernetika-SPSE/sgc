@@ -46,20 +46,19 @@ Tak perceptron určí, do které třídy vstup patří.
 
 Perceptron se učí z trénovacích dat. Postupně prochází všechny příklady a upravuje váhy podle toho, jestli klasifikoval správně nebo ne.
 
-1. Pro daný vstup $x_{i}$ spočítá výstup $\hat{y} = \mathrm{sign}(w\cdot x_{i} + b)$.
-2. Pokud se spletl ($\hat{y} \neq y_{i}$), upraví váhy podle pravidla:
+1. Pro daný vstup $x_{i}$ spočítá výstup $\hat{y}_{i} = \mathrm{sign}(w \cdot x_{i} + b)$.
+2. Pokud se spletl ($\hat{y}_{i} \neq y_{i}$), upraví váhy podle pravidla:
+
 $$
 \begin{align}
-w &:= w + \eta \cdot y_{i} \cdot x_{i}\\
-b &:= b + \eta \cdot y_{i}
+  w &:= w + \eta \cdot (y_{i} - \hat{y}_{i}) \cdot x_{i} \\
+  b &:= b + \eta \cdot (y_{i} - \hat{y}_{i})
 \end{align}
 $$
-   
 
-   kde $\eta$ je koeficient učení (learning rate).
+kde $\eta$ je koeficient učení (*learning rate*), $y_{i}$ je skutečná hodnota (label) a $\hat{y}_{i}$ je predikce.
 
-3. Proces se opakuje, dokud nejsou všechny příklady správně klasifikovány
-   nebo dokud se chyba dále nezmenšuje.
+3. Proces se opakuje v tzv. epochách, dokud nejsou všechny příklady správně klasifikovány nebo dokud se chyba dále nezmenšuje.
 
 ---
 
