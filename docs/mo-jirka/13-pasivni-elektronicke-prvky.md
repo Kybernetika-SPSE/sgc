@@ -57,15 +57,6 @@ Z polovodičových prvků v pasivní kategorii najdeme diody a různé součást
 
 > Trimry a potenciometry mohou být posuvné, otočné (i víceotáčkové), ovšem nikdy ne kontinuální (z principu jejich konstrukce). Neplést s rotačními enkodéry, které jsou kontinuální a měří se digitálně.
 
----
-Zde je přepracovaná část o cívkách, upravená přesně podle vašeho stylu, včetně doplňujících poznámek a intuitivních vysvětlení.
-
----
-
-Zde je kompletní, sjednocená verze textu o cívkách, upravená přesně podle vašeho stylu, s doplněnými vzorci a technickými detaily.
-
----
-
 ### Cívky
 - hlavní vlastností je elektrická **indukčnost** $L$, jednotka: **Henry** $[H]$, pojmenována po [Josephu Henrym](https://cs.wikipedia.org/wiki/Joseph_Henry)
 - cívka je schopna hromadit energii v **magnetickém poli**, které vzniká kolem vodiče při průchodu proudu
@@ -137,12 +128,6 @@ $$\tau = \frac{L}{R}$$
 
 > **Praktický tip:** Cívky jsou v elektronice často ty "nejproblematičtější" součástky. Jsou velké, těžké, drahé a generují magnetické pole, které může rušit okolní obvody. Proto se v moderní mikrolektronice konstruktéři snaží cívky nahrazovat jinými zapojeními (např. pomocí operačních zesilovačů – tzv. gyrátorů), pokud je to jen trochu možné.
 
----
-
-Zde je přepracovaný text o kondenzátorech, upravený do stejné struktury a tónu, jaký jste nastavil u rezistorů a cívek.
-
----
-
 ### Kondenzátory
 - hlavní vlastností je elektrická **kapacita** $C$, jednotka: **Farad** $[F]$, pojmenována po angl. fyzikovi [Michaelu Faradayovi](https://cs.wikipedia.org/wiki/Michael_Faraday)
 - kondenzátor je schopen hromadit energii v **elektrickém poli** mezi dvěma vodivými deskami (elektrodami) oddělenými dielektrikem (izolantem)
@@ -206,6 +191,11 @@ $$\tau = R \cdot C$$
 > **Závěrečné srovnání:** Zatímco cívka "bojuje" proti změně proudu (akumuluje energii v mag. poli), kondenzátor "bojuje" proti změně napětí (akumuluje energii v el. poli). V praxi jsou tyto dvě součástky svými protiklady (duální prvky).
 
 > Mimochodem, jejich kapacitní a induktivní reaktance jsou také navzájem inverzní: $X_{C} = \frac{1}{X_{L}}$ pro stejné frekvence a hodnoty $L$ a $C$ a jsou přímo spojené s přechodovými ději v RC a RL obvodech, které jsme si ukázali. Co by jste čekali že se stane, když místo obdélnékového signálu v grafech přechodových dějů použijeme sinus?
+
+> Dodatek k přechodovým dějům: Pokud vyměníme statickou složkuvstupního signálu, děj nebude exponenciální ale lineární. 
+> Vysvětlení na RC článku: Článek byl nabíjen konstantním napětím a nabíjecí proud článku exponenciálně klesal, protože napětí na kondenzátoru rostlo a snižovalo napěťový rozdíl. Pokud ovšem budeme článek nabíjet konstantním proudem, úbytek na rezistoru bude konstantní, a napětí na kondenzátoru poroste lineárně. Proč lineárně? Protože $C = \frac{Q}{U}$, tedy $U = \frac{Q}{C}$. Kapacita se nemění a proud definujeme jako $I = \frac{dQ}{dt}$, tedy $Q = I \cdot t$. Po dosazení do vzorce pro napětí dostaneme $U = \frac{I \cdot t}{C}$, což je lineární funkce času.
+> Pokud chcete do nějakého obvodu dodat lineární integrační článek, potřebujete jej tedy nabíjet konstantním proudem.
+> U cívky je to podobné, ale místo konstantního proudu potřebujeme konstantní napětí a výsledek bude lineární růst proudu. Ovšem Nelze zandedpat odpor v RL obvodu jako u RC, kde se chová "jen jako ztráta napětí". Proud roste a tím roste i úbytek napětí na rezistoru.
 
 
 
