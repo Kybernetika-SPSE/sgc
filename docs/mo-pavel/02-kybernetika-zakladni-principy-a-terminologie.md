@@ -372,6 +372,6 @@ Tyto metriky pomáhají analyzovat dynamickou odezvu systému a umožňují hodn
 | **Systém hmotnost-pružina-tlumič**       | $\dfrac{1}{ms^2 + bs + k}$                               | $m\dfrac{d^2x(t)}{dt^2} + b\dfrac{dx(t)}{dt} + kx(t) = F(t)$                   |
 | **RLC Obvod**                     | $\dfrac{1}{LCs^2 + RCs + 1}$                             | $L\dfrac{d^2q(t)}{dt^2} + R\dfrac{dq(t)}{dt} + \dfrac{q(t)}{C} = V_{in}(t)$     |
 | **Kyvadlo (malé úhly)**   | $\dfrac{1}{\frac{L}{g}s^2 + 1}$                         | $\dfrac{L}{g}\dfrac{d^2\theta(t)}{dt^2} + \theta(t) = \theta_{in}(t)$          |
-| **Kolísání hlainy kapaliny v nádrži**       | $\dfrac{K}{s^2 + 2\zeta \omega_n s + \omega_n^2}$        | $\dfrac{d^2h(t)}{dt^2} + 2\zeta\omega_n \dfrac{dh(t)}{dt} + \omega_n^2 h(t) = KF(t)$ |
+| **Kolísání hladiny kapaliny v nádrži**       | $\dfrac{K}{s^2 + 2\zeta \omega_n s + \omega_n^2}$        | $\dfrac{d^2h(t)}{dt^2} + 2\zeta\omega_n \dfrac{dh(t)}{dt} + \omega_n^2 h(t) = KF(t)$ |
 
 Všimněte si podobností formálního popisu různých systémů.
