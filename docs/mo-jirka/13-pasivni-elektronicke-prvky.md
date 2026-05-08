@@ -31,7 +31,7 @@ Z polovodičových prvků v pasivní kategorii najdeme diody a různé součást
 - mírné parazitní vlastnosti, projevují se hlavně při vysokých frekvencích
 - odpor je závislý na teplotě, s rostoucí teplotou se elektrický odpor zvětšuje $R=R_{0}(1+\alpha\Delta t)$
 
-> Proč se odpor s rostoucí teplotou zvětšuje? Protože s rostoucí teplotou se zvyšuje tepelný pohyb atomů v materiálu, což způsobuje častější srážky elektronů s těmito atomy. Tyto srážky ztěžují průchod elektrického proudu, což se projevuje jako zvýšení odporu. OVšem pozor na polovočiče, tam je to naopak.
+> Proč se odpor s rostoucí teplotou zvětšuje? Protože s rostoucí teplotou se zvyšuje tepelný pohyb atomů v materiálu, což způsobuje častější srážky elektronů s těmito atomy. Tyto srážky ztěžují průchod elektrického proudu, což se projevuje jako zvýšení odporu. Ovšem pozor na polovočiče, tam je to naopak.
 
 #### Častá zapojení
 
