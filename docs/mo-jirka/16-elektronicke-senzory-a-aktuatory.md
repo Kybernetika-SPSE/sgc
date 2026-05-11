@@ -1,4 +1,4 @@
-﻿# Otázka 16
+﻿﻿# Otázka 16
 
 ## Elektronické senzory a aktuátory
 
@@ -18,7 +18,7 @@ Jsou dva typy senzorů
 - **aktivní** → potřebuje externí zdroj napájení, aby byl schopen měřit.
 	- _Příklad: Laservoý měřič vzdálenosti (generuje laser a měří odražený paprsek)_
 
-Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elektricky měřitelnou** veličinu, nebo je potřeba **převést tuto veličinu na elektrický signál**. Problém v převodu neelektrických veličin na elektrický signál bývá takový, že tyto hodnoty nejsou jakkoli jednoduše (logaritmicky, exponenciálně, lineárně, goniometricky, .........) závislé a převod bývá buď celkově nepřesný, nebo jsou určité hodnoty kdy se převody chovají jinak, než skutečná hodnota měřené veličiny.
+Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elektricky měřitelnou** veličinu, nebo je potřeba **převést tuto veličinu na elektrický signál**. Problém v převodu neelektrických veličin na elektrický signál bývá takový, že tyto hodnoty nejsou jakkoli jednoduše (logaritmicky, exponenciálně, lineárně, goniometricky, ...) závislé a převod bývá buď celkově nepřesný, nebo jsou určité hodnoty kdy se převody chovají jinak, než skutečná hodnota měřené veličiny.
 
 ---
 

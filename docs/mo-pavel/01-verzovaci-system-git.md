@@ -1,4 +1,4 @@
-﻿# Otázka 01
+﻿﻿# Otázka 01
 
 ## Verzovací systém Git
 
@@ -102,7 +102,7 @@ Git je **distribuovaný systém pro správu verzí**, který umožňuje sledovat
    ``` git config --global --add safe.directory '%(prefix)///SEPTIM/U/<username>/<cesta k repozitari>' ```
 4. vytvoření "personal access token"
    ``` profile > settings > Developer settings > Personal access tokens > Token (classic)```
-   zkopírovat token !
+   zkopírovat token!
 5. nastavit origin pomocí tokenu   
   ``` git remote set-url origin https://<TOKEN>@github.com/<username>/<repository.git> ```
 

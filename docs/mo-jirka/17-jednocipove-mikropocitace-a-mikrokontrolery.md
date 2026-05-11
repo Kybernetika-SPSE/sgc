@@ -1,4 +1,4 @@
-﻿# Otázka 17
+﻿﻿# Otázka 17
 
 ## Jednočipové mikropočítače a mikrokontrolery
 
@@ -11,21 +11,21 @@
 - PC = osobní počítač (*personal computer*)
 - Jednočipový počítač = počítač realizovaný v jednom integrovaném obvodu
 # Počítač
-- **`CPU` (central processor unit)** : Hlavní procesor, který vykonává instrukce a provádí výpočty.
+- **`CPU` (central processor unit)**: Hlavní procesor, který vykonává instrukce a provádí výpočty.
 	- Jde o „mozek“ počítače, který řídí jeho ostatní části a vykonává samotné instrukce. Mezi známé výrobce procesorů pro osobní počítače patří například Intel a AMD.
 	- Základní stavební jednotkou procesoru je tranzistor zapojený jako spínač. Jeho úkolem je měnit stav mezi logickou nulou a jedničkou. Jeden samotný tranzistor by příliš výpočtů realizovat nemohl, proto jich v dnešních procesorech nalezneme miliardy, díky čemuž je možné provádět i nejsložitější operace.
 	- Interval mezi dvěma pulsy z oscilátoru se nazývá frekvenční cyklus. V takovém čase je procesor schopen své tranzistory přepnout do jedničky a poté zpět do nuly. O změně stavu z nuly do jedničky referujeme jako o náběžné hraně a o změně jedničky na nulu jako o hraně sestupné.
-- **`RAM` (random access memory)** : Elektronická polovodičová dočasná paměť, která uchovává data a instrukce pro aktuální operace/programy. (zjednodušeně číslované buňky z nichž každá obsahuje hodnotu)
+- **`RAM` (random access memory)**: Elektronická polovodičová dočasná paměť, která uchovává data a instrukce pro aktuální operace/programy. (zjednodušeně číslované buňky z nichž každá obsahuje hodnotu)
 	- po odpojení se maže
 	- počet zápisu a čtení není omezený
 	- **volatilní** – při vypnutí napájení se informace smaže; takto se chovají polovodičové paměti RAM
 	- **nevolatilní** – informace vydrží vypnutí napájení; tuto vlastnost mají magnetické paměti
-- **`ROM` (read only memory)** : Trvalá paměť pro základní systémová data (např. BIOS). Její obsah je dán už při výrobě a není závislý na napájení (nemaže se po odpojení napájení)
+- **`ROM` (read only memory)**: Trvalá paměť pro základní systémová data (např. BIOS). Její obsah je dán už při výrobě a není závislý na napájení (nemaže se po odpojení napájení)
 	- pro uložení firmwaru (softwaru)
 	- dříve více častý, dnes už se používá jen zřídka (z důvodu nemožnosti aktualizace softwaru, který obsahoval a taky protože RAMky jsou dnes mnohem rychlejší)
-- **`GPU` (graphics processing unit)** : Grafická jednotka pro zpracování obrazu, promítnutí do monitoru, může být ale využit i k jiným výpočtům (kryptoměny)
-- **`NPU` : (Neural Processing Unit)** je specializovaný procesor navržený k urychlení výpočtů spojených s umělou inteligencí (AI), zejména pro zpracování neuronových sítí a úloh strojového učení. (může se skládat z více CPU a GPU)
-- **`I/O` (input/output)** : Výměna dat mezi PC a externími zařízeními (myš, monitor, disk, klávesnice...)
+- **`GPU` (graphics processing unit)**: Grafická jednotka pro zpracování obrazu, promítnutí do monitoru, může být ale využit i k jiným výpočtům (kryptoměny)
+- **`NPU` (Neural Processing Unit)**: je specializovaný procesor navržený k urychlení výpočtů spojených s umělou inteligencí (AI), zejména pro zpracování neuronových sítí a úloh strojového učení. (může se skládat z více CPU a GPU)
+- **`I/O` (input/output)**: Výměna dat mezi PC a externími zařízeními (myš, monitor, disk, klávesnice...)
 
 ---
 
