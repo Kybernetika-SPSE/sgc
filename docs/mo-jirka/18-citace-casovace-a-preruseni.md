@@ -18,7 +18,6 @@ $$
 nebo
 $$
 N_{t}=N_{(t-1)}-1
-
 $$
 
 kde $N$ je hodnota čítače, $t$ je aktuální stav po příchodu čítacího impulsu a $t-1$ je časový okamžik před příchodem čítacího impulsu.
