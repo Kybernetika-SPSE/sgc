@@ -1,4 +1,4 @@
-﻿# MO Pavel
+﻿﻿# MO Pavel
 
 Sekce pro Pavlovo zpracování maturitních otázek 1 až 12.
 
@@ -29,4 +29,4 @@ Sekce pro Pavlovo zpracování maturitních otázek 1 až 12.
 
 - Odkaz na původní (nedodělaná) [skripta](https://github.com/bublinak/skripta-kyb):
 
-- Materiály na algoritmizaci a OOP (ot. 11 a 12) jsou  k dispozici v podobe zdrojů na [google drivu](https://drive.google.com/drive/folders/1BITALnXl_1SiHENJC8iYHsOI2mLOxA48?usp=sharing). 
+- Materiály na algoritmizaci a OOP (ot. 11 a 12) jsou k dispozici v podobe zdrojů na [google drivu](https://drive.google.com/drive/folders/1BITALnXl_1SiHENJC8iYHsOI2mLOxA48?usp=sharing). 

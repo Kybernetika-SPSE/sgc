@@ -1,4 +1,4 @@
-﻿# Otázka 15
+﻿﻿# Otázka 15
 
 ## Kombinační a sekvenční logika
 
@@ -60,7 +60,7 @@ $$
 - vstupy $J$, $K$
 - hodinový vstup $C$ ($CLK$)
 - když chci změnit stav změnou vstupů, musím dát zároveň $1$ i na vstup $C$, jinak nereaguje na vstupy
-- když $J=K=0$ , výstup zůstává stejný
+- když $J=K=0$, výstup zůstává stejný
 - když $J=K=1$, výstup se neguje
 - $K=1$ a $J=0$, výstup se nastaví na $0$
 - $K=0$ a $J=1$, výstup se nastaví na $1$
