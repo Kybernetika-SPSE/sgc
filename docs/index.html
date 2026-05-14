@@ -314,7 +314,9 @@
                 },
                 plugins: [
                     function (hook, vm) {
+                        var mathList = [];
                         hook.beforeEach(function (content) {
+                            mathList = [];
                             // Convert \[ ... \] → $$ ... $$
                             content = content.replace(
                                 /\\\[([\s\S]*?)\\\]/g,
@@ -323,13 +325,35 @@
                                 },
                             );
 
-                            // Fix escaped backslashes inside math blocks
-                            return content.replace(
-                                /\$\$[\s\S]*?\$\$/g,
-                                function (match) {
-                                    return match.replace(/\\\\/g, "\\\\\\\\");
-                                },
-                            );
+                            // Protect all math blocks from markdown processing
+                            // This prevents issues with _ or * inside math being interpreted as italics/bold
+                            // 1. Protect $$ ... $$
+                            content = content.replace(/\$\$[\s\S]*?\$\$/g, function(match) {
+                                mathList.push(match);
+                                return "<!--MATH" + (mathList.length - 1) + "-->";
+                            });
+
+                            // 2. Protect \( ... \)
+                            content = content.replace(/\\\([\s\S]+?\\\)/g, function(match) {
+                                mathList.push(match);
+                                return "<!--MATH" + (mathList.length - 1) + "-->";
+                            });
+
+                            // 3. Protect $ ... $ (inline math)
+                            content = content.replace(/\$([\s\S]+?)\$/g, function(match) {
+                                mathList.push(match);
+                                return "<!--MATH" + (mathList.length - 1) + "-->";
+                            });
+
+                            return content;
+                        });
+
+                        hook.afterEach(function (html, next) {
+                            // Restore math blocks after markdown has finished
+                            html = html.replace(/<!--MATH(\d+)-->/g, function(match, index) {
+                                return mathList[index];
+                            });
+                            next(html);
                         });
                     },
                 ],
