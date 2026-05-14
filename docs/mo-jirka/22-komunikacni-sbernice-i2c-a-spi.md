@@ -61,7 +61,7 @@ Na lince můžeme mít (teoreticky) až 127 zařízení, každé s unikátní 7-
 
 SPI (Serial Peripheral Interface) je sériový komunikační protokol, implementující synchronní, plně duplexní komunikaci mezi zařízeními. Vyvinula jej firma Motorola v 80. letech.
 
-Na rozdíl od I2C není třeba posílat adresní byte. Adresa je nahrazena dedikovaným CS/SS (Chip Select / Slave Select) signálem pro každé zařízení. D9ky tomu po datových linkách posíláme již jen samotná data. 
+Na rozdíl od I2C není třeba posílat adresní byte. Adresa je nahrazena dedikovaným CS/SS (Chip Select / Slave Select) signálem pro každé zařízení. Díky tomu po datových linkách posíláme již jen samotná data. 
 
 ![](images/22-spi-a.png)
 _Poznámka:_ SPI jde také využít pro zvýšení přenosové rychlosti a efektivní propojení s paměťovými zařízeními. Důležité je při návrhu určit správnou polaritu hodinového signálu.
