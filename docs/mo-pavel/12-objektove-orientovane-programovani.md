@@ -12,5 +12,3 @@
 ## Poznámka
 
 Ve starých skriptech není dohledatelná samostatná OOP kapitola. Stránka je připravená pro nové zpracování.
-
-

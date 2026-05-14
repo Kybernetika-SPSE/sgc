@@ -64,9 +64,3 @@
 - dokud prochází anodový proud, je tyristor sepnut (i bez napětí na Gate)
 - funguje binárně (sepnuto/rozepnuto), na rozdíl od tranzistoru (zesiluje analogový signál)
 ![](images/14-tyristor.png)
-
-
-
-
-
-

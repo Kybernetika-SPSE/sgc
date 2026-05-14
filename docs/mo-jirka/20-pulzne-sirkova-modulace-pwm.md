@@ -70,9 +70,3 @@ PWM signál na pinu 2 s 50% střídou a frekvencí 1000 Hz.
 **LED dioda** - u LED diody můžeme pomocí PWM řídit jas diody
 
 > Ilustrační obrázek serva v původních podkladech chybí, proto je zde ponechaný jen textový popis.
-
-
-
-
-
-

@@ -13,5 +13,3 @@
 ## Poznámka
 
 V archivu není samostatná kapitola pro přehled typů neuronových sítí. Tato stránka je připravená pro budoucí nové zpracování.
-
-

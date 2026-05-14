@@ -1,4 +1,4 @@
-﻿﻿# Otázka 17
+﻿# Otázka 17
 
 ## Jednočipové mikropočítače a mikrokontrolery
 
@@ -112,6 +112,3 @@ Po resetu se procesor podívá na adresy `FFFC` a `FFFD`, ze kterých načte tzv
 - Programový čítač po načtení bootovacího vektoru ukazuje na první instrukci programu.
 	
 - Celkový **počet základních instrukcí je malý** kvůli variacím v posledních číslech adresy
-
-
-

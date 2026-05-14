@@ -1,4 +1,4 @@
-﻿﻿# Otázka 06
+﻿# Otázka 06
 
 ## Učení s učitelem
 
