@@ -3,6 +3,8 @@
 > Částečně vytvořeno pomocí AI (GPT-5.4 + Claude Sonnet 4.5)
 
 > Praktický návod pro přidávání nových sekcí, rozcestníků a jednotlivých Markdown stránek do tohoto průvodce postaveného na Docsify.
+>
+> Potřebuje úpravu
 
 ## Účel dokumentu
 

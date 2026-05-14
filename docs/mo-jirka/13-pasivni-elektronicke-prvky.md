@@ -192,7 +192,9 @@ $$\tau = R \cdot C$$
 
 > Mimochodem, jejich kapacitní a induktivní reaktance jsou také navzájem inverzní: $X_{C} = \frac{1}{X_{L}}$ pro stejné frekvence a hodnoty $L$ a $C$ a jsou přímo spojené s přechodovými ději v RC a RL obvodech, které jsme si ukázali. Co by jste čekali že se stane, když místo obdélnékového signálu v grafech přechodových dějů použijeme sinus?
 
-> Dodatek k přechodovým dějům: Pokud vyměníme statickou složkuvstupního signálu, děj nebude exponenciální ale lineární. 
+### Dodatek k přechodovým dějům
+
+Pokud vyměníme statickou složkuvstupního signálu, děj nebude exponenciální ale lineární. 
 > Vysvětlení na RC článku: Článek byl nabíjen konstantním napětím a nabíjecí proud článku exponenciálně klesal, protože napětí na kondenzátoru rostlo a snižovalo napěťový rozdíl. Pokud ovšem budeme článek nabíjet konstantním proudem, úbytek na rezistoru bude konstantní, a napětí na kondenzátoru poroste lineárně. Proč lineárně? Protože $C = \frac{Q}{U}$, tedy $U = \frac{Q}{C}$. Kapacita se nemění a proud definujeme jako $I = \frac{dQ}{dt}$, tedy $Q = I \cdot t$. Po dosazení do vzorce pro napětí dostaneme $U = \frac{I \cdot t}{C}$, což je lineární funkce času.
 > Pokud chcete do nějakého obvodu dodat lineární integrační článek, potřebujete jej tedy nabíjet konstantním proudem.
 > U cívky je to podobné, ale místo konstantního proudu potřebujeme konstantní napětí a výsledek bude lineární růst proudu. Ovšem Nelze zandedpat odpor v RL obvodu jako u RC, kde se chová "jen jako ztráta napětí". Proud roste a tím roste i úbytek napětí na rezistoru.

@@ -32,3 +32,5 @@
 - [Nová skripta](/nova-skripta/)
 - [Aplikační listy](/application-notes/)
 - [Archiv starých materiálů](/archiv/)
+- [Různá témata](/topics/)
+  - [Základy komunikace protokolem MQTT](/topics/mqtt_basics.md)
