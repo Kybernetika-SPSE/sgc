@@ -35,7 +35,7 @@ Na lince můžeme mít (teoreticky) až 127 zařízení, každé s unikátní 7-
 	- Fast mode: 400 kbps
 	- Fast mode plus: 1 Mbps
 	- High-speed mode: 3.4 Mbps
-	> Samozřejmě jen jednosměrně (viz výše), přepínání R/W průměrnou rychlost dost omezí. Vyssí rychlosti jsou také náchylnější k rušení a parizitním jevům na vedení.
+	> Samozřejmě jen jednosměrně (viz výše), přepínání R/W průměrnou rychlost dost omezí. Vyšší rychlosti jsou také náchylnější k rušení a parizitním jevům na vedení.
 
 - **Princip otevřeného kolektoru a pull-up rezistory**
 	- I2C používá otevřený kolektor (open-drain) pro SDA a SCL, což znamená, že zařízení mohou pouze "táhnout" linku na log. 0. Pro udržení log. 1 jsou potřeba pull-up rezistory. To zabraňuje potenciálním problémům, kde by se jedno zařízení snažilo vysílat log. 1, zatímco jiné by se snažilo vysílat log. 0.
