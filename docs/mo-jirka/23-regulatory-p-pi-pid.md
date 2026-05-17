@@ -1,14 +1,14 @@
-﻿# Otázka 23 - Regulátory - P, PI, PID
+# Otázka 23 - Regulátory - P, PI, PID
 
 ## Princip řízení pomocí zpětné vazby
 ![](images/feedback.png ":class=pre-inverted")
 
 Schéma systému zapojeného ve zpětné vazbě s regulátorem, kde:
 
--$x(t)$je požadovaná hodnota výstupu.
--$e(t)$je chyba, tedy rozdíl výstupu a vstupu ($e(t) = y(t) - x(t)$)
--$u(t)$je řídící veličina. Hodnota generovaná regulátorem, která je přivedená na vstup systému.
--$y(t)$je výstup systému.
+- $x(t)$ je požadovaná hodnota výstupu.
+- $e(t)$ je chyba, tedy rozdíl výstupu a vstupu ($e(t) = y(t) - x(t)$)
+- $u(t)$ je řídící veličina. Hodnota generovaná regulátorem, která je přivedená na vstup systému.
+- $y(t)$ je výstup systému.
 
 
 ## P-Regulátor (Proporcionální regulátor):
@@ -16,17 +16,16 @@ Schéma systému zapojeného ve zpětné vazbě s regulátorem, kde:
 ### 1. **Diferenciální rovnice (Proporcionální regulátor)**:
 Proporcionální regulátor se řídí jednoduchým vztahem mezi vstupní chybou a regulačním signálem. Regulátor generuje regulační akci, která je úměrná okamžité hodnotě chyby.
 
-
-$u(t) = K_P \cdot e(t)$
+$$u(t) = K_P \cdot e(t)$$
 Kde:
--$u(t)$je výstup regulátoru (regulační akce),
--$K_P$je proporcionální zisk (zesílení) - nastavuje sílu reakce regulátoru,
--$e(t)$je chyba systému ($e(t) = \text{žádaná hodnota} - \text{skutečná hodnota}$).
+- $u(t)$ je výstup regulátoru (regulační akce),
+- $K_P$ je proporcionální zisk (zesílení) - nastavuje sílu reakce regulátoru,
+- $e(t)$ je chyba systému ($e(t) = \mathrm{žádaná hodnota} - \mathrm{skutečná hodnota}$).
 
 ### 2. **Přenosová funkce (Proporcionální regulátor)**:
 Přenosová funkce popisuje vztah mezi vstupem a výstupem systému v Laplaceově doméně:
 
-$G(s) = K_P$
+$$G(s) = K_P$$
 
 ### 3. **Vysvětlení**:
 Proporcionální regulátor reaguje na chybu v systému tím, že aplikuje sílu, která je úměrná velikosti chyby. Čím větší je chyba, tím větší je regulační akce. Proporcionální regulátor může způsobit zbytkovou chybu v ustáleném stavu, protože nikdy úplně neeliminuje chybu., pokud není nulová.
@@ -38,23 +37,22 @@ Proporcionální regulátor reaguje na chybu v systému tím, že aplikuje sílu
 ### 1. **Diferenciální rovnice (Integrační regulátor)**:
 Integrační regulátor vytváří výstup, který závisí na integrálu chyby. Výstup se neustále zvyšuje nebo snižuje v závislosti na tom, zda je chyba kladná nebo záporná. Integrační složka pomáhá eliminovat zbytkovou chybu v ustáleném stavu.
 
-$u(t) = K_I \int_{0}^{t} e(\tau) \, d\tau$
-
+$$u(t) = K_I \int_{0}^{t} e(\tau) \, d\tau$$
 Kde:
--$K_I$je integrační zisk (zesílení),
--$\int_{0}^{t} e(\tau) \, d\tau$je integrál chyby v čase.
+- $K_I$ je integrační zisk (zesílení),
+- $\int_{0}^{t} e(\tau) \, d\tau$ je integrál chyby v čase.
 
 ### 2. **Přenosová funkce (Integrační regulátor)**:
 Přenosová funkce pro integrační regulátor:
 
-$G(s) = \frac{K_I}{s}$
+$$G(s) = \frac{K_I}{s}$$
 
 ### 3. **Vysvětlení**:
 Integrační regulátor se zaměřuje na akumulaci chyby v průběhu času. Jeho hlavní funkcí je eliminace zbytkové chyby, která by mohla zůstat po použití pouze proporcionálního regulátoru. Pokud je chyba kladná, integrační akce zvyšuje výstup, dokud není chyba nulová. Při špatném nastavení může I-regulátor způsobit „nabalování“ (wind-up), což vede k pomalé reakci nebo přestřelení.
 
 > Numericky I regulátor můžeme implementovat jako jako jednoduchou sumu chyb s pevným časovým krokem:
 >$u(t) = u(t-1) + K_I \cdot e(t) \cdot \Delta t$
-> kde$u(t-1)$je předchozí výstup regulátoru,$e(t)$je aktuální chyba a$\Delta t$je časový krok mezi dvěma měřeními.
+> kde $u(t-1)$ je předchozí výstup regulátoru, $e(t)$ je aktuální chyba a $\Delta t$ je časový krok mezi dvěma měřeními.
 
 ---
 
@@ -63,16 +61,15 @@ Integrační regulátor se zaměřuje na akumulaci chyby v průběhu času. Jeho
 ### 1. **Diferenciální rovnice (Derivační regulátor)**:
 Derivační regulátor vytváří výstup, který závisí na rychlosti změny chyby. Čím rychleji se chyba mění, tím silnější je regulační akce.
 
-$u(t) = K_D \cdot \frac{d}{dt} \cdot e(t)$
-
+$$u(t) = K_D \cdot \frac{d}{dt} \cdot e(t)$$
 Kde:
--$K_D$je derivační zisk (zesílení),
--$\frac{d}{dt} \cdot e(t)$je časová derivace chyby.
+- $K_D$ je derivační zisk (zesílení),
+- $\frac{d}{dt} \cdot e(t)$ je časová derivace chyby.
 
 ### 2. **Přenosová funkce (Derivační regulátor)**:
 Přenosová funkce pro derivační regulátor:
 
-$G(s) = K_D \cdot s$
+$$G(s) = K_D \cdot s$$
 
 ### 3. **Vysvětlení**:
 Derivační regulátor reaguje na rychlost změny chyby. Pokud se chyba rychle zvyšuje nebo snižuje, derivační regulátor poskytne silnou regulační akci k vyrovnání změny. Jeho hlavní funkcí je tlumení oscilací a zlepšení stability systému. Derivační regulátor je velmi citlivý na šum, protože jakékoli rychlé změny v chybě mohou způsobit velké výstupní akce.
@@ -85,25 +82,22 @@ PID je navržen pro regulaci hodnot procesů, například teploty, rychlosti, tl
 
 Výstup PID regulátoru lze vypočítat:
 
-$u(t) = K_p \cdot e(t) + K_i \int e(t) \,dt + K_d \frac{de(t)}{dt}$,
-
+$$u(t) = K_p \cdot e(t) + K_i \int e(t) \,dt + K_d \frac{de(t)}{dt}$$
 kde:
-
--$e(t) = y(t) - x(t)$: chyba = výstup systému - požadovaný vstup
-
--$K_p$,$K_i$,$K_d$, jsou konstanty složek (proporcionální, integrační, derivační)
+- $e(t) = y(t) - x(t)$: chyba = výstup systému - požadovaný vstup
+- $K_p$, $K_i$, $K_d$, jsou konstanty složek (proporcionální, integrační, derivační)
 
 V Laplaceově přenosu:
 
-$G(s) = K_p + \frac{K_i}{s} + K_d \cdot s$
+$$G(s) = K_p + \frac{K_i}{s} + K_d \cdot s$$
 
 ## Metody nastavování PID regulátoru:
 
-- Manuální ladění: Nastavení PID parametrů lze provádět experimentálně, kdy se postupně zvyšuje$Kp$​, dokud nedosáhneme dobré odezvy, pak se přidá$Ki$​, a nakonec$Kd​$.
+- Manuální ladění: Nastavení PID parametrů lze provádět experimentálně, kdy se postupně zvyšuje $Kp$​, dokud nedosáhneme dobré odezvy, pak se přidá $Ki$​, a nakonec $Kd​$.
 
-> Nemá smysl volit$K_P$vyšší, než systém zvládne. Příklad: pokud při ohřevu s největší chybou (často při startu) regulátor nastavuje téměř plný výkon, nemá smysl volit vyšší$K_P$. Systém to nezvládne a akorát by vyšší$K_P$způsobilo větší překmit a nestabilitu.
+> Nemá smysl volit $K_P$ vyšší, než systém zvládne. Příklad: pokud při ohřevu s největší chybou (často při startu) regulátor nastavuje téměř plný výkon, nemá smysl volit vyšší $K_P$. Systém to nezvládne a akorát by vyšší $K_P$ způsobilo větší překmit a nestabilitu.
 
-> Po hrubém nastavení$K_P$pak přidáme$K_I$​ a postupně doladíme odchylku v ustáleném stavu. Nakonec přidáme$K_D$​ pro zlepšení stability a snížení překmitů. Zároveň je dobré vyzkoušet rychlost odezvy na změny.
+> Po hrubém nastavení $K_P$ pak přidáme $K_I$​ a postupně doladíme odchylku v ustáleném stavu. Nakonec přidáme $K_D$​ pro zlepšení stability a snížení překmitů. Zároveň je dobré vyzkoušet rychlost odezvy na změny.
 
 - Ziegler-Nichols metoda: Jedna z nejčastějších metod pro ladění PID parametrů, která využívá oscilace systému při daných hodnotách PID parametrů.
 
@@ -135,7 +129,7 @@ Ziegler-Nicholsova metoda existuje ve dvou základních variantách:
 
 Tato metoda se používá v uzavřené smyčce. Postup je následující:
 
-1. Nastavte regulátor tak, že vypnete integrální a derivační složky (tj. $K_i = 0$ a $K_d = 0$) a postupně zvyšujte proporcionální zesílení $K_p$, dokud systém nezačne trvale kmitat s konstantní amplitudou. Tento bod je známý jako kritické zesílení $K_u$(ultimate gain).
+1. Nastavte regulátor tak, že vypnete integrální a derivační složky (tj. $K_i = 0$ a $K_d = 0$) a postupně zvyšujte proporcionální zesílení $K_p$, dokud systém nezačne trvale kmitat s konstantní amplitudou. Tento bod je známý jako kritické zesílení $K_u$ (ultimate gain).
 2. Změřte periodu oscilací $T_u$ (ultimate period), což je doba trvání jednoho celého cyklu oscilace (např. od vrcholu k vrcholu).
 3. Vypočítejte parametry $K_p$, $K_i$ a $K_d$ podle následující tabulky:
 
@@ -160,12 +154,12 @@ Tato metoda se používá v uzavřené smyčce. Postup je následující:
 Při 3D tisku je nutné udržovat přesnou teplotu trysky (hotendu), například 200 °C. Mnoho tiskáren používá vestavěnou funkci "PID autotune" (často G-code příkaz `M303`), která dělá na pozadí přesně Ziegler-Nicholsovu metodu. Jak by to vypadalo manuálně?
 
 1. **Vypnutí I a D složky**: V nastavení tiskárny byste nastavili $K_i = 0$ a $K_d = 0$.
-2. **Hledání kritického zesílení ($K_u$)**: Postupně byste zvyšovali$K_p$. Zjistíte, že např. při$K_p = 15$začne teplota neustále pravidelně kmitat mezi 195 °C a 205 °C, aniž by se kmity utlumovaly nebo zvětšovaly. Zapíšete si **$K_u = 15$**.
+2. **Hledání kritického zesílení ($K_u$)**: Postupně byste zvyšovali $K_p$. Zjistíte, že např. při $K_p = 15$ začne teplota neustále pravidelně kmitat mezi 195 °C a 205 °C, aniž by se kmity utlumovaly nebo zvětšovaly. Zapíšete si **$K_u = 15$**.
 3. **Měření periody ($T_u$)**: Změříte čas s pomocí stopek nebo grafu. Zjistíte, že teplota dosáhne vrcholu 205 °C přesně každých 40 sekund. Zapíšete si **$T_u = 40$** vteřin.
 4. **Výpočet klasického PID**:
-   - Proporcionální složka:$K_p = 0.6 \cdot 15 = 9$
-   - Integrační složka:$K_i = 1.2 \cdot 15 / 40 = 0.45$
-   - Derivační složka:$K_d = 0.075 \cdot 15 \cdot 40 = 45$
+   - Proporcionální složka: $K_p = 0.6 \cdot 15 = 9$
+   - Integrační složka: $K_i = 1.2 \cdot 15 / 40 = 0.45$
+   - Derivační složka: $K_d = 0.075 \cdot 15 \cdot 40 = 45$
 
 **Výsledek a praxe na tiskárně:**
-Zadáte do EEPROM tiskárny hodnoty$K_p = 9$,$K_i = 0.45$,$K_d = 45$. Při zahřívání z pokojové teploty hotend velmi rychle dosáhne 200 °C. Protože je Z-N metoda agresivní, teplota pravděpodobně krátce přesáhne cíl (např. na 203 °C - tzv. překmit), ale derivace ($K_d$) tento překmit rychle utlumí a integrál ($K_i$) následně srovná teplotu přesně na 200 °C. Ve chvíli, kdy do trysky narazí studený filament a strhne teplotu dolů, regulátor okamžitě zareaguje a přidá výkon topného tělíska.
+Zadáte do EEPROM tiskárny hodnoty $K_p = 9$, $K_i = 0.45$, $K_d = 45$. Při zahřívání z pokojové teploty hotend velmi rychle dosáhne 200 °C. Protože je Z-N metoda agresivní, teplota pravděpodobně krátce přesáhne cíl (např. na 203 °C - tzv. překmit), ale derivace ($K_d$) tento překmit rychle utlumí a integrál ($K_i$) následně srovná teplotu přesně na 200 °C. Ve chvíli, kdy do trysky narazí studený filament a strhne teplotu dolů, regulátor okamžitě zareaguje a přidá výkon topného tělíska.
