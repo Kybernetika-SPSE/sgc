@@ -1,4 +1,4 @@
-﻿# Otázka 06
+# Otázka 06
 
 ## Učení s učitelem
 
@@ -29,7 +29,7 @@ $$\mathcal{D} = \{(x^{(i)}, y^{(i)})\}_{i=1}^{m}$$
 
 kde každá taková dvojice odpovídá jednomu datu (objektu, záznamu, ...)
 
-> Například, pokud budou jako vstupy různá auta, bude vektor $$x$$ popisovat sadu jejich vlastností. x = [barva, objem motoru, počet kol, počet sedadel, ...], celá trénovací sada pak bude více takových položek a k nim odpovídající labely.
+> Například, pokud budou jako vstupy různá auta, bude vektor $x$ popisovat sadu jejich vlastností. $x$ = [barva, objem motoru, počet kol, počet sedadel, ...], celá trénovací sada pak bude více takových položek a k nim odpovídající labely.
 
 ### Rozdělení na trénovací a testovací sadu:
 
