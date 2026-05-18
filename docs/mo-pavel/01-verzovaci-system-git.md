@@ -1,4 +1,4 @@
-﻿﻿# Otázka 01
+﻿# Otázka 01
 
 ## Verzovací systém Git
 
@@ -105,6 +105,3 @@ Git je **distribuovaný systém pro správu verzí**, který umožňuje sledovat
    zkopírovat token!
 5. nastavit origin pomocí tokenu   
   ``` git remote set-url origin https://<TOKEN>@github.com/<username>/<repository.git> ```
-
-
-

@@ -1,4 +1,4 @@
-﻿﻿# Otázka 16
+﻿# Otázka 16
 
 ## Elektronické senzory a aktuátory
 
@@ -40,9 +40,9 @@ Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elekt
 ![](images/16-odporove-senzory-vlhkosti.png ":class=no-invert")
 
 ### 4. Senzory plynů a chemických látek
-- **Senzory CO$\mathbf{_{2}}$, CO, CH$\mathbf{_4}$, NH$\mathbf{_3}$** – elektrochemické nebo polovodičové senzory plynů.
+- **Senzory $\mathbf{CO_2}$, $\mathbf{CO}$, $\mathbf{CH_4}$, $\mathbf{NH_3}$** – elektrochemické nebo polovodičové senzory plynů.
 - **pH senzory** – měří kyselost nebo zásaditost roztoku.
-- **Senzory kvality vzduchu (VOC, NO$\mathbf{_{2}}$, O$\mathbf{_{3}}$)** – detekují škodlivé plyny v ovzduší.
+- **Senzory kvality vzduchu (VOC, $\mathbf{NO_2}$, $\mathbf{O_3}$)** – detekují škodlivé plyny v ovzduší.
 
 ### 5. Senzory pohybu a polohy
 - **Akcelerometry** – měří zrychlení ve třech osách (např. `MPU6050`).
@@ -78,7 +78,7 @@ Při dalším dělení je nejdříve nutné si říci jestli se jedná o **elekt
 - **Bezkontaktní senzory** – fungují na principu elektromagnetického záření, ultrazvuku nebo magnetického pole.
 
 ---
-# 2. Čtení dat ze senzorů
+# Čtení dat ze senzorů
 ## A) Analogové senzory
 - Používají **A/D převodník (ADC)** k převedení napětí na digitální hodnotu.
 - Hodnota se pak zpracovává mikrokontrolérem nebo počítačem.

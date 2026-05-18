@@ -1,4 +1,4 @@
-﻿﻿# MO Pavel
+﻿# MO Pavel
 
 Sekce pro Pavlovo zpracování maturitních otázek 1 až 12.
 
@@ -23,10 +23,10 @@ Sekce pro Pavlovo zpracování maturitních otázek 1 až 12.
 - Otázky 9 až 12 zatím nemají plný starý podklad a zůstávají připravené pro nové zpracování.
 - Obrázky pro tuto sekci jsou v `docs/mo-pavel/images/` a ostatní soubory patří do `docs/mo-pavel/assets/`.
 - Prezentace k otázkám 8, 9 zde:
-    - [prezentace1](assets/1_Motivace__lidsky_mozek__modely_neuronu.pdf)
-    - [prezentace2](assets/2_Typy_umelych_neuronovych_siti-faze_jejich_cinnosti-pouziti.pdf)
-    - [prezentace3](assets/Deep_Neural_Networks_1.pdf)
+    - [prezentace1](/mo-pavel/assets/1_Motivace__lidsky_mozek__modely_neuronu.pdf ':ignore')
+    - [prezentace2](/mo-pavel/assets/2_Typy_umelych_neuronovych_siti-faze_jejich_cinnosti-pouziti.pdf ':ignore')
+    - [prezentace3](/mo-pavel/assets/Deep_Neural_Networks_1.pdf ':ignore')
 
 - Odkaz na původní (nedodělaná) [skripta](https://github.com/bublinak/skripta-kyb):
 
-- Materiály na algoritmizaci a OOP (ot. 11 a 12) jsou k dispozici v podobe zdrojů na [google drivu](https://drive.google.com/drive/folders/1BITALnXl_1SiHENJC8iYHsOI2mLOxA48?usp=sharing). 
+- Materiály na algoritmizaci a OOP (ot. 11 a 12) jsou k dispozici v podobe zdrojů na [google drivu](https://drive.google.com/drive/folders/1BITALnXl_1SiHENJC8iYHsOI2mLOxA48?usp=sharing).

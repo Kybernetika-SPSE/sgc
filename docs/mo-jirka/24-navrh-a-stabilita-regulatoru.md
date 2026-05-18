@@ -1,4 +1,4 @@
-﻿# Otázka 24 - Návrh a stabilita regulátorů
+# Otázka 24 - Návrh a stabilita regulátorů
 
 > Vytvořeno pomocí Gemini 3.1 Pro (reasoning:high). Skripty: GPT-5.4 mini
 
@@ -67,28 +67,32 @@ Této souřadnici matematicky říkáme **mez stability**, bod $(-1, 0j)$. Nalad
 
 ![](assets/24_07_bode_pid.png)
 
-Jak číst Nyquistův diagram a je systém stabilní?
-Když se podíváte na Nyquistův diagram uvedený výše, hledáte jedinou věc: pozici kritického bodu $(-1, 0j)$ vůči nakreslené křivce.
+**Jak číst Nyquistův diagram a je systém stabilní?** Když se podíváte na Nyquistův diagram uvedený výše, hledáte jedinou věc: **pozici kritického bodu** $[-1, 0j]$ vůči nakreslené křivce.
 
-Je zobrazený systém stabilní? Ano, je. Vidíme, že zakreslená křivka frekvenční odezvy tento kritický bod neobepíná (bod leží bezpečně vlevo mimo uzavřenou smyčku samotné křivky). To znamená, že jakmile systém fyzicky uzavřeme zpětnou vazbou, kmity se utlumí a proces bude stabilní.
-Lze jej dostat do nestabilní polohy? Rozhodně. Představte si, že v regulátoru ztrojnásobíte proporcionální zesílení ($K_p$). Celá Nyquistova křivka se v grafu „nafoukne“ třikrát do šířky. Část křivky, která protíná osu X, by se posunula směrem doleva, překročila by bod $-1$ a obepnula by jej. V tu chvíli by amplitudová bezpečnost (GM) klesla pod nulu a systém by v praxi naprosto nekontrolovatelně zhavaroval. Stejně tak přidání zpoždění (např. delší trubky u ventilu) by křivku fázově pootočilo po směru hodinových ručiček, což by ji také mohlo natlačit na náš „břit nože“.
-Kořeny systému: Skrytá DNA stability
-Aby inženýři nemuseli stabilitu jen odhadovat z křivek, počítají vlastnosti systému pomocí tzv. kořenů (nebo pólů). Můžete si je představit jako matematickou „DNA“, která přesně definuje, jak se systém zachová, když jej vychýlíme z rovnováhy. Kořeny se vykreslují do 2D grafu (komplexní roviny), protože se skládají ze dvou složek: reálné a imaginární.
+**Je zobrazený systém stabilní?** **Ano, je.** Vidíme, že zakreslená křivka frekvenční odezvy tento kritický bod **neobepíná** (bod leží bezpečně vlevo mimo uzavřenou smyčku samotné křivky). To znamená, že jakmile systém fyzicky uzavřeme zpětnou vazbou, kmity se utlumí a proces bude stabilní.
 
-1. Reálná část (poloha na ose X) – Určuje PŘEŽITÍ (Stabilitu)
-Tato složka rozhoduje o tom, zda amplituda vln roste nebo klesá.
+**Lze jej dostat do nestabilní polohy?** **Rozhodně.**
+* **Zvýšení zesílení:** Představte si, že v regulátoru ztrojnásobíte proporcionální zesílení ($K_p$). Celá Nyquistova křivka se v grafu „nafoukne“ třikrát do šířky. Část křivky, která protíná osu X, by se posunula směrem doleva, překročila by bod $-1$ a obepnula by jej. V tu chvíli by *amplitudová bezpečnost (GM)* klesla pod nulu a systém by v praxi naprosto nekontrolovatelně zhavaroval.
+* **Přidání zpoždění:** Stejně tak přidání zpoždění (např. delší trubky u ventilu) by křivku *fázově pootočilo* po směru hodinových ručiček, což by ji také mohlo natlačit na náš „břit nože“.
 
-Záporná hodnota (levá polorovina): Systém se postupně uklidňuje (vlna se tlumí postupně k nule). Čím dále vlevo kořen leží, tím rychleji tlumení proběhne. (Stabilní chování)
-Kladná hodnota (pravá polorovina): Systém se po vychýlení začne rozkmitávat s čím dál větší amplitudou, dokud nehavaruje. (Nestabilní chování)
-Nulová hodnota (leží přesně na středové ose Y): Vlny se ani netlumí, ani nerostou. Systém trvale kmitá a balancuje na mezi stability.
-2. Imaginární část (poloha na ose Y) – Určuje KMITÁNÍ (Frekvenci)
-Tato složka neovlivňuje, zda systém přežije nebo havaruje, ale říká nám, jakým stylem se bude chovat.
+---
 
-Nenulová hodnota: Znamená, že odezva má periodický (vlnovitý) charakter. Čím je kořen na ose Y dál od nuly, tím rychleji systém kmitá (má vyšší frekvenci).
-Nulová hodnota (leží přímo na ose X): Imaginární část chybí. To znamená, že systém vůbec neudělá „vlnu“ (nemá překmit). Pouze pozvolna po křivce „dojede“ do cíle (nebo od cíle uteče, pokud je reálná část kladná). Jedná se o tzv. aperiodický pohyb.
-Zlaté pravidlo stability:
-Aby byl řízený systém stabilní, všechny jeho kořeny bez výjimky se musí nacházet v levé polorovině (musí mít zápornou reálnou část). Bez ohledu na to, jak úžasných je 9 kořenů, stačí jeden jediný kořen, který „přeteče“ do kladné (pravé) poloroviny, a celý systém skončí nestabilitou.
+**Kořeny systému: Skrytá DNA stability.** Aby inženýři nemuseli stabilitu jen odhadovat z křivek, počítají vlastnosti systému pomocí tzv. **kořenů (nebo pólů)**. Můžete si je představit jako matematickou *„DNA“*, která přesně definuje, jak se systém zachová, když jej vychýlíte z rovnováhy. Kořeny se vykreslují do 2D grafu (komplexní roviny), protože se skládají ze dvou složek: **reálné** a **imaginární**.
 
+**1. Reálná část (poloha na ose X) – Určuje PŘEŽITÍ (Stabilitu):** Tato složka rozhoduje o tom, zda amplituda vln roste nebo klesá.
+* **Záporná hodnota (levá polorovina):** _Stabilní chování._ Systém se postupně uklidňuje (vlna se tlumí postupně k nule). Čím dále vlevo kořen leží, tím rychleji tlumení proběhne.
+* **Kladná hodnota (pravá polorovina):** _Nestabilní chování._ Systém se po vychýlení začne rozkmitávat s čím dál větší amplitudou, dokud nehavaruje.
+* **Nulová hodnota (přesně na středové ose Y):** _Mez stability._ Vlny se ani netlumí, ani nerostou. Systém trvale kmitá a balancuje na hraně.
+
+**2. Imaginární část (poloha na ose Y) – Určuje KMITÁNÍ (Frekvenci):** Tato složka neovlivňuje, zda systém přežije nebo havaruje, ale říká nám, jakým stylem se bude chovat.
+* **Nenulová hodnota:** Znamená, že odezva má periodický (vlnovitý) charakter. Čím je kořen na ose Y dál od nuly, tím rychleji systém kmitá (má vyšší frekvenci).
+* **Nulová hodnota (přesně na ose X):** Imaginární část chybí. To znamená, že systém vůbec neudělá „vlnu“ (nemá překmit). Pouze pozvolna po křivce „dojede“ do cíle (nebo od cíle uteče, pokud je reálná část kladná). Jedná se o tzv. *aperiodický pohyb*.
+
+
+> [!tip] **Zlaté pravidlo stability:**
+> Aby byl řízený systém stabilní, **všechny jeho kořeny bez výjimky se musí nacházet v levé polorovině** (musí mít zápornou reálnou část). Bez ohledu na to, jak úžasných je 9 kořenů, stačí jeden jediný kořen, který „přeteče“ do kladné (pravé) poloroviny, a celý systém skončí nestabilitou.
+
+---
 #### Měření bezpečné vzdálenosti od ostří
 V praxi navrhujeme systémy tak, aby měly dostatečný odstup od nestability. Sledujeme dvě míry bezpečnosti:
 

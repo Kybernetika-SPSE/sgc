@@ -34,8 +34,3 @@ Karnaughova mapa je tabulka, kde každé pole odpovídá určité kombinaci hodn
 ### Příklad:
 
 ![](images/karnaugh.png)
-
-
-
-
-

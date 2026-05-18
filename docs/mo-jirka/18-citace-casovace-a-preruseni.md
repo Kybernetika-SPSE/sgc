@@ -1,4 +1,4 @@
-﻿﻿# Otázka 18
+﻿# Otázka 18
 
 ## Čítače, časovače a přerušení
 

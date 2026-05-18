@@ -39,4 +39,3 @@
 - Obsah jednotlivých sekcí se bude doplňovat postupně.
 - Obrázky jsou nyní uložené v `mo-*/images/` a ostatní soubory patří do `mo-*/assets/`.
 - Repo je nastavené tak, aby šlo publikovat z `docs/` na GitHub Pages.
-

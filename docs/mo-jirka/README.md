@@ -24,6 +24,3 @@ Sekce pro Jirkovo zpracování maturitních otázek 13 až 24.
 - Otázka 19 zatím nemá samostatnou novou kapitolu a zůstává připravená pro další doplnění.
 - Obrázky pro tuto sekci jsou v `docs/mo-jirka/images/` a ostatní soubory patří do `docs/mo-jirka/assets/`.
 - Všechny odkazy na původní zdroje směřují do importovaného archivu v `docs/archiv/skripta-kyb/`.
-
-
-

@@ -22,7 +22,7 @@ Jak si lze všimnout, výstupní signál v pravidelných intervalech přepíná 
 | Střída | Střída | Střída | Střída | Vstupní | dělič | Volba vstupu | Polarita výstupu |
 
 - Střída (Duty Cycle) - 4 bity - nastavení $T_{ON}/T_{OFF}$
-  > 
+
 - Vstupní dělič - 2 bity - nastavení frekvence (dělící poměr vstupního signálu)
   > 00 - CLK/16, 01 - CLK/8, 10 - CLK/4, 11 - CLK/2
 - Volba vstupu - 1 bit - výběr mezi hodinovým signálem či externím vstupem
@@ -30,10 +30,6 @@ Jak si lze všimnout, výstupní signál v pravidelných intervalech přepíná 
 - Polarita výstupu - 1 bit - hw prohození $T_{ON}/T_{OFF}$.
   > 0 - normální, 1 - invertovaný
 
-
----
-
-Původní text dále
 
 ---
 
@@ -95,9 +91,3 @@ PWM signál na pinu 2 s 50% střídou a frekvencí 1000 Hz.
 **LED dioda** - u LED diody můžeme pomocí PWM řídit jas diody
 
 > Ilustrační obrázek serva v původních podkladech chybí, proto je zde ponechaný jen textový popis.
-
-
-
-
-
-

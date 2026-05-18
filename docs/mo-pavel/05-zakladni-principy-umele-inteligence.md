@@ -146,7 +146,3 @@ Nevýhody a výzvy:
 ### Genetické algoritmy
 - Genetické algoritmy (GA) jsou optimalizační metody inspirované evoluční teorií a principy přirozeného výběru. Simulují evoluční procesy, jako jsou mutace, křížení a selekce, aby našly optimální řešení komplexních problémů.
 - Genetické algoritmy jsou silný nástroj pro hledání optimálních řešení a jsou hojně využívány v širokém spektru aplikací od inženýrství po vědecký výzkum.
-
-
-
-

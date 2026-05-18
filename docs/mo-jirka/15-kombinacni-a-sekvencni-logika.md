@@ -1,4 +1,4 @@
-﻿﻿# Otázka 15
+﻿# Otázka 15
 
 ## Kombinační a sekvenční logika
 

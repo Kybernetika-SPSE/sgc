@@ -12,5 +12,3 @@
 ## Poznámka
 
 V importovaných materiálech není samostatná kapitola věnovaná algoritmizaci. Tato stránka zůstává jako připravený rozcestník pro budoucí obsah.
-
-
