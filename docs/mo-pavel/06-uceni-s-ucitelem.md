@@ -21,7 +21,7 @@ Každá položka vstupu je tedy vektor:
 
 $$ x = [x_1, x_2, \ldots , x_n], \qquad x_i \in \mathcal{R}, $$
 
-kde x_i jsou jednotlivé vlastnosti jednoho vstupu.
+kde $x_i$ jsou jednotlivé vlastnosti jednoho vstupu.
 
 A každá položka má k ní odpovídající *label*, což je odpovídající výstup (od učitele). Celkem jde tedy o soubor dvojic dat 
 
