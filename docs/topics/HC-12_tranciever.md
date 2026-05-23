@@ -40,7 +40,7 @@
  
 ## 1. Úvod
  
-![Obr.1 Modul HC-12](./images/HC-12_tranciever_hc12+ant.png)
+![Obr.1 Modul HC-12](./images/HC-12_tranciever_hc12+ant.png ":class=no-invert")
 *Obr.1, HC-12 Tranciever a anténa*
  
 HC-12 je **RF transceiver**, což znamená, že může posílat a přijímat data. Modul pracuje v pásmu 433 MHz rádiových vln.
@@ -82,7 +82,7 @@ adresa přímo do obsahu zprávy v kódu. Například jako první bajt každého
  
 ## 3. Popis desky a pinů
  
-![HC-12, Pinout](./images/HC-12_tranciever_hc12_pinout.png)
+![HC-12, Pinout](./images/HC-12_tranciever_hc12_pinout.png ":class=no-invert")
 *Obr.2, Popis pinů*
  
 ### Popis pinů
@@ -216,7 +216,7 @@ Arduino D5  ——→  HC-12 RXD
 Arduino 5V  ——→  HC-12 VCC
 Arduino GND ——→  HC-12 GND
 ```
-![Schéma zapojení: Arduino](./images/HC-12_tranciever_arduino.png)
+![Schéma zapojení: Arduino](./images/HC-12_tranciever_arduino.png ":class=no-invert")
 
 *Obr.3, Zapojení HC-12 k Arduino UNO*
 
@@ -230,7 +230,7 @@ ESP32 VIN (5V)           ——→  HC-12 VCC
 ESP32 GND                ——→  HC-12 GND
 ```
  
-![Schéma zapojení: Arduino](./images/HC-12_tranciever_esp32.png)
+![Schéma zapojení: Arduino](./images/HC-12_tranciever_esp32.png ":class=no-invert")
 
 *Obr.4, Zapojení HC-12 k ESP32*
 
