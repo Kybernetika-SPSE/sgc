@@ -1,4 +1,4 @@
-## Slovo úvodem
+## Úvod
 
 Zatímco v předchozích tématech jsme se zabývali pasivními prvky a základními polovodiči, v této otázce se podíváme na jedno z nejdůležitějších zapojení výkonové elektroniky – **H-můstek**. Pokud potřebujeme stejnosměrný motor (DC motor) nejen zapnout a vypnout, ale také měnit směr jeho otáčení nebo jej aktivně brzdit, pouhý jeden spínací tranzistor nám stačit nebude. 
 
@@ -43,6 +43,15 @@ Pokud by došlo k současnému sepnutí spínačů nad sebou (např. $S_1$ a $S_
 ## Realizace pomocí tranzistorů
 
 V reálné praxi se místo mechanických spínačů používají tranzistory. U menších výkonů bipolární (BJT), u moderních a výkonnějších zapojení výhradně polí řízené tranzistory (**MOSFET**), případně **IGBT** tranzistory pro velmi vysoká napětí.
+
+<iframe
+    src="https://www.falstad.com/circuit/circuitjs.html?ctz=DwYwlgTgBAZgvAIgIwKgFwM6IAwDpsEECsqYIiSuAHACwDsAnEVQGzYtIENVEuogAjRL1QAHIQiLZUANwjDUAW0zCApgFokKAHwAoKFGBooADwp0WUKtihIGAJivTYOMQDsKqAaooElAe0QAE1UYAEMAVwAbNFlvHHx7GgYUqnsGJCJuDKQ6KjjyBDxsJJTuHh4AZhYaGipKhAB6PQMjU0QaJEtrKBoCJ1R4IvdPKHjkPyhFQIQQ8OjYqBlx4tLU9Mzs3PsChJLk1IqiapoiGiaWw2MzZAtbNlsHe+ch51EPZC8fCedp4NDIjE4t9VgdysxjjV6PY6LsiokwWVrPUaFCLvoru0EJ1LF0bH0bHjBq4oO9RuNOL8ZnNAYtliCEUijicaPYkOclgJCqCykjsCisujWtAbnjnlAas9icMoPIftJmhjgCKOnVxWcaFKXDK5ZSFZdlVj7ElbEhHDDHFodtrnLr9UqokaqFRTY5KkRLWbpc4onsSFAyCSwIhKrgaJUGCw6KzagxsHRKqcNGyhYYAO5Guie83O13e1PADM3Y2aq2PbP5xWtIsUJ6R8t5m0FmsId3Z3r9K2Vg0tgmujs2SPdpW9zu1XqVS32fJNqvprHhqcu2ous0z17NhdquyOPs74fVhedp57iwH+c3Pcn-r2fnnwtYne2cditf3luv6fP0vT9+Pl9PE++6zj2j6AeBlpniBI5gZaEFQLe66uHOwAAOawQh-INiW97oZeN5YX2OHQa0QQLpKT6oj+SEyn8swAgsBZkaKAGWi+v5NlM1IMUCKEfnWuJ3F2JEXuYuJmt+jYbnxW4uvWK5SchoGXtuEl9kOInAMxFAvhJ7KlnwnF0TSjEodp2KSvJFGGRuXH-PMvEGjIToujY04uuok7Sl0qBprZihhCYMgKDJxa5l0CG5i8SkwaKTwUYBNkxYe+E2JKe5JcMoWqqulgZX+qX3JFuUFYg7lFUBmX2iltaWriL5VZuKm5b01mldiapWZqGnScpOVOL0EXWO1Clrq11EjQlu7bg4I3bg8OJar1Soqh1Lo9BqAycXafjZcgDyvkJbDtWKPS5N00VZQaq2nWlmrDdtvi7X1yCAXpgG1CNnZqWOHLLTV2LrfiLqTpd1WiYDUCg1Am2g+1sO3jDDVg01wgPPYvASpqGONXtko41jS3JYYojXMI8WakQdx1N5ShhE9bwzMU2D+hgvoIAAIv4USqDIYQFgASliWRuo4ItQJdPlQH5JIBUFIUGnh5OOJK4sPf9hhK62otQ7uNHg8AQs3JOEu61AnnWkMUsy7RgXBZIBak1iJs2CbXnaigUz0-KYhM7gKRSIQQdB57bOIFzogQGEfOo5DPSSurxMPpeQOE1LGvJ4g1m9CVmktrwbmYwXW0Z-nDwbeOidXbFwjUy6m003nwvjmqxdV-awCNOAEB6EAA"
+    width="100%"
+    height="380"
+    title="Více komparátorů s kodérem - Falstad"
+    loading="lazy"
+    style="border: 1px solid #ddd; border-radius: 8px;">
+</iframe>
 
 Můstek můžeme postavit dvěma způsoby:
 
