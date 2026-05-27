@@ -1,3 +1,5 @@
+# H-můstek
+
 ## Úvod
 
 Zatímco v předchozích tématech jsme se zabývali pasivními prvky a základními polovodiči, v této otázce se podíváme na jedno z nejdůležitějších zapojení výkonové elektroniky – **H-můstek**. Pokud potřebujeme stejnosměrný motor (DC motor) nejen zapnout a vypnout, ale také měnit směr jeho otáčení nebo jej aktivně brzdit, pouhý jeden spínací tranzistor nám stačit nebude. 
@@ -25,6 +27,13 @@ Můstek tvoří čtyři spínače označené jako $S_1, S_2, S_3, S_4$. Podle to
         |         |
        --- GND (Zem)
 ```
+| Sepnuté spínače | Stav motoru | Popis funkce |
+| :--- | :--- | :--- |
+| **$S_1$ a $S_4$** | **Otáčení vpravo** | Proud teče z $+V_{cc}$ přes $S_1$, motorem zleva doprava a přes $S_4$ do GND. |
+| **$S_3$ a $S_2$** | **Otáčení vlevo** | Proud teče z $+V_{cc}$ přes $S_3$, motorem zprava doleva a přes $S_2$ do GND. |
+| **Všechny rozepnuté** | **STOP (Volnoběh)** | Motorem neteče žádný proud, hřídel volně dobíhá. |
+| **$S_1$ a $S_3$** nebo **$S_2$ a $S_4$** | **Brzda** | Motor je zkratován do napájení (nebo země), generuje protisílu a rychle zastaví. |
+| **$S_1$ a $S_2$** nebo **$S_3$ a $S_4$** | **ZAKÁZANÝ STAV** | **Zkrat zdroje (Shoot-through)!** Proud teče přímo z $+V_{cc}$ do GND a hrozí zničení prvků. |
 
 ### Základní pracovní stavy
 
@@ -45,7 +54,7 @@ Pokud by došlo k současnému sepnutí spínačů nad sebou (např. $S_1$ a $S_
 V reálné praxi se místo mechanických spínačů používají tranzistory. U menších výkonů bipolární (BJT), u moderních a výkonnějších zapojení výhradně polí řízené tranzistory (**MOSFET**), případně **IGBT** tranzistory pro velmi vysoká napětí.
 
 <iframe
-    src="https://www.falstad.com/circuit/circuitjs.html?ctz=DwYwlgTgBAZgvAIgIwKgFwM6IAwDpsEECsqYIiSuAHACwDsAnEVQGzYtIENVEuogAjRL1QAHIQiLZUANwjDUAW0zCApgFokKAHwAoKFGBooADwp0WUKtihIGAJivTYOMQDsKqAaooElAe0QAE1UYAEMAVwAbNFlvHHx7GgYUqnsGJCJuDKQ6KjjyBDxsJJTuHh4AZhYaGipKhAB6PQMjU0QaJEtrKBoCJ1R4IvdPKHjkPyhFQIQQ8OjYqBlx4tLU9Mzs3PsChJLk1IqiapoiGiaWw2MzZAtbNlsHe+ch51EPZC8fCedp4NDIjE4t9VgdysxjjV6PY6LsiokwWVrPUaFCLvoru0EJ1LF0bH0bHjBq4oO9RuNOL8ZnNAYtliCEUijicaPYkOclgJCqCykjsCisujWtAbnjnlAas9icMoPIftJmhjgCKOnVxWcaFKXDK5ZSFZdlVj7ElbEhHDDHFodtrnLr9UqokaqFRTY5KkRLWbpc4onsSFAyCSwIhKrgaJUGCw6KzagxsHRKqcNGyhYYAO5Guie83O13e1PADM3Y2aq2PbP5xWtIsUJ6R8t5m0FmsId3Z3r9K2Vg0tgmujs2SPdpW9zu1XqVS32fJNqvprHhqcu2ous0z17NhdquyOPs74fVhedp57iwH+c3Pcn-r2fnnwtYne2cditf3luv6fP0vT9+Pl9PE++6zj2j6AeBlpniBI5gZaEFQLe66uHOwAAOawQh-INiW97oZeN5YX2OHQa0QQLpKT6oj+SEyn8swAgsBZkaKAGWi+v5NlM1IMUCKEfnWuJ3F2JEXuYuJmt+jYbnxW4uvWK5SchoGXtuEl9kOInAMxFAvhJ7KlnwnF0TSjEodp2KSvJFGGRuXH-PMvEGjIToujY04uuok7Sl0qBprZihhCYMgKDJxa5l0CG5i8SkwaKTwUYBNkxYe+E2JKe5JcMoWqqulgZX+qX3JFuUFYg7lFUBmX2iltaWriL5VZuKm5b01mldiapWZqGnScpOVOL0EXWO1Clrq11EjQlu7bg4I3bg8OJar1Soqh1Lo9BqAycXafjZcgDyvkJbDtWKPS5N00VZQaq2nWlmrDdtvi7X1yCAXpgG1CNnZqWOHLLTV2LrfiLqTpd1WiYDUCg1Am2g+1sO3jDDVg01wgPPYvASpqGONXtko41jS3JYYojXMI8WakQdx1N5ShhE9bwzMU2D+hgvoIAAIv4USqDIYQFgASliWRuo4ItQJdPlQH5JIBUFIUGnh5OOJK4sPf9hhK62otQ7uNHg8AQs3JOEu61AnnWkMUsy7RgXBZIBak1iJs2CbXnaigUz0-KYhM7gKRSIQQdB57bOIFzogQGEfOo5DPSSurxMPpeQOE1LGvJ4g1m9CVmktrwbmYwXW0Z-nDwbeOidXbFwjUy6m003nwvjmqxdV-awCNOAEB6EAA"
+    src="https://www.falstad.com/circuit/circuitjs.html?ctz=DwYwlgTgBAZgvAIgIwKgFwM6IAwDpsEECsqYIiSuAHACwDsAnEVQGzYtIENVEuogAjRL1QAHIQiLZUANwjDUAW0zCApgFokKAHwAoKFGBooADwp0WUKtihIGAJivTYOMQDsKqAaooElAe0QAE1UYAEMAVwAbNFlvHHx7GgYUqnsGJCJuDKQ6KjjyBDxsJJTuHh4AZhYaGipKhAB6PQMjU0QaJEtrKBoCJ1R4IvdPKHjkPyhFQIQQ8OjYqBlx4tLU9Mzs3PsChJLk1IqiappjmiaWw2MzZAtbNlsHe+ch51EPZC8fCedp4NDIjE4t9VgdysxjjV6PY6LsiokwWVrPUaFCLvoru0EJ1LF0bH0bHjBq4oO9RuNOL8ZnNAYtliCEUijidOkQSEsBIVQWUkdgUVl0a1oDc8c8oDVnsThlB5D9pM0McBhR06mKiLVJS5pbLKfLLkqsUlCUhHPYqFRbCapc4dXrFVFDebLY5KkRHFodlrnFE9uyyCSwB1cCwqNw6HR7EQTa77Bp7CgFa0AO6GpLOx7uq1ewWGFMip4MXFPD3WnPAPOIGPpgnO0uJ3NYmse3r9Qt1-UAcyxdlNfIzUHsSXbiq7Nxr9j746H2frwCCWOqFp7UEXtjNpam1IBCzLMkdFpsZot6kqnqGXVQSdeSjCJhkClnFYQR-uA6dL1cj8b-S6b6XfBnfUnxfX9lwvQDFSfWoLR6HEBgg5NG1VUU4KJBDDGVbFVR6dUaHg68ZV8PwvxFB5RVyXE2GHRDSJsHoKPwz99Uw0UeglawN1tYigMbGD8QtU8P2GEiOgEicoFwlcJ2ohsbkkwSJI1NDrxEyQHkjSwJQ0mTyyxLTeHFPDlKYxVRGuRA2DEiTiwA88byIt4ZmKbB2QwH0EAAEX8KJVBkMIywAJT0vsbEsqATzPCgAKvElFFve9JDLUcLL7U9xUnfJ0OAZKiikqB+J0oKbhsErwtPKVwJi6U4rvB99TMrFSpscqtRQKYwgcsQnNwFIpEIfr+ratzEC80QIDCPyyygvjDMY4SeLk9SDN4OihLtGjhAeHCNQ4rLpqcXp-x0-bQMo46sRWg7LpalSFs25rHEu8Dbsgi6yMsLJ3VskyNoQVcTQtJt1z2hcQ37JsHHOscfxNFtCWBl7fqBwGf1qKGOh-O4Ici+bXuhwknnHPkdPnG5V0LFcwZu2Kt3mIFVNXNKa2p3HfvJywazbEH8dfZmcfW2SMYeuHDJJ1M8Ipwc8JZql-jp2JVKl9MjVrbnECVinly5xHBefNM0uXGWpu7J4DZs9HkFN90nhqMWbiV5cHYRmm5dpY37bTAH+wBi2wLNb2sx13T83df2wLRtW9aM4sY-592KFj72LF9xPHeJiDgEacAID0IA"
     width="100%"
     height="380"
     title="Více komparátorů s kodérem - Falstad"
@@ -76,20 +85,6 @@ Když tranzistory v H-můstku prudce rozepneme, indukčnost motoru se pokusí ud
 
 Každý tranzistor v můstku proto musí mít paralelně k sobě připojenou rychlou diodu v závěrném směru (u MOSFETů bývá tato dioda již integrovaná přímo ve struktuře čipu – tzv. *Body Diode*, avšak pro vyšší frekvence se k nim často přidávají externí, extrémně rychlé **Schottkyho diody**). Tyto diody umožní bezpečné odvedení nahromaděné energie zpět do napájecího zdroje nebo filtračních kondenzátorů.
 
-```
-            + Vcc
-        +-----+-----+
-        |     |     |
-       ---   / \   ---  <- Ochranné diody antiparalelně
-       / \   ---   / \     k tranzistorům
-        |     |     |
-        +--[ M ]--+
-        |     |     |
-       ---   / \   ---
-       / \   ---   /         |     |     |
-       ----------- GND
-```
-
 ### Dead Time (Mrtvý čas)
 Tranzistory se neotevírají ani nezavírají okamžitě, proces trvá několik desítek až stovek nanosekund. Pokud měníme směr otáčení motoru a bleskově zavřeme $S_1+S_4$ a otevřeme $S_3+S_2$, mohlo by se stát, že se na malý okamžik potkají stav, kdy se $S_1$ ještě nestihl zcela zavřít a $S_2$ se už začíná otevírat.
 
@@ -99,7 +94,7 @@ Abychom zabránili destrukčnímu zkratu (*shoot-through*), mikrokontrolér (neb
 
 ## Regulace rychlosti pomocí PWM
 
-H-můstek sám o sobě umí měnit jen směr. Jak ale zajistíme, aby motor běžehl např. na polovinu výkonu? Využijeme **pulsně šířkovou modulaci (PWM)**.
+H-můstek sám o sobě umí měnit jen směr. Jak ale zajistíme, aby motor běžel např. na polovinu výkonu? Využijeme **pulsně šířkovou modulaci (PWM)**.
 
 Místo toho, abychom tranzistory nechali sepnuté trvale, budeme je velmi rychle (např. s frekvencí 20 kHz) zapínat a vypínat. Motor má velkou mechanickou i elektrickou setrvačnost, takže tyto pulsy vyhladí a reaguje na **střední hodnotu napětí**.
 
@@ -114,7 +109,7 @@ Místo toho, abychom tranzistory nechali sepnuté trvale, budeme je velmi rychle
 Stavět H-můstek z diskrétních (samostatných) tranzistorů pro menší výkony je neekonomické a složité. Proto se často sahá po hotových integrovaných obvodech:
 
 - **L293D / L298N:** Absolutní klasika v učebnicích robotiky. Obsahují bipolární tranzistory. Jejich obrovskou nevýhodou je velký úbytek napětí (klidně i 1,5 až 2 V), který se promění v teplo, proto vyžadují masivní chladiče.
-- **TB6612FNG / DRV8833:** Moderní budiče na bázi MOSFETů. Mají minimální vnitřní odpor, hřejí zanedbatelně a nepotřebují chladič, i když jsou rozměrově mnohem menší.
+- **TB6612FNG / DRV8833:** Moderní budiče na bázi MOSFETŮ. Mají minimální vnitřní odpor, hřejí zanedbatelně a nepotřebují chladič, i když jsou rozměrově mnohem menší.
 
 | Vlastnost | Bipolární můstek (např. L298N) | MOSFET můstek (např. TB6612FNG) |
 | :--- | :--- | :--- |
@@ -128,4 +123,14 @@ Stavět H-můstek z diskrétních (samostatných) tranzistorů pro menší výko
 H-můstek najdeme všude tam, kde je vyžadován obousměrný pohyb:
 - **Pohony robotů** (řízení kol a pásů).
 - **Krokové motory** (každá cívka krokového motoru vyžaduje pro plnohodnotné řízení svůj vlastní H-můstek).
-- **Měniče napětí (Invertory):** Zde zátěží není motor, ale transformátor. H-můstek střídavým spínáním vytváří ze stejnosměrného napětí (např. z 12V autobaterie) napětí střídavé, které se následně transformuje na sinusových 230 V.
+- **Měniče napětí (Invertory):** Zde zátěží není motor, ale transformátor. H-můstek střídavým spínáním vytváří ze stejnosměrného napětí (např. z 12V autobaterie) střídavé, které se následně transformuje na sinusových 230 V.
+
+---
+
+## Zdroje
+
+Malina, Václav: Poznáváme elektroniku
+
+Vondra, Martin: Elektronika – Součástky a obvody
+
+Sedra, Adel S. & Smith, Kenneth C.: Microelectronic Circuits.
