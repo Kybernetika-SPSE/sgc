@@ -69,7 +69,7 @@ adresa přímo do obsahu zprávy v kódu. Například jako první bajt každého
 | Počet kanálů | 100 (rozestup 400 kHz) |
 | Výkon vysílače | až **+20 dBm (100 mW)** |
 | Citlivost přijímače | až −117 dBm (FU3), až −124 dBm (FU4) |
-| Dosah | ~600 m (FU3), **~1,8 km (FU4)** |
+| Dosah | 600 m (FU3), **až 1,8 km (FU4)** |
 | Napájení | 3,2 – 5,5 V |
 | Odběr při vysílání | až 100 mA |
 | Klidový odběr | 3,6 mA (FU1) / 80 µA (FU2) / 16 mA (FU3, FU4) / 22 µA (spánek) |
@@ -96,18 +96,27 @@ adresa přímo do obsahu zprávy v kódu. Například jako první bajt každého
 | 5 | SET | LOW = konfigurace, HIGH = přenos dat |
 | ANT1 | — | IPEX konektor pro externí anténu |
 | ANT2 | — | Konektor pro pájení pružinové antény |
+| NC | — | Nezapojeno (bez funkce, slouží k uchycení) |
 
 *Tab.2 , Popis pinů [1]*
  
 Pin SET má interní pull-up 10 kΩ, takže dokud se nepřipojí nastavovací pin, modul automaticky běží v normálním (přenosovém) módu.
  
 ### Co je uvnitř desky?
- 
-- **Si4463 (Silicon Labs)** — RF čip, který přijímá a vysílá rádiový signál na 433 MHz [2]
-- **STM8S003F3 (STMicroelectronics)** — 8bitový mikrokontrolér, který řídí Si4463 
-  a zpracovává UART komunikaci [3]
-- **RF přepínač µPG2214TB** — přepíná anténu mezi příjmem a vysíláním [4]
----
+
+Modul HC-12 není jen rádiový čip, je to kompletní systém. O veškerou logiku se stará vlastní mikrokontrolér, takže navenek se modul tváří jako obyčejná sériová linka a uživatel nemusí řešit žádné RF detaily.
+
+**Si4463** (Silicon Labs)  Rádiový transceiver — moduluje a demoduluje signál v pásmu 433 MHz, zajišťuje samotné vysílání a příjem dat vzduchem [2]
+
+**STM8S003F3** (STMicroelectronics)  8bitový mikrokontrolér — řídí čip Si4463, zpracovává UART komunikaci, vyřizuje AT příkazy a balí data do paketů [3]
+
+**µPG2214TB** Vysokofrekvenční přepínač — přepíná anténu mezi vysíláním a příjmem (modul je half-duplex, nemůže obojí najednou) [4]
+
+**30 MHz XO** Krystalový oscilátor — zdroj přesného hodinového signálu pro Si4463
+
+
+**Spolupráce komponentů:**
+Když přijdou data na pin RXD, převezme je STM8, zabalí je a předá čipu Si4463. Ten data odvysílá přes anténu. Na druhé straně Si4463 signál přijme, STM8 ho dekóduje a pošle ven pinem TXD. Přepínač µPG2214TB přitom hlídá, aby byla anténa vždy připojená buď k vysílací, nebo přijímací části.
  
 ## 4. Provozní módy (FU1–FU4)
  
@@ -331,7 +340,7 @@ while True:
 
 **Legislativa (ČR)**
 - Frekvence 433 MHz je v EU volně dostupná. 433 MHz patří do ISM (Industrial, Scientific, Medical) pásma v EU podle normy EN 300 220.
-- HC-12 je rádiové zařízení. Modul by neměl by být provozován bez antény nebo s poškozenou anténou.
+- HC-12 je rádiové zařízení. Modul by neměl být provozován bez antény nebo s poškozenou anténou.
 - Při instalaci je nutno dodržet minimální vzdálenost od metalických předmětů (alespoň několik cm)
 
 **Elektromagnetická kompatibilita (EMC)**
