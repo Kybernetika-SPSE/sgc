@@ -16,6 +16,7 @@
   - [22 - Komunikační sběrnice I2C a SPI](/mo-jirka/22-komunikacni-sbernice-i2c-a-spi.md)
   - [23 - Regulátory P, PI, PID](/mo-jirka/23-regulatory-p-pi-pid.md)
   - [24 - Návrh a stabilita regulátorů](/mo-jirka/24-navrh-a-stabilita-regulatoru.md)
+  - [Hrádek](/mo-jirka/Hrádek_unipolarni_tranzistory.md)
 - [MO Pavel](/mo-pavel/)
   - [01 - Verzovací systém Git](/mo-pavel/01-verzovaci-system-git.md)
   - [02 - Kybernetika, definice, základní principy a terminologie](/mo-pavel/02-kybernetika-zakladni-principy-a-terminologie.md)
