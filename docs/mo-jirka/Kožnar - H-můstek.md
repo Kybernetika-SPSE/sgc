@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Zatímco v předchozích tématech jsme se zabývali pasivními prvky a základními polovodiči, v této otázce se podíváme na jedno z nejdůležitějších zapojení výkonové elektroniky – **H-můstek**. Pokud potřebujeme stejnosměrný motor (DC motor) nejen zapnout a vypnout, ale také měnit směr jeho otáčení nebo jej aktivně brzdit, pouhý jeden spínací tranzistor nám stačit nebude. 
+**H-můstek**. Pokud potřebujeme stejnosměrný motor (DC motor) nejen zapnout a vypnout, ale také měnit směr jeho otáčení nebo jej aktivně brzdit, pouhý jeden spínací tranzistor nám stačit nebude. 
 
 H-můstek dostal svůj název podle specifického tvaru schématu, které připomíná písmeno **H**. Skládá se ze čtyř spínačů (zpravidla tranzistorů) a zátěže (motoru) umístěné uprostřed jako „příčka“ tohoto písmene. Je základním stavebním kamenem robotiky, pohonů CNC strojů, elektrických vozidel i spínaných měničů.
 
