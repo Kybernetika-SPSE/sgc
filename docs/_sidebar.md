@@ -35,3 +35,4 @@
 - [Archiv starých materiálů](/archiv/)
 - [Různá témata](/topics/)
   - [Základy komunikace protokolem MQTT](/topics/mqtt_basics.md)
+  - [HC-12 Tranciever](/topics/HC-12_tranciever.md)
